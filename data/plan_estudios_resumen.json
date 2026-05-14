@@ -1,0 +1,99 @@
+{
+  "plan_estudios_resumen": {
+    "plan_curricular": "2024",
+    "vigencia_desde": "Año Académico 2025",
+    "totales": {
+      "cursos": 59,
+      "creditos": 220,
+      "semestres": 10,
+      "creditos_por_semestre_promedio": 22
+    },
+    "areas_curriculares": [
+      {
+        "codigo": "EG",
+        "nombre": "Estudios Generales",
+        "numero_cursos": 10,
+        "creditos": 37,
+        "porcentaje_cursos": 17,
+        "porcentaje_creditos": 17,
+        "descripcion": "Orientada a desarrollar integralmente al estudiante universitario en las dimensiones de desarrollo personal y social, desarrollo académico profesional y desarrollo de una cultura investigadora.",
+        "dimensiones": [
+          "Desarrollo personal y social: actuación ética, autorrealización, capacidad crítica y autocrítica, apreciación de la diversidad y multiculturalidad.",
+          "Desarrollo académico profesional: análisis y síntesis, organización, planificación, resolución de problemas, toma de decisiones, comunicación académica.",
+          "Desarrollo de una cultura investigadora: indagación, creatividad, trabajo autónomo en procesos de investigación."
+        ]
+      },
+      {
+        "codigo": "EE",
+        "nombre": "Estudios Específicos",
+        "numero_cursos": 25,
+        "creditos": 94,
+        "porcentaje_cursos": 42,
+        "porcentaje_creditos": 43,
+        "descripcion": "Conformada por disciplinas fundamentales para la escuela profesional. Promueve la formación que dota de identidad a la profesión, con conocimientos teóricos y metodológicos de campo disciplinario y práctico.",
+        "rasgos_perfil": {
+          "conocer": "Paradigmas de programación, modelos de datos, metodologías de desarrollo de software, normas y estándares de calidad, tecnologías de internet, tipos de redes, protocolos y esquemas de seguridad, dispositivos lógicos programables.",
+          "saber": "Diseñar algoritmos eficientes, bases de datos, procesos de consulta, proyectos de sistemas computacionales. Seleccionar paradigmas de programación, metodologías de desarrollo. Integrar tecnologías de internet. Desarrollar aplicaciones cliente-servidor distribuidas. Asegurar calidad de sistemas de información.",
+          "saber_ser_convivir": "Aprender de manera autónoma, responsabilidad ética, trabajo en equipo inter y multidisciplinario, crítico, reflexivo, emprendedor e innovador, conciencia social, responsabilidad ecológica."
+        }
+      },
+      {
+        "codigo": "EESP",
+        "nombre": "Estudios de Especialidad",
+        "numero_cursos": 20,
+        "creditos": 75,
+        "porcentaje_cursos": 34,
+        "porcentaje_creditos": 34,
+        "descripcion": "Dirigida a la profundización de una disciplina determinada, ofrece competencias profesionales para la redefinición de la formación en el marco de las transformaciones de calificaciones profesionales y mercados de trabajo.",
+        "subcategorias": {
+          "obligatorios": {
+            "numero_cursos": 13,
+            "creditos": 50
+          },
+          "electivos": {
+            "numero_cursos": "23 disponibles (el estudiante elige según créditos requeridos)",
+            "creditos_disponibles": 81,
+            "creditos_a_completar_aprox": 25
+          }
+        }
+      },
+      {
+        "codigo": "AE",
+        "nombre": "Actividades Extracurriculares",
+        "numero_cursos": 3,
+        "creditos": 6,
+        "porcentaje_cursos": 5,
+        "porcentaje_creditos": 3,
+        "descripcion": "Actividades del ámbito cultural, deportivo, artístico o académico que complementan las actividades curriculares en pos de la formación integral de los estudiantes (definición SINEACE).",
+        "nota": "El plan contempla 4 cursos extracurriculares disponibles (Deporte, Proyección Social, Debate, Actividades), pero solo 3 son obligatorios para sumar los 6 créditos del área."
+      },
+      {
+        "codigo": "PPP",
+        "nombre": "Prácticas Pre Profesionales",
+        "numero_cursos": 1,
+        "creditos": 8,
+        "porcentaje_cursos": 2,
+        "porcentaje_creditos": 4,
+        "descripcion": "Orientada a coadyuvar al desarrollo de las competencias de formación académica-profesional mediante la aplicación de conocimientos, habilidades, actitudes y valores en una situación real de trabajo en una institución de gestión pública o privada.",
+        "requisito_creditos": 180
+      }
+    ],
+    "categorias_seminario": {
+      "nombre": "Seminario de Investigación",
+      "numero_cursos": 2,
+      "creditos": 7,
+      "cursos": ["IFI29 - Seminario de Investigación", "IFI33 - Trabajo de Investigación"],
+      "nota": "Estos cursos están contabilizados dentro de los Estudios de Especialidad."
+    },
+    "lineas_areas_de_la_carrera": [
+      "Estudios Generales",
+      "Ciencias de la Computación",
+      "Gestión",
+      "Investigación",
+      "Ingeniería de Software",
+      "Ingeniería Computacional",
+      "Inteligencia Artificial",
+      "Electivos de Especialidad"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Python (por si después agregas scripts)
+__pycache__/
+*.pyc
+.env
+venv/

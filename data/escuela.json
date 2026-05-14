@@ -1,0 +1,77 @@
+{
+  "escuela": {
+    "nombre": "Escuela Profesional de Ingeniería Informática y de Sistemas",
+    "siglas": "EPIIS",
+    "facultad": "Facultad de Ingeniería Eléctrica, Electrónica, Informática y Mecánica",
+    "siglas_facultad": "FIEEIM",
+    "universidad": "Universidad Nacional de San Antonio Abad del Cusco",
+    "siglas_universidad": "UNSAAC",
+    "departamento_academico": "Departamento Académico de Ingeniería Informática",
+    "ubicacion": "Cusco, Perú",
+    "carrera": {
+      "nombre_carrera": "Ingeniería Informática y de Sistemas",
+      "grado_academico": "Bachiller en Ingeniería Informática y de Sistemas",
+      "titulo_profesional": "Ingeniero(a) Informático(a) y de Sistemas",
+      "duracion_semestres": 10,
+      "duracion_anios": 5,
+      "modalidad": "Presencial",
+      "total_creditos": 220,
+      "total_cursos": 59
+    },
+    "autoridades": {
+      "rector": {
+        "nombre": "Dr. Eleazar Crucinta Ugarte",
+        "cargo": "Rector"
+      },
+      "vicerrectora_academica": {
+        "nombre": "Dra. Paulina Taco Llave",
+        "cargo": "Vicerrectora Académica"
+      },
+      "decano_facultad": {
+        "nombre": "Dr. Lauro Enciso Rodas",
+        "cargo": "Decano de la Facultad de Ingeniería Eléctrica, Electrónica, Informática y Mecánica"
+      },
+      "directora_escuela": {
+        "nombre": "Mg. Karelia Medina Miranda",
+        "cargo": "Directora de la Escuela Profesional de Ingeniería Informática y de Sistemas"
+      },
+      "director_departamento": {
+        "nombre": "Dr. Dennis Iván Candia Oviedo",
+        "cargo": "Director del Departamento Académico de Ingeniería Informática"
+      },
+      "comision_curricular": [
+        "Dr. Edwin Carrasco Poblete",
+        "Dr. Luis Beltrán Palma Ttito",
+        "Mg. Iván César Medrano Valencia"
+      ]
+    },
+    "plan_curricular_vigente": {
+      "nombre": "Plan Curricular 2024",
+      "anio_aprobacion": 2025,
+      "fecha_aprobacion": "2025-01-13",
+      "resolucion_consejo_universitario": "CU-031-2025-UNSAAC",
+      "resolucion_decanatura": "D-5245-2024-FIEEIM-UNSAAC",
+      "implementacion_desde": "Año Académico 2025",
+      "vigencia_actualizacion_curricular": "Cada 3 años o cuando sea conveniente según Ley Universitaria 30220",
+      "modelo_educativo": "Formación basada en competencias",
+      "marco_legal": [
+        "Ley Universitaria 30220",
+        "Estatuto Universitario UNSAAC",
+        "Modelo Educativo UNSAAC",
+        "Directiva CU-203-2024-UNSAAC (Actualización de Plan Curricular de Estudios de Pregrado)"
+      ]
+    },
+    "enlaces_oficiales": {
+      "web_escuela": "https://in.unsaac.edu.pe/",
+      "plan_estudios_centro_computo": "http://ccomputo.unsaac.edu.pe/index.php?op=planes&escprof=IN&curric=3&escprofnom=INGENIER%CDA%20INFORM%C1TICA%20Y%20DE%20SISTEMAS",
+      "web_universidad": "https://www.unsaac.edu.pe"
+    },
+    "presentacion": "La Escuela Profesional de Ingeniería Informática y de Sistemas forma profesionales altamente calificados con capacidad creativa e innovadora, con sólida formación humanística, tecnológica y científica, orientada a atender las necesidades cambiantes del desarrollo socioeconómico del país. La formación se basa en competencias, con énfasis en investigación, responsabilidad social y respeto por el medio ambiente.",
+    "competencias_genericas": {
+      "CG-01": "Comunicación efectiva (oral y escrita)",
+      "CG-02": "Aplicación de conceptos científicos y matemáticos",
+      "CG-03": "Compromiso ético y responsabilidad social",
+      "CG-04": "Pensamiento computacional e innovación"
+    }
+  }
+}
