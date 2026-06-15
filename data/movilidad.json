@@ -1,0 +1,116 @@
+{
+  "version": "1.0.0",
+  "categoria_id": "MOV",
+  "nombre": "Movilidad Estudiantil",
+  "fuentes_normativas": [
+    "Oficina de Relaciones Internacionales UNSAAC",
+    "Programa PAME-UDUAL (Unión de Universidades de América Latina)"
+  ],
+  "contenido": {
+    "dependencia": "Oficina de Relaciones Internacionales UNSAAC",
+    "programas": [
+      {
+        "nombre": "PAME-UDUAL",
+        "tipo": "Internacional latinoamericano",
+        "descripcion": "Programa de movilidad académica de la Unión de Universidades de América Latina."
+      },
+      {
+        "nombre": "Convenios Bilaterales",
+        "universidades": ["Universidad de Salamanca (España)", "Universidad Federal de Paraná (Brasil)", "UNAM (México)", "Universidad Nacional de Córdoba (Argentina)"],
+        "tipo": "Internacional"
+      },
+      {
+        "nombre": "Movilidad Nacional",
+        "tipo": "Nacional",
+        "descripcion": "Con universidades públicas del Perú."
+      },
+      {
+        "nombre": "Becas PRONABEC / Fundación Carolina",
+        "tipo": "Financiamiento externo",
+        "descripcion": "Becas de posgrado y movilidad con financiamiento."
+      }
+    ],
+    "requisitos_generales": [
+      "Estar matriculado a partir del IV semestre",
+      "Promedio ponderado mínimo de 14 sobre 20",
+      "Acreditar nivel intermedio del idioma del país destino",
+      "No tener sanciones disciplinarias",
+      "Presentar carta de motivación y plan de estudios equivalente"
+    ],
+    "documentos_postulacion": ["Solicitud de postulación", "Currículum vitae", "Constancia de matrícula", "Certificado de notas", "Carta de motivación", "Carta de recomendación docente", "Acreditación del idioma", "Plan de estudios equivalente"],
+    "convalidacion": "Los cursos aprobados en intercambio se convalidan mediante homologación ante la Dirección de la Escuela, previa revisión de sílabos.",
+    "convocatorias": "Se publican en el portal web UNSAAC (sección Relaciones Internacionales), SERUNSA y redes sociales institucionales."
+  },
+  "qa_entries": [
+    {
+      "id": "MOV-001",
+      "intent": "consulta_mov_programas_disponibles",
+      "pregunta": "¿Qué programas de movilidad estudiantil hay?",
+      "respuesta": "La UNSAAC ofrece movilidad a través de: el programa PAME-UDUAL (latinoamericano), convenios bilaterales con universidades extranjeras, movilidad nacional con universidades públicas del Perú, y becas con financiamiento externo como PRONABEC y la Fundación Carolina.",
+      "fuente": "Oficina de Relaciones Internacionales UNSAAC"
+    },
+    {
+      "id": "MOV-002",
+      "intent": "consulta_mov_requisitos_intercambio",
+      "pregunta": "¿Qué requisitos necesito para postular a un intercambio?",
+      "respuesta": "Necesitas: estar matriculado a partir del IV semestre, un promedio ponderado mínimo de 14 sobre 20, acreditar nivel intermedio del idioma del país destino, no tener sanciones disciplinarias, y presentar carta de motivación y plan de estudios equivalente.",
+      "fuente": "Oficina de Relaciones Internacionales UNSAAC"
+    },
+    {
+      "id": "MOV-003",
+      "intent": "consulta_mov_convalidacion_cursos",
+      "pregunta": "¿Se convalidan los cursos que llevo en el intercambio?",
+      "respuesta": "Sí. Los cursos que apruebes durante el intercambio se convalidan mediante homologación ante la Dirección de la Escuela, previa revisión de los sílabos.",
+      "fuente": "Oficina de Relaciones Internacionales UNSAAC"
+    },
+    {
+      "id": "MOV-004",
+      "intent": "consulta_mov_apoyo_economico",
+      "pregunta": "¿Hay apoyo económico para hacer movilidad?",
+      "respuesta": "El apoyo económico para movilidad proviene principalmente de becas con financiamiento externo, como PRONABEC y la Fundación Carolina, orientadas a posgrado y movilidad.",
+      "fuente": "Oficina de Relaciones Internacionales UNSAAC"
+    },
+    {
+      "id": "MOV-005",
+      "intent": "consulta_mov_estudiantes_entrantes",
+      "pregunta": "¿La UNSAAC recibe estudiantes de intercambio de otras universidades?",
+      "respuesta": "",
+      "_pendiente": "La información disponible cubre la movilidad saliente. Falta el detalle sobre estudiantes entrantes (extranjeros o de otras universidades que vienen a la UNSAAC); confirmar con la Oficina de Relaciones Internacionales."
+    },
+    {
+      "id": "MOV-006",
+      "intent": "consulta_mov_convocatorias",
+      "pregunta": "¿Cuándo y dónde se publican las convocatorias de movilidad?",
+      "respuesta": "Las convocatorias de movilidad se publican en el portal web de la UNSAAC (sección Relaciones Internacionales), en el portal SERUNSA y en las redes sociales institucionales.",
+      "fuente": "Oficina de Relaciones Internacionales UNSAAC"
+    },
+    {
+      "id": "MOV-007",
+      "intent": "consulta_mov_documentos_postulacion",
+      "pregunta": "¿Qué documentos necesito para postular a movilidad?",
+      "respuesta": "Los documentos de postulación son: solicitud de postulación, currículum vitae, constancia de matrícula, certificado de notas, carta de motivación, carta de recomendación docente, acreditación del idioma y plan de estudios equivalente.",
+      "fuente": "Oficina de Relaciones Internacionales UNSAAC"
+    },
+    {
+      "id": "MOV-008",
+      "intent": "consulta_mov_impacto_titulacion",
+      "pregunta": "¿Irme de intercambio me atrasa en la carrera?",
+      "respuesta": "No pierdes avance curricular: los cursos aprobados durante el intercambio se convalidan por homologación ante la Dirección de Escuela, por lo que cuentan dentro de tu plan de estudios.",
+      "fuente": "Oficina de Relaciones Internacionales UNSAAC"
+    },
+    {
+      "id": "MOV-009",
+      "intent": "consulta_mov_requisito_idioma",
+      "pregunta": "¿Necesito acreditar un idioma para viajar de intercambio?",
+      "respuesta": "Sí. Debes acreditar un nivel intermedio del idioma del país de destino como uno de los requisitos generales de postulación.",
+      "fuente": "Oficina de Relaciones Internacionales UNSAAC"
+    },
+    {
+      "id": "MOV-010",
+      "intent": "consulta_mov_universidades_convenio",
+      "pregunta": "¿Con qué universidades hay convenio?",
+      "respuesta": "Entre los convenios bilaterales figuran la Universidad de Salamanca (España), la Universidad Federal de Paraná (Brasil), la UNAM (México) y la Universidad Nacional de Córdoba (Argentina). Además hay movilidad nacional con universidades públicas del Perú.",
+      "fuente": "Oficina de Relaciones Internacionales UNSAAC"
+    }
+  ]
+}

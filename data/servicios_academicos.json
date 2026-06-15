@@ -1,0 +1,129 @@
+{
+  "version": "1.0.0",
+  "categoria_id": "SER",
+  "nombre": "Servicios Académicos y Universitarios",
+  "fuentes_normativas": [
+    "TUPA UNSAAC - Texto Único de Procedimientos Administrativos",
+    "Portal SERUNSA / DRAA / DTI UNSAAC"
+  ],
+  "contenido": {
+    "servicios": [
+      {
+        "nombre": "Biblioteca Central UNSAAC",
+        "acceso_presencial": "Lunes a sábado",
+        "acceso_virtual": ["repositorio.unsaac.edu.pe", "EBSCO", "Scopus", "Biblioteca Virtual Consorcio de Universidades"],
+        "requisito": "Usuario institucional"
+      },
+      {
+        "nombre": "Correo Institucional",
+        "formato": "nombre.apellido@unsaac.edu.pe",
+        "tramite": "Dirección de Tecnologías de la Información (DTI) con carné universitario",
+        "acceso_a": ["Google Workspace for Education", "Microsoft 365", "Aulas virtuales"]
+      },
+      {
+        "nombre": "Aula Virtual (Moodle)",
+        "url": "aulavirtual.unsaac.edu.pe",
+        "acceso": "Portal SERUNSA o plataforma Moodle con usuario institucional"
+      },
+      {
+        "nombre": "Portal SERUNSA",
+        "url": "serunsa.unsaac.edu.pe",
+        "funciones": ["Matrícula en línea", "Consulta de horarios", "Historial de notas", "Constancias descargables", "Historial de tutoría"]
+      },
+      {
+        "nombre": "Laboratorios de Cómputo EPIIS",
+        "cantidad": 4,
+        "software": ["Visual Studio", "Eclipse", "NetBeans", "MATLAB", "Cisco Packet Tracer"],
+        "acceso": "Estudiantes matriculados en horario publicado"
+      },
+      {
+        "nombre": "Certificados y Constancias",
+        "dependencia": "DRAA (Dirección de Registros Académicos y Admisión)",
+        "plazo": "3 a 10 días hábiles según el tipo de documento"
+      },
+      {
+        "nombre": "Récord de Notas Oficial",
+        "tramite": "DRAA con solicitud y pago según TUPA",
+        "nota": "SERUNSA emite reporte no oficial descargable"
+      },
+      {
+        "nombre": "TUPA",
+        "nombre_completo": "Texto Único de Procedimientos Administrativos",
+        "descripcion": "Detalla todos los trámites, requisitos, plazos y costos de la UNSAAC.",
+        "ubicacion": "Portal web UNSAAC, sección Transparencia"
+      }
+    ]
+  },
+  "qa_entries": [
+    {
+      "id": "SER-001",
+      "intent": "consulta_ser_biblioteca",
+      "pregunta": "¿Cómo accedo a la biblioteca?",
+      "respuesta": "La Biblioteca Central de la UNSAAC atiende presencialmente de lunes a sábado y ofrece acceso virtual a recursos como el repositorio institucional, EBSCO, Scopus y la Biblioteca Virtual del Consorcio de Universidades. Necesitas tu usuario institucional.",
+      "fuente": "Biblioteca Central UNSAAC"
+    },
+    {
+      "id": "SER-002",
+      "intent": "consulta_ser_correo_institucional",
+      "pregunta": "¿Cómo obtengo mi correo institucional?",
+      "respuesta": "El correo institucional tiene el formato nombre.apellido@unsaac.edu.pe y se tramita en la Dirección de Tecnologías de la Información (DTI) con tu carné universitario. Da acceso a Google Workspace for Education, Microsoft 365 y las aulas virtuales.",
+      "fuente": "Dirección de Tecnologías de la Información (DTI) UNSAAC"
+    },
+    {
+      "id": "SER-003",
+      "intent": "consulta_ser_certificados_constancias",
+      "pregunta": "¿Dónde pido certificados y constancias?",
+      "respuesta": "Los certificados y constancias los emite la DRAA (Dirección de Registros Académicos y Admisión). El plazo es de 3 a 10 días hábiles según el tipo de documento.",
+      "fuente": "DRAA UNSAAC"
+    },
+    {
+      "id": "SER-004",
+      "intent": "consulta_ser_aula_virtual",
+      "pregunta": "¿Cómo accedo al aula virtual?",
+      "respuesta": "El aula virtual funciona en Moodle (aulavirtual.unsaac.edu.pe). Ingresas desde el portal SERUNSA o directamente en la plataforma Moodle con tu usuario institucional.",
+      "fuente": "Aula Virtual (Moodle) UNSAAC"
+    },
+    {
+      "id": "SER-005",
+      "intent": "consulta_ser_laboratorios_computo",
+      "pregunta": "¿Puedo usar los laboratorios de cómputo de la escuela?",
+      "respuesta": "La EPIIS cuenta con 4 laboratorios de cómputo, con software como Visual Studio, Eclipse, NetBeans, MATLAB y Cisco Packet Tracer. El acceso es para estudiantes matriculados en el horario publicado.",
+      "fuente": "Laboratorios de Cómputo EPIIS"
+    },
+    {
+      "id": "SER-006",
+      "intent": "consulta_ser_carta_presentacion",
+      "pregunta": "¿Cómo pido una carta de presentación (p. ej. para un congreso)?",
+      "respuesta": "",
+      "_pendiente": "No hay información sobre cartas de presentación generales (congresos, concursos). La carta documentada corresponde a Prácticas Pre-Profesionales (ver practicas.json). Confirmar el trámite de cartas generales con la secretaría de la Escuela."
+    },
+    {
+      "id": "SER-007",
+      "intent": "consulta_ser_impresion_campus",
+      "pregunta": "¿Dónde puedo imprimir o sacar copias en el campus?",
+      "respuesta": "",
+      "_pendiente": "No hay datos sobre servicios de impresión o fotocopias en el campus. Verificar con la Escuela o Bienestar antes de responder."
+    },
+    {
+      "id": "SER-008",
+      "intent": "consulta_ser_record_notas",
+      "pregunta": "¿Cómo obtengo mi récord de notas?",
+      "respuesta": "El récord de notas oficial se tramita en la DRAA, con solicitud y pago según el TUPA. Para un reporte no oficial descargable puedes usar el portal SERUNSA.",
+      "fuente": "DRAA / SERUNSA UNSAAC"
+    },
+    {
+      "id": "SER-009",
+      "intent": "consulta_ser_tupa",
+      "pregunta": "¿Qué es el TUPA y dónde lo consulto?",
+      "respuesta": "El TUPA (Texto Único de Procedimientos Administrativos) detalla todos los trámites de la UNSAAC con sus requisitos, plazos y costos. Lo encuentras en el portal web de la UNSAAC, sección Transparencia.",
+      "fuente": "TUPA UNSAAC"
+    },
+    {
+      "id": "SER-010",
+      "intent": "consulta_ser_contacto_secretaria",
+      "pregunta": "¿Cómo contacto a la secretaría de la Escuela?",
+      "respuesta": "",
+      "_pendiente": "No hay datos de contacto ni horario de la secretaría de la Escuela en la fuente. Completar con el correo, teléfono y horario reales de la secretaría de la EPIIS."
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "version": "1.0.0",
+  "descripcion": "Corpus de consultas reales y simuladas de estudiantes y docentes de la EPIIS-UNSAAC. Cada entrada es solo la consulta en lenguaje natural (sin respuestas ni IDs internos). El campo intent_esperado sirve para evaluar al clasificador.",
+  "metodologia": {
+    "fuentes_previstas": [
+      "Encuesta breve a estudiantes de la EPIIS (semestres 1° al 10°)",
+      "Consultas frecuentes registradas en secretaría de la Escuela",
+      "Mensajes de grupos de WhatsApp de la promoción y la Escuela (anonimizados)",
+      "Derivación inicial a partir de trigger_phrases de keywords.json para arrancar el prototipo"
+    ],
+    "registros_lingueisticos": [
+      "formal: estudiante dirigiéndose a un docente o personal administrativo",
+      "informal: estudiante consultando entre pares, en WhatsApp o de forma rápida",
+      "con_errores: incluye typos, falta de tildes, mayúsculas inconsistentes (refleja escritura real en chat)"
+    ],
+    "nota_etica": "Las consultas provenientes de canales reales se transcriben anonimizadas, sin nombres, números ni datos identificables."
+  },
+  "estadisticas": {
+    "total_consultas": 80,
+    "categorias_cubiertas": 10,
+    "consultas_por_categoria_aprox": 8,
+    "origen": {
+      "derivado_trigger_phrases": 80,
+      "encuesta_estudiantes": 0,
+      "whatsapp_promocion": 0,
+      "secretaria_escuela": 0
+    }
+  },
+  "consultas": [
+    {"texto": "¿En qué consiste la tutoría académica?", "intent_esperado": "consulta_tutoria_definicion", "registro": "formal", "origen": "derivado_trigger_phrases"},
+    {"texto": "para que sirve la tutoria", "intent_esperado": "consulta_tutoria_definicion", "registro": "con_errores", "origen": "derivado_trigger_phrases"},
+    {"texto": "oe explicame que es eso de tutoria xfa", "intent_esperado": "consulta_tutoria_definicion", "registro": "informal", "origen": "derivado_trigger_phrases"},
+    {"texto": "¿Cada cuánto tengo que ir a tutoría?", "intent_esperado": "consulta_tutoria_frecuencia", "registro": "informal", "origen": "derivado_trigger_phrases"},
+    {"texto": "cuantas veces al semestre es la tutoria", "intent_esperado": "consulta_tutoria_frecuencia", "registro": "con_errores", "origen": "derivado_trigger_phrases"},
+    {"texto": "¿Quién es mi tutor y cómo lo contacto?", "intent_esperado": "consulta_tutoria_contacto_tutor", "registro": "formal", "origen": "derivado_trigger_phrases"},
+    {"texto": "alguien sabe quien es el tutor de info?", "intent_esperado": "consulta_tutoria_contacto_tutor", "registro": "informal", "origen": "derivado_trigger_phrases"},
+    {"texto": "¿La asistencia a tutoría es obligatoria?", "intent_esperado": "consulta_tutoria_obligatoriedad", "registro": "formal", "origen": "derivado_trigger_phrases"},
+    {"texto": "puedo cambiarme de tutor?", "intent_esperado": "consulta_tutoria_cambio_tutor", "registro": "informal", "origen": "derivado_trigger_phrases"},
+    {"texto": "lo que hablo con mi tutor es privado o le cuenta a la escuela", "intent_esperado": "consulta_tutoria_confidencialidad", "registro": "informal", "origen": "derivado_trigger_phrases"},
+
+    {"texto": "¿Qué tipos de tutoría hay?", "intent_esperado": "consulta_tipos_tutoria_general", "registro": "formal", "origen": "derivado_trigger_phrases"},
+    {"texto": "hay tutoria individual o solo grupal", "intent_esperado": "consulta_tipos_tutoria_individual", "registro": "con_errores", "origen": "derivado_trigger_phrases"},
+    {"texto": "¿La tutoría es presencial o virtual?", "intent_esperado": "consulta_tipos_tutoria_virtual", "registro": "formal", "origen": "derivado_trigger_phrases"},
+    {"texto": "el tutor me puede hacer terapia psicologica?", "intent_esperado": "consulta_tipos_tutoria_vs_psicologia", "registro": "informal", "origen": "derivado_trigger_phrases"},
+    {"texto": "soy ingresante, hay alguien que me oriente?", "intent_esperado": "consulta_tipos_tutoria_ingresantes", "registro": "informal", "origen": "derivado_trigger_phrases"},
+    {"texto": "estoy jalando varios cursos, hay apoyo de tutoria?", "intent_esperado": "consulta_tipos_tutoria_riesgo_academico", "registro": "informal", "origen": "derivado_trigger_phrases"},
+    {"texto": "mi tutor de carrera tambien me asesora la tesis?", "intent_esperado": "consulta_tipos_tutoria_vs_asesoria_tesis", "registro": "con_errores", "origen": "derivado_trigger_phrases"},
+    {"texto": "¿El tutor ayuda con orientación vocacional?", "intent_esperado": "consulta_tipos_tutoria_vocacional", "registro": "formal", "origen": "derivado_trigger_phrases"},
+
+    {"texto": "¿Cuántos semestres dura la carrera?", "intent_esperado": "consulta_cursos_duracion_carrera", "registro": "formal", "origen": "derivado_trigger_phrases"},
+    {"texto": "cuantos años son sistemas en la unsaac", "intent_esperado": "consulta_cursos_duracion_carrera", "registro": "informal", "origen": "derivado_trigger_phrases"},
+    {"texto": "¿Cuántos créditos necesito para graduarme?", "intent_esperado": "consulta_cursos_total_creditos", "registro": "formal", "origen": "derivado_trigger_phrases"},
+    {"texto": "que cursos llevo en primer ciclo", "intent_esperado": "consulta_cursos_primer_semestre", "registro": "informal", "origen": "derivado_trigger_phrases"},
+    {"texto": "puedo adelantar cursos del siguiente semestre?", "intent_esperado": "consulta_cursos_adelanto_semestres", "registro": "informal", "origen": "derivado_trigger_phrases"},
+    {"texto": "que pasa si jalo un curso", "intent_esperado": "consulta_cursos_desaprobacion", "registro": "informal", "origen": "derivado_trigger_phrases"},
+    {"texto": "¿Cuándo empiezo a llevar electivos?", "intent_esperado": "consulta_cursos_electivos", "registro": "formal", "origen": "derivado_trigger_phrases"},
+    {"texto": "donde veo mi horario de clases", "intent_esperado": "consulta_cursos_horario_clases", "registro": "informal", "origen": "derivado_trigger_phrases"},
+    {"texto": "¿Qué es un crédito académico?", "intent_esperado": "consulta_cursos_creditos_definicion", "registro": "formal", "origen": "derivado_trigger_phrases"},
+    {"texto": "como se saca el promedio ponderado", "intent_esperado": "consulta_cursos_promedio_ponderado", "registro": "con_errores", "origen": "derivado_trigger_phrases"},
+
+    {"texto": "¿Qué especialidades ofrece la escuela?", "intent_esperado": "consulta_esp_listado_especialidades", "registro": "formal", "origen": "derivado_trigger_phrases"},
+    {"texto": "en que me puedo especializar en info", "intent_esperado": "consulta_esp_listado_especialidades", "registro": "informal", "origen": "derivado_trigger_phrases"},
+    {"texto": "cuando elijo mi mencion?", "intent_esperado": "consulta_esp_cuando_elegir", "registro": "informal", "origen": "derivado_trigger_phrases"},
+    {"texto": "que cursos lleva ingenieria de software", "intent_esperado": "consulta_esp_cursos_ingenieria_software", "registro": "informal", "origen": "derivado_trigger_phrases"},
+    {"texto": "¿Puedo cambiar de especialidad después?", "intent_esperado": "consulta_esp_cambio_especialidad", "registro": "formal", "origen": "derivado_trigger_phrases"},
+    {"texto": "que cursos hay de redes en la carrera", "intent_esperado": "consulta_esp_cursos_redes_telecom", "registro": "informal", "origen": "derivado_trigger_phrases"},
+    {"texto": "que cursos lleva la linea de IA", "intent_esperado": "consulta_esp_ia_ciencia_datos", "registro": "con_errores", "origen": "derivado_trigger_phrases"},
+    {"texto": "¿Puedo tomar electivos de otras líneas?", "intent_esperado": "consulta_esp_electivos_cruzados", "registro": "formal", "origen": "derivado_trigger_phrases"},
+
+    {"texto": "¿Qué necesito para empezar mis prácticas pre-profesionales?", "intent_esperado": "consulta_ppp_requisitos_inicio", "registro": "formal", "origen": "derivado_trigger_phrases"},
+    {"texto": "desde que ciclo se pueden hacer las ppp", "intent_esperado": "consulta_ppp_requisitos_inicio", "registro": "informal", "origen": "derivado_trigger_phrases"},
+    {"texto": "cuantas horas son las practicas?", "intent_esperado": "consulta_ppp_horas_acumuladas", "registro": "informal", "origen": "derivado_trigger_phrases"},
+    {"texto": "puedo hacer practicas en una empresa sin convenio", "intent_esperado": "consulta_ppp_empresa_convenio", "registro": "con_errores", "origen": "derivado_trigger_phrases"},
+    {"texto": "¿Cómo solicito la carta de presentación?", "intent_esperado": "consulta_ppp_carta_presentacion", "registro": "formal", "origen": "derivado_trigger_phrases"},
+    {"texto": "como entrego el informe final de practicas", "intent_esperado": "consulta_ppp_informe_final", "registro": "informal", "origen": "derivado_trigger_phrases"},
+    {"texto": "¿Me deben pagar por las prácticas?", "intent_esperado": "consulta_ppp_remuneracion", "registro": "formal", "origen": "derivado_trigger_phrases"},
+    {"texto": "puedo hacer practicas en una municipalidad", "intent_esperado": "consulta_ppp_sector_publico", "registro": "informal", "origen": "derivado_trigger_phrases"},
+    {"texto": "ya trabajo, eso me cuenta como practicas?", "intent_esperado": "consulta_ppp_trabajo_actual", "registro": "informal", "origen": "derivado_trigger_phrases"},
+
+    {"texto": "¿Qué servicios ofrece bienestar universitario?", "intent_esperado": "consulta_bie_servicios_generales", "registro": "formal", "origen": "derivado_trigger_phrases"},
+    {"texto": "donde puedo ir si necesito hablar con un psicologo", "intent_esperado": "consulta_bie_atencion_psicologica", "registro": "informal", "origen": "derivado_trigger_phrases"},
+    {"texto": "como saco beca de comedor", "intent_esperado": "consulta_bie_beca_alimentacion", "registro": "informal", "origen": "derivado_trigger_phrases"},
+    {"texto": "hay apoyo economico para los que no tenemos recursos?", "intent_esperado": "consulta_bie_apoyo_economico", "registro": "con_errores", "origen": "derivado_trigger_phrases"},
+    {"texto": "¿Tengo seguro estudiantil?", "intent_esperado": "consulta_bie_seguro_estudiantil", "registro": "formal", "origen": "derivado_trigger_phrases"},
+    {"texto": "como entro a deportes de la uni", "intent_esperado": "consulta_bie_deportes_cultura", "registro": "informal", "origen": "derivado_trigger_phrases"},
+    {"texto": "hay residencia universitaria? soy de provincia", "intent_esperado": "consulta_bie_residencia_universitaria", "registro": "informal", "origen": "derivado_trigger_phrases"},
+    {"texto": "necesito el certificado socioeconomico, donde lo pido", "intent_esperado": "consulta_bie_certificado_socioeconomico", "registro": "informal", "origen": "derivado_trigger_phrases"},
+    {"texto": "se puede comer en el comedor sin beca?", "intent_esperado": "consulta_bie_comedor_acceso", "registro": "informal", "origen": "derivado_trigger_phrases"},
+
+    {"texto": "¿Qué programas de intercambio hay?", "intent_esperado": "consulta_mov_programas_disponibles", "registro": "formal", "origen": "derivado_trigger_phrases"},
+    {"texto": "quiero irme de intercambio que necesito", "intent_esperado": "consulta_mov_requisitos_intercambio", "registro": "informal", "origen": "derivado_trigger_phrases"},
+    {"texto": "se convalidan los cursos que llevo afuera?", "intent_esperado": "consulta_mov_convalidacion_cursos", "registro": "informal", "origen": "derivado_trigger_phrases"},
+    {"texto": "la U paga el pasaje del intercambio?", "intent_esperado": "consulta_mov_apoyo_economico", "registro": "informal", "origen": "derivado_trigger_phrases"},
+    {"texto": "¿Cuándo salen las convocatorias de movilidad?", "intent_esperado": "consulta_mov_convocatorias", "registro": "formal", "origen": "derivado_trigger_phrases"},
+    {"texto": "tengo que saber ingles para intercambio?", "intent_esperado": "consulta_mov_requisito_idioma", "registro": "informal", "origen": "derivado_trigger_phrases"},
+    {"texto": "con que universidades hay convenio", "intent_esperado": "consulta_mov_universidades_convenio", "registro": "informal", "origen": "derivado_trigger_phrases"},
+
+    {"texto": "¿Cuándo es la matrícula?", "intent_esperado": "consulta_mat_fechas_matricula", "registro": "informal", "origen": "derivado_trigger_phrases"},
+    {"texto": "como me matriculo en serunsa", "intent_esperado": "consulta_mat_proceso_serunsa", "registro": "informal", "origen": "derivado_trigger_phrases"},
+    {"texto": "¿Qué requisitos pide la matrícula?", "intent_esperado": "consulta_mat_requisitos", "registro": "formal", "origen": "derivado_trigger_phrases"},
+    {"texto": "y si me matriculo tarde que pasa", "intent_esperado": "consulta_mat_fuera_de_plazo", "registro": "informal", "origen": "derivado_trigger_phrases"},
+    {"texto": "cuantos cursos maximo puedo llevar por semestre", "intent_esperado": "consulta_mat_creditos_maximo", "registro": "informal", "origen": "derivado_trigger_phrases"},
+    {"texto": "puedo retirarme de un curso una vez matriculado?", "intent_esperado": "consulta_mat_retiro_curso", "registro": "con_errores", "origen": "derivado_trigger_phrases"},
+    {"texto": "que es la matricula condicional", "intent_esperado": "consulta_mat_condicional", "registro": "con_errores", "origen": "derivado_trigger_phrases"},
+    {"texto": "¿Cuánto cuesta matricularse?", "intent_esperado": "consulta_mat_costo", "registro": "formal", "origen": "derivado_trigger_phrases"},
+
+    {"texto": "¿Cuáles son las modalidades de titulación?", "intent_esperado": "consulta_tit_modalidades", "registro": "formal", "origen": "derivado_trigger_phrases"},
+    {"texto": "como me titulo", "intent_esperado": "consulta_tit_modalidades", "registro": "informal", "origen": "derivado_trigger_phrases"},
+    {"texto": "que necesito para titularme", "intent_esperado": "consulta_tit_requisitos_inicio", "registro": "informal", "origen": "derivado_trigger_phrases"},
+    {"texto": "¿Cómo obtengo el grado de bachiller?", "intent_esperado": "consulta_tit_grado_bachiller", "registro": "formal", "origen": "derivado_trigger_phrases"},
+    {"texto": "cuanto tiempo tengo para titularme despues de egresar", "intent_esperado": "consulta_tit_plazo_titulacion", "registro": "con_errores", "origen": "derivado_trigger_phrases"},
+    {"texto": "en que consiste titulacion por suficiencia profesional", "intent_esperado": "consulta_tit_suficiencia_profesional", "registro": "con_errores", "origen": "derivado_trigger_phrases"},
+    {"texto": "si jalo la sustentacion que sigue", "intent_esperado": "consulta_tit_desaprobacion_sustentacion", "registro": "informal", "origen": "derivado_trigger_phrases"},
+    {"texto": "mi titulo queda registrado en sunedu?", "intent_esperado": "consulta_tit_registro_sunedu", "registro": "informal", "origen": "derivado_trigger_phrases"},
+
+    {"texto": "¿Cómo accedo a la biblioteca virtual?", "intent_esperado": "consulta_ser_biblioteca", "registro": "formal", "origen": "derivado_trigger_phrases"},
+    {"texto": "como saco mi correo institucional", "intent_esperado": "consulta_ser_correo_institucional", "registro": "informal", "origen": "derivado_trigger_phrases"},
+    {"texto": "donde pido una constancia de estudios", "intent_esperado": "consulta_ser_certificados_constancias", "registro": "informal", "origen": "derivado_trigger_phrases"},
+    {"texto": "no puedo entrar al aula virtual", "intent_esperado": "consulta_ser_aula_virtual", "registro": "informal", "origen": "derivado_trigger_phrases"},
+    {"texto": "¿Puedo usar los laboratorios de cómputo?", "intent_esperado": "consulta_ser_laboratorios_computo", "registro": "formal", "origen": "derivado_trigger_phrases"},
+    {"texto": "como saco mi record de notas oficial", "intent_esperado": "consulta_ser_record_notas", "registro": "con_errores", "origen": "derivado_trigger_phrases"},
+    {"texto": "¿Qué es el TUPA?", "intent_esperado": "consulta_ser_tupa", "registro": "formal", "origen": "derivado_trigger_phrases"}
+  ]
+}

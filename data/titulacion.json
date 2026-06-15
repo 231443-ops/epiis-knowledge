@@ -1,0 +1,96 @@
+{
+  "version": "0.1.0",
+  "categoria_id": "TIT",
+  "nombre": "Titulación",
+  "estado": "en_construccion",
+  "fuentes_normativas": [
+    "Reglamento de Grados y Títulos UNSAAC (pendiente de incorporación)",
+    "Ley Universitaria N° 30220",
+    "SUNEDU - Registro Nacional de Grados y Títulos"
+  ],
+  "_nota_modulo": "Este módulo está en construcción. Las respuestas orientan al usuario a las fuentes oficiales mientras se incorpora el Reglamento de Grados y Títulos UNSAAC. Cada qa_entry tiene un campo _pendiente con la información concreta a completar.",
+  "contenido": {
+    "canales_oficiales": [
+      "Dirección de la Escuela Profesional de Ingeniería Informática y de Sistemas",
+      "Dirección de Registros Académicos y Admisión (DRAA)",
+      "Vicerrectorado Académico UNSAAC",
+      "SUNEDU — registro nacional de grados y títulos"
+    ]
+  },
+  "qa_entries": [
+    {
+      "id": "TIT-001",
+      "intent": "consulta_tit_modalidades",
+      "pregunta": "¿Cuáles son las modalidades de titulación?",
+      "respuesta": "La Ley Universitaria N° 30220 contempla, entre otras, la tesis y el trabajo de suficiencia profesional como modalidades para obtener el título profesional. Las modalidades específicas aceptadas en la UNSAAC y sus requisitos están en el Reglamento de Grados y Títulos, que aún no tengo cargado. Te recomiendo consultar en la secretaría de la Escuela.",
+      "fuente": "Ley Universitaria N° 30220",
+      "_pendiente": "Cargar el listado oficial de modalidades vigentes en la UNSAAC (tesis, suficiencia profesional, otras) desde el Reglamento de Grados y Títulos."
+    },
+    {
+      "id": "TIT-002",
+      "intent": "consulta_tit_requisitos_inicio",
+      "pregunta": "¿Qué requisitos necesito para iniciar el trámite de titulación?",
+      "respuesta": "Sé con certeza que necesitas tener el grado de bachiller y haber aprobado las Prácticas Pre-Profesionales (el certificado de prácticas se adjunta al expediente de titulación). Los demás requisitos completos están en el Reglamento de Grados y Títulos UNSAAC, que aún no tengo cargado.",
+      "fuente": "Reglamento de Prácticas Pre-Profesionales UNSAAC",
+      "_pendiente": "Cargar la lista completa de requisitos del expediente de titulación desde el Reglamento de Grados y Títulos."
+    },
+    {
+      "id": "TIT-003",
+      "intent": "consulta_tit_grado_bachiller",
+      "pregunta": "¿Cómo obtengo el grado de bachiller?",
+      "respuesta": "Según la Ley Universitaria N° 30220, el grado de bachiller requiere haber aprobado los estudios de pregrado (los 220 créditos del plan curricular 2024, en tu caso) y cumplir los requisitos adicionales que establezca la universidad. Los detalles del trámite están en el Reglamento de Grados y Títulos UNSAAC, que aún no tengo cargado.",
+      "fuente": "Ley Universitaria N° 30220",
+      "_pendiente": "Cargar el procedimiento específico (idioma extranjero, trabajo de investigación, plazos) desde el Reglamento UNSAAC."
+    },
+    {
+      "id": "TIT-004",
+      "intent": "consulta_tit_plazo_titulacion",
+      "pregunta": "¿Cuánto tiempo tengo para titularme después de egresar?",
+      "respuesta": "Aún no tengo cargada esta información en mi base de conocimiento. Te recomiendo consultarla en la secretaría de la Escuela o en la DRAA, donde se aplica el Reglamento de Grados y Títulos UNSAAC.",
+      "_pendiente": "Cargar plazos máximos y consecuencias de vencerlos desde el Reglamento."
+    },
+    {
+      "id": "TIT-005",
+      "intent": "consulta_tit_suficiencia_profesional",
+      "pregunta": "¿En qué consiste la titulación por suficiencia profesional?",
+      "respuesta": "La suficiencia profesional es una de las modalidades reconocidas por la Ley Universitaria N° 30220, en la que el egresado demuestra dominio de la profesión mediante experiencia laboral y una evaluación. Los requisitos específicos y el procedimiento en la UNSAAC están en el Reglamento de Grados y Títulos, que aún no tengo cargado.",
+      "fuente": "Ley Universitaria N° 30220",
+      "_pendiente": "Cargar los años de experiencia exigidos, el tipo de evaluación y el procedimiento concreto desde el Reglamento."
+    },
+    {
+      "id": "TIT-006",
+      "intent": "consulta_tit_eleccion_asesor",
+      "pregunta": "¿Cómo elijo a mi asesor de tesis?",
+      "respuesta": "Aún no tengo cargada esta información en mi base de conocimiento. Te recomiendo consultarla en la secretaría de la Escuela, donde se aplica el Reglamento de Grados y Títulos UNSAAC.",
+      "_pendiente": "Cargar el procedimiento de designación de asesor (solicitud, aprobación, cambio) desde el Reglamento."
+    },
+    {
+      "id": "TIT-007",
+      "intent": "consulta_tit_duracion_proceso",
+      "pregunta": "¿Cuánto dura el proceso de titulación?",
+      "respuesta": "Aún no tengo cargada esta información en mi base de conocimiento. El plazo depende de la modalidad elegida y de los tiempos del jurado y trámites administrativos; se detalla en el Reglamento de Grados y Títulos UNSAAC.",
+      "_pendiente": "Cargar duración estimada por modalidad desde el Reglamento."
+    },
+    {
+      "id": "TIT-008",
+      "intent": "consulta_tit_jurado_sustentacion",
+      "pregunta": "¿Quién conforma el jurado de sustentación?",
+      "respuesta": "Aún no tengo cargada esta información en mi base de conocimiento. La composición del jurado está definida en el Reglamento de Grados y Títulos UNSAAC; te recomiendo consultarla en la secretaría de la Escuela.",
+      "_pendiente": "Cargar composición del jurado (número, perfil docente, presidente) desde el Reglamento."
+    },
+    {
+      "id": "TIT-009",
+      "intent": "consulta_tit_desaprobacion_sustentacion",
+      "pregunta": "¿Qué pasa si desapruebo la sustentación?",
+      "respuesta": "Aún no tengo cargada esta información en mi base de conocimiento. Generalmente existe la posibilidad de una nueva sustentación bajo condiciones específicas, definidas en el Reglamento de Grados y Títulos UNSAAC.",
+      "_pendiente": "Cargar el procedimiento de segunda sustentación (plazos, condiciones, número máximo de intentos) desde el Reglamento."
+    },
+    {
+      "id": "TIT-010",
+      "intent": "consulta_tit_registro_sunedu",
+      "pregunta": "¿Mi título queda registrado en SUNEDU?",
+      "respuesta": "Sí. Todos los grados académicos y títulos profesionales otorgados por universidades peruanas se inscriben en el Registro Nacional de Grados y Títulos administrado por la SUNEDU, conforme a la Ley Universitaria N° 30220. La UNSAAC tramita ese registro como parte del proceso de titulación.",
+      "fuente": "Ley Universitaria N° 30220 / SUNEDU"
+    }
+  ]
+}

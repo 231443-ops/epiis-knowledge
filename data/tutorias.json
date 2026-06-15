@@ -1,0 +1,251 @@
+{
+  "version": "1.0.0",
+  "categoria_id": "TUT",
+  "nombre": "Proceso de Tutorías",
+  "fuentes_normativas": [
+    "Reglamento de Tutoría Académica UNSAAC — Res. N° CU-0220-2017-UNSAAC (24/05/2017)",
+    "Ley Universitaria N° 30220, Art. 87.5",
+    "Estatuto UNSAAC, Art. 195.5"
+  ],
+  "contenido": {
+    "definicion": {
+      "art": "Art. 3°",
+      "texto": "La Tutoría Académica es un proceso permanente de acompañamiento durante la formación de los estudiantes, que se concreta mediante la atención personalizada o grupal por parte de docentes, orientándolos y proporcionándoles seguimiento en los aspectos psicosociales, cognitivos y afectivos del aprendizaje."
+    },
+    "fines": {
+      "art": "Art. 4°",
+      "descripcion": "Constituirse como medio para hacer auténticos los fines de la Ley Universitaria, asegurar la excelencia integral y sostenible en la formación profesional.",
+      "nota_especial": "Es obligatorio asignar un tutor al estudiante con matrícula condicionada."
+    },
+    "sujetos": {
+      "art": "Art. 6°",
+      "tutor": "Docente universitario con régimen de tiempo completo o dedicación exclusiva, acreditado para promover la formación integral.",
+      "tutorado": "El estudiante universitario."
+    },
+    "dimensiones": {
+      "art": "Art. 7°",
+      "academica": [
+        "Conocer las exigencias de las diversas opciones académicas",
+        "Aprender habilidades de estudio eficaces",
+        "Fomentar habilidades de pensamiento crítico",
+        "Identificar los estilos de aprendizaje individuales",
+        "Promover habilidades de toma de decisiones"
+      ],
+      "personal": [
+        "Fomentar el conocimiento y aceptación de sí mismo",
+        "Desarrollar el sentido de la responsabilidad personal",
+        "Promover habilidades interpersonales y de comunicación",
+        "Promover el trabajo en grupo",
+        "Fomentar la comprensión y el respeto hacia los demás"
+      ],
+      "profesional": [
+        "Conocer características, intereses, aptitudes y habilidades propias",
+        "Fomentar el conocimiento del mundo del trabajo",
+        "Comprender la relación entre rendimiento académico y elecciones de futuro",
+        "Desarrollar actitud positiva hacia el mundo del trabajo",
+        "Examinar la influencia de los cambios en el mundo del trabajo"
+      ]
+    },
+    "estructura_tutorial": {
+      "art": "Art. 8°",
+      "comite_tutorial": {
+        "integrantes": ["Decano", "Director de Escuela Profesional", "Docente elegido por Consejo de Facultad"],
+        "funciones_art": "Art. 9°"
+      },
+      "tutores": "Conjunto de docentes de la Escuela Profesional adscritos al departamento académico."
+    },
+    "periodicidad": {
+      "art": "Art. 12°",
+      "modalidades": "Entrevistas programadas, comentarios de trabajos u otras actividades.",
+      "momentos_clave_semestre": [
+        "Al comienzo del curso académico",
+        "Después de la primera evaluación parcial",
+        "Una semana antes de la finalización del semestre"
+      ],
+      "sesiones_adicionales": "El tutor valorará más reuniones según necesidades; el estudiante puede solicitarlas."
+    },
+    "funciones_tutor": {
+      "art": "Art. 13°",
+      "principales": [
+        "Recibir información de docentes sobre sus tutorados (13.1)",
+        "Contactar a estudiantes con inasistencias frecuentes (13.2)",
+        "Comunicar aspectos relevantes al Comité Tutorial (13.3)",
+        "Orientar individualmente en procesos de aprendizaje (13.6)",
+        "Mantener registro de visitas, reuniones y seguimiento (13.7)",
+        "Derivar al estudiante a servicios especializados cuando sea necesario (13.9)"
+      ],
+      "atencion_especial": {
+        "ingresantes": "Art. 13.5 - especial atención en el primer semestre de Estudios Generales",
+        "egresantes": "Art. 13.6 - preparación ante la futura salida a la vida profesional",
+        "discapacidad": "Art. 13.6 - atiende especificidades de estudiantes con discapacidad"
+      }
+    },
+    "asignacion_tutores": {
+      "art": "Art. 14°",
+      "desde": "Primer semestre de estudios",
+      "hasta": "Culminación del plan curricular",
+      "maximo_tutorados": 25,
+      "cambio_tutor": "El estudiante puede solicitar cambio razonadamente al Comité Tutorial; resuelve el Vicerrectorado Académico en última instancia."
+    },
+    "confidencialidad": {
+      "art": "Art. 15°",
+      "deber": "Los tutores tienen deber de confidencialidad sobre la información de los estudiantes.",
+      "excepcion": "En casos graves, puede informar a padres/representantes legales solo en circunstancias excepcionales (Art. 13.8).",
+      "normativa": "Respeta la normativa de Protección de Datos de Carácter Personal."
+    },
+    "evaluacion_programa": {
+      "art": "Art. 16°",
+      "frecuencia": "Al finalizar el año académico",
+      "indicadores": [
+        "Cantidad y calidad de profesores participantes",
+        "Cantidad de estudiantes participantes",
+        "Cumplimiento de objetivos",
+        "Tasa de deserción y permanencia",
+        "Nivel de satisfacción de estudiantes y docentes"
+      ],
+      "reporte": "El Comité Tutorial informa al Vicerrectorado Académico."
+    }
+  },
+  "qa_entries": [
+    {
+      "id": "TUT-001",
+      "intent": "consulta_tutoria_definicion",
+      "pregunta": "¿Qué es la tutoría académica en la UNSAAC?",
+      "respuesta": "La Tutoría Académica es un proceso permanente de acompañamiento durante tu formación, que se concreta mediante atención personalizada o grupal de un docente, orientándote en los aspectos psicosociales, cognitivos y afectivos del aprendizaje.",
+      "fuente": "Art. 3°"
+    },
+    {
+      "id": "TUT-002",
+      "intent": "consulta_tutoria_frecuencia",
+      "pregunta": "¿Con qué frecuencia debo ir a tutoría?",
+      "respuesta": "Durante el semestre hay al menos tres momentos clave de tutoría: al inicio del curso, después de la primera evaluación parcial y una semana antes de finalizar el semestre. El tutor puede programar reuniones adicionales según las necesidades, y tú también puedes solicitarlas.",
+      "fuente": "Art. 12°"
+    },
+    {
+      "id": "TUT-003",
+      "intent": "consulta_tutoria_contacto_tutor",
+      "pregunta": "¿Cómo sé quién es mi tutor y cómo lo contacto?",
+      "respuesta": "El Comité Tutorial de tu Escuela asigna un tutor a cada estudiante desde el primer semestre. Puedes consultar quién es tu tutor en el portal SERUNSA, en la sección Historial de tutoría, o en la secretaría de la Escuela Profesional.",
+      "fuente": "Art. 8°, Art. 14°"
+    },
+    {
+      "id": "TUT-004",
+      "intent": "consulta_tutoria_temas",
+      "pregunta": "¿Sobre qué temas se habla en la tutoría?",
+      "respuesta": "La tutoría aborda tres dimensiones: la académica (hábitos de estudio, pensamiento crítico, toma de decisiones), la personal (autoconocimiento, responsabilidad, comunicación) y la profesional (intereses, aptitudes y relación con el mundo laboral).",
+      "fuente": "Art. 7°"
+    },
+    {
+      "id": "TUT-005",
+      "intent": "consulta_tutoria_obligatoriedad",
+      "pregunta": "¿La asistencia a tutoría es obligatoria?",
+      "respuesta": "Sí. El Comité Tutorial determina la frecuencia mínima obligatoria de entrevistas (Art. 12.2). Para estudiantes con matrícula condicionada, la asignación de tutor es mandatoria (Art. 4°).",
+      "fuente": "Art. 12.2, Art. 4°"
+    },
+    {
+      "id": "TUT-006",
+      "intent": "consulta_tutoria_registro_asistencia",
+      "pregunta": "¿Cómo se registra mi asistencia a las tutorías?",
+      "respuesta": "El tutor mantiene un registro de las visitas, reuniones y seguimiento de cada tutorado, que sirve para informar al Comité Tutorial sobre tu avance.",
+      "fuente": "Art. 13.7"
+    },
+    {
+      "id": "TUT-007",
+      "intent": "consulta_tutoria_cambio_tutor",
+      "pregunta": "¿Puedo cambiar de tutor?",
+      "respuesta": "Sí. Puedes solicitar el cambio de tutor de forma razonada ante el Comité Tutorial; en última instancia, resuelve el Vicerrectorado Académico.",
+      "fuente": "Art. 14°"
+    },
+    {
+      "id": "TUT-008",
+      "intent": "consulta_tutoria_reglamento",
+      "pregunta": "¿Existe un reglamento de tutorías y dónde lo consulto?",
+      "respuesta": "Sí. Las tutorías se rigen por el Reglamento de Tutoría Académica de la UNSAAC, aprobado por Resolución N° CU-0220-2017-UNSAAC, en el marco de la Ley Universitaria N° 30220 (Art. 87.5) y el Estatuto UNSAAC (Art. 195.5).",
+      "fuente": "Res. N° CU-0220-2017-UNSAAC"
+    },
+    {
+      "id": "TUT-009",
+      "intent": "consulta_tutoria_materiales_sesion",
+      "pregunta": "¿Qué debo llevar o preparar para una sesión de tutoría?",
+      "respuesta": "",
+      "_pendiente": "El reglamento CU-0220-2017 no especifica qué materiales llevar a la sesión. Verificar la práctica con la Escuela o redactar como recomendación (p. ej. historial de notas) antes de publicar."
+    },
+    {
+      "id": "TUT-010",
+      "intent": "consulta_tutoria_confidencialidad",
+      "pregunta": "¿Las sesiones de tutoría son confidenciales?",
+      "respuesta": "Sí. El tutor tiene deber de confidencialidad sobre tu información (Art. 15°). Solo en circunstancias graves y excepcionales puede informar a tus padres o representantes, respetando la normativa de Protección de Datos Personales (Art. 13.8).",
+      "fuente": "Art. 15°, Art. 13.8"
+    },
+    {
+      "id": "TTUT-001",
+      "intent": "consulta_tipos_tutoria_general",
+      "pregunta": "¿Qué tipos de tutoría existen?",
+      "respuesta": "El reglamento contempla dos formas principales de atención tutorial: la personalizada (individual) y la grupal, según las necesidades del estudiante.",
+      "fuente": "Art. 3°"
+    },
+    {
+      "id": "TTUT-002",
+      "intent": "consulta_tipos_tutoria_individual",
+      "pregunta": "¿Qué es la tutoría individual?",
+      "respuesta": "La tutoría individual es la atención personalizada, uno a uno, entre el tutor y el estudiante, orientada a su proceso de aprendizaje y a sus necesidades específicas.",
+      "fuente": "Art. 3°, Art. 13.6"
+    },
+    {
+      "id": "TTUT-003",
+      "intent": "consulta_tipos_tutoria_grupal",
+      "pregunta": "¿Cómo funciona la tutoría grupal?",
+      "respuesta": "La tutoría grupal es la atención que el tutor brinda a un conjunto de tutorados a la vez; el reglamento la reconoce junto con la atención personalizada.",
+      "fuente": "Art. 3°"
+    },
+    {
+      "id": "TTUT-004",
+      "intent": "consulta_tipos_tutoria_pares",
+      "pregunta": "¿Existe la tutoría entre pares (entre compañeros)?",
+      "respuesta": "",
+      "_pendiente": "El reglamento CU-0220-2017 no contempla explícitamente la tutoría entre pares. Verificar si la Escuela la ofrece como práctica antes de responder."
+    },
+    {
+      "id": "TTUT-005",
+      "intent": "consulta_tipos_tutoria_virtual",
+      "pregunta": "¿Hay tutoría virtual o solo presencial?",
+      "respuesta": "",
+      "_pendiente": "El Art. 12° menciona entrevistas programadas y otras actividades, pero no detalla la modalidad virtual. Confirmar con la Escuela si se admiten sesiones por videoconferencia."
+    },
+    {
+      "id": "TTUT-006",
+      "intent": "consulta_tipos_tutoria_vs_psicologia",
+      "pregunta": "¿La tutoría incluye apoyo psicológico?",
+      "respuesta": "La tutoría no reemplaza la atención psicológica profesional. Cuando el tutor lo considera necesario, deriva al estudiante a servicios especializados, como la Orientación Psicológica de Bienestar Universitario.",
+      "fuente": "Art. 13.9"
+    },
+    {
+      "id": "TTUT-007",
+      "intent": "consulta_tipos_tutoria_ingresantes",
+      "pregunta": "¿Hay tutoría especial para ingresantes?",
+      "respuesta": "Sí. El tutor presta especial atención a los estudiantes ingresantes, sobre todo durante el primer semestre de Estudios Generales, para apoyar su adaptación a la vida universitaria.",
+      "fuente": "Art. 13.5"
+    },
+    {
+      "id": "TTUT-008",
+      "intent": "consulta_tipos_tutoria_riesgo_academico",
+      "pregunta": "¿Hay tutoría especial si estoy en riesgo académico?",
+      "respuesta": "Sí. La asignación de tutor es obligatoria para los estudiantes con matrícula condicionada, justamente para acompañarlos en la mejora de su rendimiento.",
+      "fuente": "Art. 4°"
+    },
+    {
+      "id": "TTUT-009",
+      "intent": "consulta_tipos_tutoria_vs_asesoria_tesis",
+      "pregunta": "¿Mi tutor es el mismo que mi asesor de tesis?",
+      "respuesta": "",
+      "_pendiente": "El reglamento de tutoría no regula la asesoría de tesis, que pertenece al proceso de titulación. Verificar para diferenciar claramente ambos roles antes de responder."
+    },
+    {
+      "id": "TTUT-010",
+      "intent": "consulta_tipos_tutoria_vocacional",
+      "pregunta": "¿El tutor me ayuda con la orientación vocacional y profesional?",
+      "respuesta": "Sí. Dentro de su dimensión profesional, la tutoría te ayuda a conocer tus intereses, aptitudes y habilidades, y a relacionar tu rendimiento académico con tus decisiones de futuro profesional.",
+      "fuente": "Art. 7°"
+    }
+  ]
+}

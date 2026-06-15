@@ -1,99 +1,179 @@
 {
-  "plan_estudios_resumen": {
-    "plan_curricular": "2024",
-    "vigencia_desde": "Año Académico 2025",
-    "totales": {
-      "cursos": 59,
-      "creditos": 220,
-      "semestres": 10,
-      "creditos_por_semestre_promedio": 22
-    },
-    "areas_curriculares": [
-      {
-        "codigo": "EG",
-        "nombre": "Estudios Generales",
-        "numero_cursos": 10,
-        "creditos": 37,
-        "porcentaje_cursos": 17,
-        "porcentaje_creditos": 17,
-        "descripcion": "Orientada a desarrollar integralmente al estudiante universitario en las dimensiones de desarrollo personal y social, desarrollo académico profesional y desarrollo de una cultura investigadora.",
-        "dimensiones": [
-          "Desarrollo personal y social: actuación ética, autorrealización, capacidad crítica y autocrítica, apreciación de la diversidad y multiculturalidad.",
-          "Desarrollo académico profesional: análisis y síntesis, organización, planificación, resolución de problemas, toma de decisiones, comunicación académica.",
-          "Desarrollo de una cultura investigadora: indagación, creatividad, trabajo autónomo en procesos de investigación."
-        ]
+  "version": "1.0.0",
+  "categoria_id": "ESP",
+  "nombre": "Especialidades y Áreas de la Carrera",
+  "fuentes_normativas": [
+    "Plan Curricular 2024 - EPIIS UNSAAC (vigente desde año académico 2025)"
+  ],
+  "contenido": {
+    "plan_estudios_resumen": {
+      "plan_curricular": "2024",
+      "vigencia_desde": "Año Académico 2025",
+      "totales": {
+        "cursos": 59,
+        "creditos": 220,
+        "semestres": 10,
+        "creditos_por_semestre_promedio": 22
       },
-      {
-        "codigo": "EE",
-        "nombre": "Estudios Específicos",
-        "numero_cursos": 25,
-        "creditos": 94,
-        "porcentaje_cursos": 42,
-        "porcentaje_creditos": 43,
-        "descripcion": "Conformada por disciplinas fundamentales para la escuela profesional. Promueve la formación que dota de identidad a la profesión, con conocimientos teóricos y metodológicos de campo disciplinario y práctico.",
-        "rasgos_perfil": {
-          "conocer": "Paradigmas de programación, modelos de datos, metodologías de desarrollo de software, normas y estándares de calidad, tecnologías de internet, tipos de redes, protocolos y esquemas de seguridad, dispositivos lógicos programables.",
-          "saber": "Diseñar algoritmos eficientes, bases de datos, procesos de consulta, proyectos de sistemas computacionales. Seleccionar paradigmas de programación, metodologías de desarrollo. Integrar tecnologías de internet. Desarrollar aplicaciones cliente-servidor distribuidas. Asegurar calidad de sistemas de información.",
-          "saber_ser_convivir": "Aprender de manera autónoma, responsabilidad ética, trabajo en equipo inter y multidisciplinario, crítico, reflexivo, emprendedor e innovador, conciencia social, responsabilidad ecológica."
-        }
-      },
-      {
-        "codigo": "EESP",
-        "nombre": "Estudios de Especialidad",
-        "numero_cursos": 20,
-        "creditos": 75,
-        "porcentaje_cursos": 34,
-        "porcentaje_creditos": 34,
-        "descripcion": "Dirigida a la profundización de una disciplina determinada, ofrece competencias profesionales para la redefinición de la formación en el marco de las transformaciones de calificaciones profesionales y mercados de trabajo.",
-        "subcategorias": {
-          "obligatorios": {
-            "numero_cursos": 13,
-            "creditos": 50
-          },
-          "electivos": {
-            "numero_cursos": "23 disponibles (el estudiante elige según créditos requeridos)",
-            "creditos_disponibles": 81,
-            "creditos_a_completar_aprox": 25
+      "areas_curriculares": [
+        {
+          "codigo": "EG",
+          "nombre": "Estudios Generales",
+          "numero_cursos": 10,
+          "creditos": 37,
+          "porcentaje_cursos": 17,
+          "porcentaje_creditos": 17,
+          "descripcion": "Orientada a desarrollar integralmente al estudiante universitario en las dimensiones de desarrollo personal y social, desarrollo académico profesional y desarrollo de una cultura investigadora.",
+          "dimensiones": [
+            "Desarrollo personal y social: actuación ética, autorrealización, capacidad crítica y autocrítica, apreciación de la diversidad y multiculturalidad.",
+            "Desarrollo académico profesional: análisis y síntesis, organización, planificación, resolución de problemas, toma de decisiones, comunicación académica.",
+            "Desarrollo de una cultura investigadora: indagación, creatividad, trabajo autónomo en procesos de investigación."
+          ]
+        },
+        {
+          "codigo": "EE",
+          "nombre": "Estudios Específicos",
+          "numero_cursos": 25,
+          "creditos": 94,
+          "porcentaje_cursos": 42,
+          "porcentaje_creditos": 43,
+          "descripcion": "Conformada por disciplinas fundamentales para la escuela profesional. Promueve la formación que dota de identidad a la profesión, con conocimientos teóricos y metodológicos de campo disciplinario y práctico.",
+          "rasgos_perfil": {
+            "conocer": "Paradigmas de programación, modelos de datos, metodologías de desarrollo de software, normas y estándares de calidad, tecnologías de internet, tipos de redes, protocolos y esquemas de seguridad, dispositivos lógicos programables.",
+            "saber": "Diseñar algoritmos eficientes, bases de datos, procesos de consulta, proyectos de sistemas computacionales. Seleccionar paradigmas de programación, metodologías de desarrollo. Integrar tecnologías de internet. Desarrollar aplicaciones cliente-servidor distribuidas. Asegurar calidad de sistemas de información.",
+            "saber_ser_convivir": "Aprender de manera autónoma, responsabilidad ética, trabajo en equipo inter y multidisciplinario, crítico, reflexivo, emprendedor e innovador, conciencia social, responsabilidad ecológica."
           }
+        },
+        {
+          "codigo": "EESP",
+          "nombre": "Estudios de Especialidad",
+          "numero_cursos": 20,
+          "creditos": 75,
+          "porcentaje_cursos": 34,
+          "porcentaje_creditos": 34,
+          "descripcion": "Dirigida a la profundización de una disciplina determinada, ofrece competencias profesionales para la redefinición de la formación en el marco de las transformaciones de calificaciones profesionales y mercados de trabajo.",
+          "subcategorias": {
+            "obligatorios": {
+              "numero_cursos": 13,
+              "creditos": 50
+            },
+            "electivos": {
+              "numero_cursos": "23 disponibles (el estudiante elige según créditos requeridos)",
+              "creditos_disponibles": 81,
+              "creditos_a_completar_aprox": 25
+            }
+          }
+        },
+        {
+          "codigo": "AE",
+          "nombre": "Actividades Extracurriculares",
+          "numero_cursos": 3,
+          "creditos": 6,
+          "porcentaje_cursos": 5,
+          "porcentaje_creditos": 3,
+          "descripcion": "Actividades del ámbito cultural, deportivo, artístico o académico que complementan las actividades curriculares en pos de la formación integral de los estudiantes (definición SINEACE).",
+          "nota": "El plan contempla 4 cursos extracurriculares disponibles (Deporte, Proyección Social, Debate, Actividades), pero solo 3 son obligatorios para sumar los 6 créditos del área."
+        },
+        {
+          "codigo": "PPP",
+          "nombre": "Prácticas Pre Profesionales",
+          "numero_cursos": 1,
+          "creditos": 8,
+          "porcentaje_cursos": 2,
+          "porcentaje_creditos": 4,
+          "descripcion": "Orientada a coadyuvar al desarrollo de las competencias de formación académica-profesional mediante la aplicación de conocimientos, habilidades, actitudes y valores en una situación real de trabajo en una institución de gestión pública o privada.",
+          "requisito_creditos": 180
         }
+      ],
+      "categorias_seminario": {
+        "nombre": "Seminario de Investigación",
+        "numero_cursos": 2,
+        "creditos": 7,
+        "cursos": ["IFI29 - Seminario de Investigación", "IFI33 - Trabajo de Investigación"],
+        "nota": "Estos cursos están contabilizados dentro de los Estudios de Especialidad."
       },
-      {
-        "codigo": "AE",
-        "nombre": "Actividades Extracurriculares",
-        "numero_cursos": 3,
-        "creditos": 6,
-        "porcentaje_cursos": 5,
-        "porcentaje_creditos": 3,
-        "descripcion": "Actividades del ámbito cultural, deportivo, artístico o académico que complementan las actividades curriculares en pos de la formación integral de los estudiantes (definición SINEACE).",
-        "nota": "El plan contempla 4 cursos extracurriculares disponibles (Deporte, Proyección Social, Debate, Actividades), pero solo 3 son obligatorios para sumar los 6 créditos del área."
-      },
-      {
-        "codigo": "PPP",
-        "nombre": "Prácticas Pre Profesionales",
-        "numero_cursos": 1,
-        "creditos": 8,
-        "porcentaje_cursos": 2,
-        "porcentaje_creditos": 4,
-        "descripcion": "Orientada a coadyuvar al desarrollo de las competencias de formación académica-profesional mediante la aplicación de conocimientos, habilidades, actitudes y valores en una situación real de trabajo en una institución de gestión pública o privada.",
-        "requisito_creditos": 180
-      }
-    ],
-    "categorias_seminario": {
-      "nombre": "Seminario de Investigación",
-      "numero_cursos": 2,
-      "creditos": 7,
-      "cursos": ["IFI29 - Seminario de Investigación", "IFI33 - Trabajo de Investigación"],
-      "nota": "Estos cursos están contabilizados dentro de los Estudios de Especialidad."
+      "lineas_areas_de_la_carrera": [
+        "Estudios Generales",
+        "Ciencias de la Computación",
+        "Gestión",
+        "Investigación",
+        "Ingeniería de Software",
+        "Ingeniería Computacional",
+        "Inteligencia Artificial",
+        "Electivos de Especialidad"
+      ]
+    }
+  },
+  "qa_entries": [
+    {
+      "id": "ESP-001",
+      "intent": "consulta_esp_listado_especialidades",
+      "pregunta": "¿Qué especialidades o líneas ofrece la EPIIS?",
+      "respuesta": "El plan curricular 2024 organiza la carrera en líneas/áreas: Estudios Generales, Ciencias de la Computación, Gestión, Investigación, Ingeniería de Software, Ingeniería Computacional, Inteligencia Artificial y Electivos de Especialidad. El área de Estudios de Especialidad concentra 75 créditos (34% del plan), de los cuales 50 son cursos obligatorios y unos 25 se completan con electivos.",
+      "fuente": "Plan Curricular 2024 EPIIS"
     },
-    "lineas_areas_de_la_carrera": [
-      "Estudios Generales",
-      "Ciencias de la Computación",
-      "Gestión",
-      "Investigación",
-      "Ingeniería de Software",
-      "Ingeniería Computacional",
-      "Inteligencia Artificial",
-      "Electivos de Especialidad"
-    ]
-  }
+    {
+      "id": "ESP-002",
+      "intent": "consulta_esp_cuando_elegir",
+      "pregunta": "¿Cuándo elijo mi especialidad?",
+      "respuesta": "",
+      "_pendiente": "El plan curricular 2024 no documenta un mecanismo formal de 'elección de especialidad' como track. Los Estudios de Especialidad empiezan desde el 6° semestre con los electivos. Verificar con la Escuela si existe una declaración formal de mención/especialidad o si la 'especialización' surge solo por la combinación de electivos elegidos."
+    },
+    {
+      "id": "ESP-003",
+      "intent": "consulta_esp_demanda_laboral",
+      "pregunta": "¿Qué especialidad tiene más demanda laboral?",
+      "respuesta": "",
+      "_pendiente": "No es información del plan curricular sino de mercado laboral. Si se quiere responder, conviene tomar datos externos confiables (p. ej. estudios del MTPE o IPAE) y citarlos; mientras tanto, dejar fuera del prototipo o derivar al usuario a fuentes oficiales."
+    },
+    {
+      "id": "ESP-004",
+      "intent": "consulta_esp_cursos_ingenieria_software",
+      "pregunta": "¿Qué cursos forman la línea de Ingeniería de Software?",
+      "respuesta": "Dentro de la línea de Ingeniería de Software, la malla 2024 incluye cursos obligatorios como Metodología y Desarrollo de Software, Ingeniería de Software I y II, Formulación de Proyectos de TI y Desarrollo de Proyectos de Ingeniería de Software, complementables con electivos de especialidad.",
+      "fuente": "Plan Curricular 2024 EPIIS / Malla 2024"
+    },
+    {
+      "id": "ESP-005",
+      "intent": "consulta_esp_cambio_especialidad",
+      "pregunta": "¿Puedo cambiar de especialidad?",
+      "respuesta": "",
+      "_pendiente": "Como ESP-002, depende de si existe una declaración formal de especialidad/mención en la EPIIS. Si no la hay, la 'especialización' se materializa solo por los electivos elegidos y el cambio sería simplemente cambiar de electivos en los siguientes ciclos. Confirmar con la Escuela."
+    },
+    {
+      "id": "ESP-006",
+      "intent": "consulta_esp_cursos_redes_telecom",
+      "pregunta": "¿Qué cursos forman la línea de Redes y Telecomunicaciones?",
+      "respuesta": "En la línea de redes y sistemas, la malla 2024 incluye Redes de Computadoras I y II, Sistemas Operativos, Programación Paralela y Distribuida, Sistemas Internet de las Cosas y Ciberseguridad, complementables con electivos de especialidad.",
+      "fuente": "Plan Curricular 2024 EPIIS / Malla 2024"
+    },
+    {
+      "id": "ESP-007",
+      "intent": "consulta_esp_ia_ciencia_datos",
+      "pregunta": "¿Qué cursos forman la línea de Inteligencia Artificial y Ciencia de Datos?",
+      "respuesta": "La línea de Inteligencia Artificial incluye en la malla 2024 los cursos obligatorios Inteligencia Artificial, Aprendizaje Automático, Aprendizaje Profundo y Ciencia de Datos, además de Modelos Probabilísticos y Modelado y Simulación como base, complementables con electivos de especialidad.",
+      "fuente": "Plan Curricular 2024 EPIIS / Malla 2024"
+    },
+    {
+      "id": "ESP-008",
+      "intent": "consulta_esp_seguridad_certificaciones",
+      "pregunta": "¿La carrera prepara para certificaciones en ciberseguridad?",
+      "respuesta": "",
+      "_pendiente": "La malla incluye el curso de Ciberseguridad (IFI32) en el 9° semestre, pero el plan curricular no menciona preparación específica para certificaciones externas (CCNA, CEH, etc.). Verificar con la Escuela antes de afirmarlo."
+    },
+    {
+      "id": "ESP-009",
+      "intent": "consulta_esp_convenios_practicas",
+      "pregunta": "¿Hay convenios de prácticas según mi especialidad?",
+      "respuesta": "",
+      "_pendiente": "El plan curricular no lista convenios específicos por línea. La información de empresas con convenio para PPP debe pedirse a la Dirección de Escuela o a la Unidad de Prácticas. Ver también practicas.json."
+    },
+    {
+      "id": "ESP-010",
+      "intent": "consulta_esp_electivos_cruzados",
+      "pregunta": "¿Puedo tomar electivos de otras líneas además de la mía?",
+      "respuesta": "El plan curricular 2024 contempla 23 electivos disponibles en Estudios de Especialidad y el estudiante elige los que necesita para completar aproximadamente 25 créditos. Como no existe una declaración formal de 'línea única', en la práctica puedes combinar electivos de distintas áreas según tus intereses, respetando los prerrequisitos.",
+      "fuente": "Plan Curricular 2024 EPIIS"
+    }
+  ]
 }

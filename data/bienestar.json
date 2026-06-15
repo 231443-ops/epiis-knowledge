@@ -1,0 +1,140 @@
+{
+  "version": "1.0.0",
+  "categoria_id": "BIE",
+  "nombre": "Bienestar Universitario",
+  "fuentes_normativas": [
+    "Dirección de Bienestar y Responsabilidad Social UNSAAC",
+    "Programa Beca 18 - MINEDU (becas externas)"
+  ],
+  "contenido": {
+    "dependencia": "Dirección de Bienestar y Responsabilidad Social UNSAAC",
+    "ubicacion": "Campus Universitario de Perayoc",
+    "contacto": "Correo institucional publicado en unsaac.edu.pe | Anexo de Bienestar",
+    "servicios": [
+      {
+        "nombre": "Atención Médica y Odontológica",
+        "descripcion": "Atención de salud básica dentro del campus para estudiantes matriculados.",
+        "acceso": "Tópico universitario con carné vigente"
+      },
+      {
+        "nombre": "Orientación Psicológica",
+        "descripcion": "Servicio gratuito de atención psicológica confidencial.",
+        "acceso": "Cita presencial en oficinas de Bienestar o por correo institucional"
+      },
+      {
+        "nombre": "Beca de Alimentación",
+        "descripcion": "Acceso gratuito al comedor universitario de lunes a viernes.",
+        "requisitos": ["Solicitud al Director de Bienestar", "Constancia de matrícula", "Declaración jurada de ingresos", "Recibos de servicios del domicilio"],
+        "renovacion": "Cada semestre, previo estudio socioeconómico"
+      },
+      {
+        "nombre": "Apoyo Económico y Becas",
+        "descripcion": "Gestión de becas, exoneraciones y apoyo extraordinario para estudiantes vulnerables.",
+        "programas_externos": ["Beca 18 MINEDU"]
+      },
+      {
+        "nombre": "Seguro Estudiantil de Accidentes",
+        "descripcion": "Seguro automático al completar la matrícula, cubre accidentes dentro y fuera del campus.",
+        "activacion": "Desde el primer día de clases hasta el fin del semestre"
+      },
+      {
+        "nombre": "Actividades Deportivas",
+        "descripcion": "Fútbol, básquet, vóley, atletismo, natación, artes marciales, ajedrez.",
+        "inscripcion": "Gratuita para estudiantes matriculados"
+      },
+      {
+        "nombre": "Actividades Culturales",
+        "descripcion": "Talleres de danza, teatro, música y artes plásticas.",
+        "inscripcion": "Gratuita para estudiantes matriculados"
+      },
+      {
+        "nombre": "Residencia Universitaria",
+        "descripcion": "Alojamiento para estudiantes de provincias y comunidades alejadas.",
+        "acceso": "Estudio socioeconómico, solicitud al inicio del año académico"
+      },
+      {
+        "nombre": "Certificado Socioeconómico",
+        "descripcion": "Documento emitido por la Unidad de Servicio Social.",
+        "requisitos": ["Solicitud", "Constancia de matrícula", "Declaración jurada de ingresos", "Documentos acreditadores"],
+        "plazo_emision": "5 a 10 días hábiles"
+      },
+      {
+        "nombre": "Comedor Universitario",
+        "descripcion": "Abierto para todos los estudiantes matriculados. Beca: gratis. Sin beca: precio subsidiado.",
+        "beneficio_beca": "Acceso sin costo para beneficiarios de beca de alimentación"
+      }
+    ]
+  },
+  "qa_entries": [
+    {
+      "id": "BIE-001",
+      "intent": "consulta_bie_servicios_generales",
+      "pregunta": "¿Qué servicios de bienestar ofrece la UNSAAC?",
+      "respuesta": "Bienestar Universitario ofrece: atención médica y odontológica, orientación psicológica, beca y comedor de alimentación, apoyo económico y becas, seguro estudiantil de accidentes, actividades deportivas y culturales, residencia universitaria y certificado socioeconómico.",
+      "fuente": "Dirección de Bienestar y Responsabilidad Social UNSAAC"
+    },
+    {
+      "id": "BIE-002",
+      "intent": "consulta_bie_atencion_psicologica",
+      "pregunta": "¿Cómo accedo a la atención psicológica gratuita?",
+      "respuesta": "La UNSAAC ofrece orientación psicológica gratuita y confidencial. Puedes solicitar una cita presencial en las oficinas de Bienestar o escribir al correo institucional de la dependencia.",
+      "fuente": "Dirección de Bienestar - Orientación Psicológica"
+    },
+    {
+      "id": "BIE-003",
+      "intent": "consulta_bie_beca_alimentacion",
+      "pregunta": "¿Cómo solicito la beca de alimentación?",
+      "respuesta": "La beca de alimentación da acceso gratuito al comedor universitario de lunes a viernes. Para solicitarla presentas una solicitud al Director de Bienestar, tu constancia de matrícula, una declaración jurada de ingresos y recibos de servicios del domicilio. Se renueva cada semestre, previo estudio socioeconómico.",
+      "fuente": "Dirección de Bienestar - Beca de Alimentación"
+    },
+    {
+      "id": "BIE-004",
+      "intent": "consulta_bie_apoyo_economico",
+      "pregunta": "¿Hay apoyo económico para estudiantes de bajos recursos?",
+      "respuesta": "Sí. Bienestar gestiona becas, exoneraciones y apoyo extraordinario para estudiantes en situación vulnerable, y también canaliza programas externos como Beca 18 del MINEDU.",
+      "fuente": "Dirección de Bienestar - Apoyo Económico y Becas"
+    },
+    {
+      "id": "BIE-005",
+      "intent": "consulta_bie_seguro_estudiantil",
+      "pregunta": "¿Tengo seguro estudiantil y qué cubre?",
+      "respuesta": "Al completar tu matrícula se activa automáticamente un seguro estudiantil de accidentes, que cubre accidentes dentro y fuera del campus desde el primer día de clases hasta el fin del semestre.",
+      "fuente": "Dirección de Bienestar - Seguro Estudiantil de Accidentes"
+    },
+    {
+      "id": "BIE-006",
+      "intent": "consulta_bie_deportes_cultura",
+      "pregunta": "¿Cómo me inscribo a actividades deportivas o culturales?",
+      "respuesta": "La inscripción es gratuita para estudiantes matriculados. En deportes hay fútbol, básquet, vóley, atletismo, natación, artes marciales y ajedrez; en cultura, talleres de danza, teatro, música y artes plásticas.",
+      "fuente": "Dirección de Bienestar - Actividades Deportivas y Culturales"
+    },
+    {
+      "id": "BIE-007",
+      "intent": "consulta_bie_residencia_universitaria",
+      "pregunta": "¿Existe residencia universitaria y cómo postulo?",
+      "respuesta": "La residencia universitaria ofrece alojamiento a estudiantes de provincias y comunidades alejadas. El acceso requiere un estudio socioeconómico y se solicita al inicio del año académico.",
+      "fuente": "Dirección de Bienestar - Residencia Universitaria"
+    },
+    {
+      "id": "BIE-008",
+      "intent": "consulta_bie_certificado_socioeconomico",
+      "pregunta": "¿Cómo obtengo el certificado socioeconómico?",
+      "respuesta": "El certificado socioeconómico lo emite la Unidad de Servicio Social. Requiere solicitud, constancia de matrícula, declaración jurada de ingresos y documentos acreditadores; el plazo de emisión es de 5 a 10 días hábiles.",
+      "fuente": "Unidad de Servicio Social UNSAAC"
+    },
+    {
+      "id": "BIE-009",
+      "intent": "consulta_bie_comedor_acceso",
+      "pregunta": "¿Quiénes pueden comer en el comedor universitario?",
+      "respuesta": "El comedor universitario está abierto a todos los estudiantes matriculados. Si tienes beca de alimentación, el acceso es gratuito; si no, pagas un precio subsidiado.",
+      "fuente": "Dirección de Bienestar - Comedor Universitario"
+    },
+    {
+      "id": "BIE-010",
+      "intent": "consulta_bie_contacto_oficina",
+      "pregunta": "¿Dónde queda y cómo contacto a la oficina de Bienestar?",
+      "respuesta": "La dependencia es la Dirección de Bienestar y Responsabilidad Social, ubicada en el Campus Universitario de Perayoc. Puedes contactarla por el correo institucional publicado en unsaac.edu.pe o por el anexo de Bienestar.",
+      "fuente": "Dirección de Bienestar y Responsabilidad Social UNSAAC"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "version": "0.1.0",
+  "categoria_id": "MAT",
+  "nombre": "Matrícula",
+  "estado": "en_construccion",
+  "fuentes_normativas": [
+    "Reglamento de Matrícula UNSAAC (pendiente de incorporación)",
+    "Portal SERUNSA - serunsa.unsaac.edu.pe"
+  ],
+  "_nota_modulo": "Este módulo está en construcción. Las respuestas orientan al usuario a las fuentes oficiales mientras se incorpora el Reglamento de Matrícula UNSAAC. Cada qa_entry tiene un campo _pendiente con la información concreta a completar.",
+  "contenido": {
+    "canales_oficiales": [
+      "Portal SERUNSA (serunsa.unsaac.edu.pe) — matrícula en línea y consulta de horarios",
+      "Secretaría de la Escuela Profesional de Ingeniería Informática y de Sistemas",
+      "Dirección de Registros Académicos y Admisión (DRAA)",
+      "TUPA UNSAAC — costos y plazos de trámites"
+    ]
+  },
+  "qa_entries": [
+    {
+      "id": "MAT-001",
+      "intent": "consulta_mat_fechas_matricula",
+      "pregunta": "¿Cuándo es la matrícula?",
+      "respuesta": "Las fechas de matrícula varían cada semestre y son publicadas por la UNSAAC en el portal SERUNSA (serunsa.unsaac.edu.pe) y en los avisos oficiales de la Escuela. Te recomiendo revisar ahí el cronograma vigente.",
+      "fuente": "Portal SERUNSA",
+      "_pendiente": "Reemplazar por el calendario académico del semestre cuando se incorpore el Reglamento de Matrícula."
+    },
+    {
+      "id": "MAT-002",
+      "intent": "consulta_mat_proceso_serunsa",
+      "pregunta": "¿Cómo me matriculo en SERUNSA?",
+      "respuesta": "La matrícula se realiza en línea a través del portal SERUNSA (serunsa.unsaac.edu.pe), ingresando con tu usuario institucional. Desde ahí seleccionas los cursos del semestre y confirmas tu matrícula dentro del plazo establecido.",
+      "fuente": "Portal SERUNSA",
+      "_pendiente": "Completar el paso a paso oficial (pre-matrícula, selección de cursos, confirmación, descarga de constancia) con la fuente del Reglamento de Matrícula."
+    },
+    {
+      "id": "MAT-003",
+      "intent": "consulta_mat_requisitos",
+      "pregunta": "¿Qué requisitos necesito para matricularme?",
+      "respuesta": "Aún no tengo la lista oficial de requisitos cargada en mi base de conocimiento. Te recomiendo consultarla directamente en SERUNSA o en la secretaría de la Escuela Profesional, donde se publica cada semestre.",
+      "_pendiente": "Cargar la lista de requisitos de matrícula del Reglamento UNSAAC (carné, pagos, etc.)."
+    },
+    {
+      "id": "MAT-004",
+      "intent": "consulta_mat_modalidad_presencial",
+      "pregunta": "¿La matrícula es presencial o en línea?",
+      "respuesta": "La matrícula se realiza en línea a través del portal SERUNSA. Para trámites complementarios (como casos especiales o subsanaciones) puedes acercarte a la secretaría de la Escuela o a la DRAA.",
+      "fuente": "Portal SERUNSA",
+      "_pendiente": "Confirmar si existen casos en que la matrícula deba ser presencial, según el Reglamento de Matrícula."
+    },
+    {
+      "id": "MAT-005",
+      "intent": "consulta_mat_fuera_de_plazo",
+      "pregunta": "¿Qué pasa si me matriculo fuera de plazo?",
+      "respuesta": "La matrícula extemporánea puede estar permitida bajo ciertas condiciones, pero el procedimiento, requisitos y costos están en el Reglamento de Matrícula y el TUPA UNSAAC. Aún no tengo esa información cargada; te recomiendo consultarla en la secretaría de la Escuela.",
+      "_pendiente": "Cargar el procedimiento de matrícula extemporánea (plazos, recargo, autorización) desde el Reglamento."
+    },
+    {
+      "id": "MAT-006",
+      "intent": "consulta_mat_creditos_maximo",
+      "pregunta": "¿Cuántos créditos máximos puedo llevar por semestre?",
+      "respuesta": "El plan curricular 2024 está diseñado para 22 créditos por semestre, pero los topes mínimos y máximos de créditos para la matrícula están en el Reglamento de Matrícula UNSAAC, que aún no tengo cargado. Te recomiendo consultarlo en SERUNSA o en la secretaría de la Escuela.",
+      "fuente": "Plan Curricular 2024 EPIIS",
+      "_pendiente": "Cargar los topes oficiales de créditos (mínimo, máximo regular, máximo para estudiantes destacados) desde el Reglamento."
+    },
+    {
+      "id": "MAT-007",
+      "intent": "consulta_mat_retiro_curso",
+      "pregunta": "¿Puedo retirarme de un curso después de matricularme?",
+      "respuesta": "El retiro de un curso está contemplado bajo ciertas condiciones y plazos, pero el procedimiento exacto está en el Reglamento de Matrícula UNSAAC, que aún no tengo cargado. Te recomiendo consultarlo en la secretaría de la Escuela o en la DRAA.",
+      "_pendiente": "Cargar el procedimiento de retiro de curso (plazo, formulario, efecto en el registro) desde el Reglamento."
+    },
+    {
+      "id": "MAT-008",
+      "intent": "consulta_mat_condicional",
+      "pregunta": "¿Qué es la matrícula condicional?",
+      "respuesta": "La matrícula condicional es la situación de un estudiante que, por su rendimiento académico, debe cumplir ciertas condiciones para mantenerse en la carrera. El Reglamento de Tutoría UNSAAC indica que a estos estudiantes se les asigna obligatoriamente un tutor (Art. 4°). Los criterios y consecuencias específicas están en el Reglamento de Matrícula, que aún no tengo cargado.",
+      "fuente": "Reglamento de Tutoría UNSAAC, Art. 4°",
+      "_pendiente": "Cargar los criterios formales (cursos desaprobados, promedio, semestres de duración del condicionamiento) desde el Reglamento de Matrícula."
+    },
+    {
+      "id": "MAT-009",
+      "intent": "consulta_mat_costo",
+      "pregunta": "¿Cuánto cuesta la matrícula?",
+      "respuesta": "Los costos de matrícula y de trámites asociados están en el TUPA UNSAAC (Texto Único de Procedimientos Administrativos), que se publica en el portal web institucional, sección Transparencia.",
+      "fuente": "TUPA UNSAAC",
+      "_pendiente": "Cargar los montos vigentes (matrícula ordinaria, extemporánea, exoneraciones) desde el TUPA."
+    },
+    {
+      "id": "MAT-010",
+      "intent": "consulta_mat_seguro_activacion",
+      "pregunta": "¿Cuándo se activa mi seguro estudiantil al matricularme?",
+      "respuesta": "El seguro estudiantil de accidentes se activa automáticamente al completar la matrícula y cubre desde el primer día de clases hasta el fin del semestre.",
+      "fuente": "Dirección de Bienestar - Seguro Estudiantil de Accidentes"
+    }
+  ]
+}

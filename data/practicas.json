@@ -1,0 +1,144 @@
+{
+  "version": "1.0.0",
+  "categoria_id": "PPP",
+  "nombre": "Prácticas Pre-Profesionales",
+  "fuentes_normativas": [
+    "Reglamento de Prácticas Pre-Profesionales UNSAAC",
+    "Ley N° 28518 - Ley de Modalidades Formativas Laborales",
+    "Decreto Legislativo N° 1401 - Régimen de formación laboral en el sector público"
+  ],
+  "contenido": {
+    "requisitos_inicio": {
+      "descripcion": "Para iniciar las prácticas pre-profesionales el estudiante debe cumplir:",
+      "condiciones": [
+        "Haber cursado y aprobado el IX semestre",
+        "Tener un promedio ponderado mínimo de 11 sobre 20",
+        "Contar con carta de presentación emitida por la Dirección de la Escuela",
+        "Tener acuerdo firmado con una empresa o institución convenio",
+        "Estar matriculado en el curso de Prácticas Pre-Profesionales"
+      ]
+    },
+    "duracion": {
+      "horas_minimas": 300,
+      "equivalencia": "Aproximadamente tres meses a tiempo completo",
+      "observacion": "Este mínimo es exigido para la validación académica y trámites de titulación."
+    },
+    "empresa_centro_practicas": {
+      "prioridad": "Empresas con convenio vigente con la UNSAAC",
+      "sin_convenio": "Posible con carta de autorización de la Dirección de Escuela, si la institución está formalmente constituida y las actividades corresponden al perfil de la carrera.",
+      "sector_publico": {
+        "permitido": true,
+        "norma": "Decreto Legislativo N° 1401",
+        "ejemplos": ["Municipalidades", "Gobiernos regionales", "Ministerios", "Empresas estatales"]
+      },
+      "trabajo_actual": "Es posible si las actividades corresponden al perfil de la carrera y se cuenta con supervisor técnico interno. Requiere autorización de la Dirección de Escuela."
+    },
+    "carta_presentacion": {
+      "emisor": "Dirección de la Escuela Profesional",
+      "documentos_requeridos": [
+        "Solicitud en secretaría de la escuela",
+        "Comprobante de matrícula vigente",
+        "Constancia de notas actualizada",
+        "Datos de la empresa receptora"
+      ],
+      "plazo_emision": "Tres días hábiles"
+    },
+    "remuneracion": {
+      "norma": "Ley N° 28518",
+      "subvencion_minima": "50% de la Remuneración Mínima Vital vigente",
+      "seguro_salud": true,
+      "nota": "Condiciones deben estar estipuladas en el convenio de prácticas."
+    },
+    "supervision_universitaria": {
+      "responsable": "Asesor de Prácticas (docente designado por la Dirección de Escuela)",
+      "actividades": [
+        "Realiza visitas o reuniones de seguimiento",
+        "Evalúa el informe final",
+        "Recibe la calificación del supervisor de la empresa",
+        "Emite la nota definitiva"
+      ]
+    },
+    "informe_final": {
+      "descripcion": "Documento técnico que describe actividades realizadas, aprendizajes obtenidos y aportes a la organización.",
+      "presentacion": "Unidad de Prácticas de la Escuela al finalizar las prácticas",
+      "formato": "Formato oficial disponible en secretaría de la escuela"
+    },
+    "relacion_titulacion": {
+      "es_requisito": true,
+      "descripcion": "La aprobación del curso de Prácticas Pre-Profesionales y la presentación del informe son requisitos obligatorios para iniciar el trámite de titulación.",
+      "expediente": "El certificado de prácticas debe adjuntarse al expediente de titulación."
+    }
+  },
+  "qa_entries": [
+    {
+      "id": "PPP-001",
+      "intent": "consulta_ppp_requisitos_inicio",
+      "pregunta": "¿Cuáles son los requisitos para iniciar las prácticas pre-profesionales?",
+      "respuesta": "Debes: (1) haber cursado y aprobado el IX semestre, (2) tener un promedio ponderado mínimo de 11 sobre 20, (3) contar con carta de presentación de la Dirección de la Escuela, (4) tener un acuerdo firmado con una empresa o institución con convenio y (5) estar matriculado en el curso de Prácticas Pre-Profesionales.",
+      "fuente": "Reglamento de PPP UNSAAC"
+    },
+    {
+      "id": "PPP-002",
+      "intent": "consulta_ppp_horas_acumuladas",
+      "pregunta": "¿Cuántas horas de prácticas debo hacer?",
+      "respuesta": "Las prácticas pre-profesionales exigen un mínimo de 300 horas, equivalentes a aproximadamente tres meses a tiempo completo. Ese mínimo es el requerido para la validación académica y los trámites de titulación.",
+      "fuente": "Reglamento de PPP UNSAAC"
+    },
+    {
+      "id": "PPP-003",
+      "intent": "consulta_ppp_empresa_convenio",
+      "pregunta": "¿En qué empresa puedo hacer mis prácticas? ¿Debe tener convenio?",
+      "respuesta": "Tienen prioridad las empresas con convenio vigente con la UNSAAC. También puedes practicar en una institución sin convenio si está formalmente constituida y sus actividades corresponden al perfil de tu carrera, presentando una carta de autorización de la Dirección de Escuela.",
+      "fuente": "Reglamento de PPP UNSAAC"
+    },
+    {
+      "id": "PPP-004",
+      "intent": "consulta_ppp_carta_presentacion",
+      "pregunta": "¿Quién emite la carta de presentación y qué necesito para pedirla?",
+      "respuesta": "La emite la Dirección de la Escuela Profesional. Debes presentar: solicitud en secretaría, comprobante de matrícula vigente, constancia de notas actualizada y los datos de la empresa receptora. El plazo de emisión es de tres días hábiles.",
+      "fuente": "Reglamento de PPP UNSAAC"
+    },
+    {
+      "id": "PPP-005",
+      "intent": "consulta_ppp_informe_final",
+      "pregunta": "¿Cómo es el informe final de prácticas y dónde se entrega?",
+      "respuesta": "Al terminar tus prácticas debes presentar un informe final ante la Unidad de Prácticas de la Escuela, usando el formato oficial disponible en secretaría. Es un documento técnico que describe las actividades realizadas, los aprendizajes obtenidos y tus aportes a la organización.",
+      "fuente": "Reglamento de PPP UNSAAC"
+    },
+    {
+      "id": "PPP-006",
+      "intent": "consulta_ppp_remuneracion",
+      "pregunta": "¿Las prácticas pre-profesionales son remuneradas?",
+      "respuesta": "Sí. Según la Ley N° 28518, el practicante debe recibir una subvención económica no menor al 50% de la Remuneración Mínima Vital vigente, además de seguro de salud. Estas condiciones deben constar en el convenio de prácticas.",
+      "fuente": "Ley N° 28518"
+    },
+    {
+      "id": "PPP-007",
+      "intent": "consulta_ppp_sector_publico",
+      "pregunta": "¿Puedo hacer prácticas en una entidad del Estado?",
+      "respuesta": "Sí. Puedes realizar prácticas en el sector público (municipalidades, gobiernos regionales, ministerios o empresas estatales) al amparo del Decreto Legislativo N° 1401, que regula el régimen de formación laboral en el sector público.",
+      "fuente": "Decreto Legislativo N° 1401"
+    },
+    {
+      "id": "PPP-008",
+      "intent": "consulta_ppp_supervision_universidad",
+      "pregunta": "¿Quién supervisa mis prácticas por parte de la universidad?",
+      "respuesta": "Un Asesor de Prácticas, docente designado por la Dirección de Escuela, supervisa tu desempeño: realiza visitas o reuniones de seguimiento, evalúa el informe final, recibe la calificación del supervisor de la empresa y emite tu nota definitiva.",
+      "fuente": "Reglamento de PPP UNSAAC"
+    },
+    {
+      "id": "PPP-009",
+      "intent": "consulta_ppp_trabajo_actual",
+      "pregunta": "Si ya trabajo, ¿puedo convalidarlo como prácticas?",
+      "respuesta": "Sí, es posible convalidar tu trabajo actual como prácticas si las actividades corresponden al perfil de tu carrera y cuentas con un supervisor técnico interno. Requiere la autorización de la Dirección de Escuela.",
+      "fuente": "Reglamento de PPP UNSAAC"
+    },
+    {
+      "id": "PPP-010",
+      "intent": "consulta_ppp_requisito_titulacion",
+      "pregunta": "¿Las prácticas son requisito para titularme?",
+      "respuesta": "Sí. Aprobar el curso de Prácticas Pre-Profesionales y presentar el informe son requisitos obligatorios para iniciar el trámite de titulación; el certificado de prácticas debe adjuntarse al expediente de titulación.",
+      "fuente": "Reglamento de PPP UNSAAC"
+    }
+  ]
+}

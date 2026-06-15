@@ -1,139 +1,221 @@
 {
-  "malla_semestralizada": {
-    "plan_curricular": "2024",
-    "creditos_por_semestre": 22,
-    "total_semestres": 10,
-    "nota": "Cada semestre suma 22 créditos. A partir del 6° semestre el estudiante debe completar electivos de especialidad. Los semestres 6 al 9 incluyen espacios para electivos.",
-    "semestres": [
-      {
-        "numero": 1,
-        "nombre": "Primer Semestre",
-        "total_creditos": 22,
-        "cursos": [
-          {"codigo": "QUG01", "nombre": "Química General", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": []},
-          {"codigo": "MEG01", "nombre": "Algebra y Geometría Analítica", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": []},
-          {"codigo": "HIG01", "nombre": "Historia Crítica del Perú e Identidad Nacional", "creditos": 3, "ht": 2, "hp": 2, "prerrequisitos": []},
-          {"codigo": "FIG01", "nombre": "Física I", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": []},
-          {"codigo": "CBG01", "nombre": "Ecología y Medio Ambiente", "creditos": 3, "ht": 2, "hp": 2, "prerrequisitos": []},
-          {"codigo": "MEG02", "nombre": "Cálculo I", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": []}
-        ]
-      },
-      {
-        "numero": 2,
-        "nombre": "Segundo Semestre",
-        "total_creditos": 22,
-        "cursos": [
-          {"codigo": "LCG01", "nombre": "Lingüística y Comunicación Humana", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": []},
-          {"codigo": "MEG03", "nombre": "Estadística General", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": []},
-          {"codigo": "IFG01", "nombre": "Pensamiento Computacional e Inteligencia Artificial", "creditos": 3, "ht": 2, "hp": 2, "prerrequisitos": []},
-          {"codigo": "MEG04", "nombre": "Cálculo II", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["MEG02"]},
-          {"codigo": "IFI01", "nombre": "Fundamentos de Programación", "creditos": 3, "ht": 2, "hp": 2, "prerrequisitos": []},
-          {"codigo": "MEI04", "nombre": "Matemáticas Discretas I", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["MEG01"]}
-        ]
-      },
-      {
-        "numero": 3,
-        "nombre": "Tercer Semestre",
-        "total_creditos": 22,
-        "cursos": [
-          {"codigo": "IFI02", "nombre": "Algoritmos y Estructuras de Datos I", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["IFI01", "IFG01"]},
-          {"codigo": "IFI03", "nombre": "Programación I", "creditos": 2, "ht": 0, "hp": 4, "prerrequisitos": ["IFI01"]},
-          {"codigo": "MEI05", "nombre": "Algebra Lineal Computacional", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["MEG01"]},
-          {"codigo": "FII02", "nombre": "Física Aplicada a la Informática", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["FIG01"]},
-          {"codigo": "MEI06", "nombre": "Matemáticas Discretas II", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["MEI04"]},
-          {"codigo": "MEI09", "nombre": "Cálculo III", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["MEG04"]}
-        ]
-      },
-      {
-        "numero": 4,
-        "nombre": "Cuarto Semestre",
-        "total_creditos": 22,
-        "cursos": [
-          {"codigo": "IFI04", "nombre": "Algoritmos y Estructuras de Datos II", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["IFI02", "IFI03"]},
-          {"codigo": "IFI05", "nombre": "Programación II", "creditos": 2, "ht": 0, "hp": 4, "prerrequisitos": ["IFI02", "IFI03"]},
-          {"codigo": "ADI01", "nombre": "Organización y Dirección de Empresas", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": [], "prerrequisito_creditos": 60},
-          {"codigo": "ELI01", "nombre": "Electrónica y Diseño Digital", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["FII02"]},
-          {"codigo": "IFI07", "nombre": "Modelos Probabilísticos", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["MEI06", "MEG03"]},
-          {"codigo": "MEI08", "nombre": "Ecuaciones Diferenciales", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["MEI09"]}
-        ]
-      },
-      {
-        "numero": 5,
-        "nombre": "Quinto Semestre",
-        "total_creditos": 22,
-        "cursos": [
-          {"codigo": "IFI08", "nombre": "Análisis y Diseño de Algoritmos", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["IFI04"]},
-          {"codigo": "IFI09", "nombre": "Programación III", "creditos": 2, "ht": 0, "hp": 4, "prerrequisitos": ["IFI05"]},
-          {"codigo": "IFI10", "nombre": "Análisis y Diseño de Sistemas de Información", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["IFI04", "ADI01"]},
-          {"codigo": "IFI11", "nombre": "Organización y Arquitectura del Computador", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["ELI01"]},
-          {"codigo": "IFI12", "nombre": "Métodos Numéricos", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["MEI08"]},
-          {"codigo": "IFI13", "nombre": "Teoría de la Computación", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["IFI04"]}
-        ]
-      },
-      {
-        "numero": 6,
-        "nombre": "Sexto Semestre",
-        "total_creditos": 22,
-        "cursos": [
-          {"codigo": "IFI14", "nombre": "Inteligencia Artificial", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["MEI05", "IFI07"]},
-          {"codigo": "IFI15", "nombre": "Fundamentos y Diseño de Base de Datos", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["IFI10"]},
-          {"codigo": "IFI16", "nombre": "Sistemas Operativos", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["IFI11"]},
-          {"codigo": "IFI17", "nombre": "Modelado y Simulación", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["IFI07", "IFI12"]},
-          {"codigo": "EUI01", "nombre": "Deporte", "creditos": 2, "ht": 0, "hp": 4, "prerrequisitos": [], "prerrequisito_creditos": 100},
-          {"codigo": "ELECTIVO", "nombre": "Electivo de Especialidad", "creditos": 4, "prerrequisitos": []}
-        ]
-      },
-      {
-        "numero": 7,
-        "nombre": "Séptimo Semestre",
-        "total_creditos": 22,
-        "cursos": [
-          {"codigo": "IFI19", "nombre": "Aprendizaje Automático", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["IFI14"]},
-          {"codigo": "IFI20", "nombre": "Metodología y Desarrollo de Software", "creditos": 5, "ht": 3, "hp": 4, "prerrequisitos": ["IFI15"]},
-          {"codigo": "IFI21", "nombre": "Redes de Computadoras I", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["IFI16"]},
-          {"codigo": "IFI22", "nombre": "Ciencia de Datos", "creditos": 3, "ht": 2, "hp": 2, "prerrequisitos": ["IFI14"]},
-          {"codigo": "IFI23", "nombre": "Proyección Social", "creditos": 2, "ht": 0, "hp": 4, "prerrequisitos": [], "prerrequisito_creditos": 120},
-          {"codigo": "ELECTIVO", "nombre": "Electivo de Especialidad", "creditos": 4, "prerrequisitos": []}
-        ]
-      },
-      {
-        "numero": 8,
-        "nombre": "Octavo Semestre",
-        "total_creditos": 22,
-        "cursos": [
-          {"codigo": "IFI24", "nombre": "Programación Paralela y Distribuida", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["IFI21", "IFI08"]},
-          {"codigo": "IFI25", "nombre": "Aprendizaje Profundo", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["IFI19"]},
-          {"codigo": "IFI26", "nombre": "Ingeniería de Software I", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["IFI20"]},
-          {"codigo": "IFI27", "nombre": "Redes de Computadoras II", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["IFI21"]},
-          {"codigo": "IFI28", "nombre": "Formulación de Proyectos de Tecnologías de la Información", "creditos": 3, "ht": 2, "hp": 2, "prerrequisitos": ["IFI20"]},
-          {"codigo": "ELECTIVO", "nombre": "Electivo de Especialidad", "creditos": 3, "prerrequisitos": []}
-        ]
-      },
-      {
-        "numero": 9,
-        "nombre": "Noveno Semestre",
-        "total_creditos": 22,
-        "cursos": [
-          {"codigo": "IFI29", "nombre": "Seminario de Investigación", "creditos": 3, "ht": 2, "hp": 2, "prerrequisitos": [], "prerrequisito_creditos": 170},
-          {"codigo": "IFI30", "nombre": "Ingeniería de Software II", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["IFI26"]},
-          {"codigo": "IFI31", "nombre": "Sistemas Internet de las Cosas", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["IFI27", "IFI19"]},
-          {"codigo": "IFI32", "nombre": "Ciberseguridad", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["IFI27"]},
-          {"codigo": "ELECTIVO", "nombre": "Electivo de Especialidad", "creditos": 4, "prerrequisitos": []},
-          {"codigo": "ELECTIVO", "nombre": "Electivo de Especialidad", "creditos": 3, "prerrequisitos": []}
-        ]
-      },
-      {
-        "numero": 10,
-        "nombre": "Décimo Semestre",
-        "total_creditos": 22,
-        "cursos": [
-          {"codigo": "IFI33", "nombre": "Trabajo de Investigación", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["IFI29"]},
-          {"codigo": "IFI34", "nombre": "Desarrollo de Proyectos de Ingeniería de Software", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["IFI28", "IFI30"]},
-          {"codigo": "IFI35", "nombre": "Administración de Tecnologías de la Información", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["IFI32"]},
-          {"codigo": "IFI18", "nombre": "Debate", "creditos": 2, "ht": 0, "hp": 4, "prerrequisitos": [], "prerrequisito_creditos": 180},
-          {"codigo": "IFI66", "nombre": "Práctica Pre Profesionales", "creditos": 8, "ht": 0, "hp": 16, "prerrequisitos": [], "prerrequisito_creditos": 180}
-        ]
-      }
-    ]
-  }
+  "version": "1.0.0",
+  "categoria_id": "CUR",
+  "nombre": "Cursos y Plan de Estudios",
+  "fuentes_normativas": [
+    "Plan Curricular 2024 - EPIIS UNSAAC",
+    "Malla Semestralizada 2024"
+  ],
+  "contenido": {
+    "malla_semestralizada": {
+      "plan_curricular": "2024",
+      "creditos_por_semestre": 22,
+      "total_semestres": 10,
+      "total_creditos": 220,
+      "nota": "Cada semestre suma 22 créditos. A partir del 6° semestre el estudiante debe completar electivos de especialidad. Los semestres 6 al 9 incluyen espacios para electivos.",
+      "semestres": [
+        {
+          "numero": 1,
+          "nombre": "Primer Semestre",
+          "total_creditos": 22,
+          "cursos": [
+            {"codigo": "QUG01", "nombre": "Química General", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": []},
+            {"codigo": "MEG01", "nombre": "Algebra y Geometría Analítica", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": []},
+            {"codigo": "HIG01", "nombre": "Historia Crítica del Perú e Identidad Nacional", "creditos": 3, "ht": 2, "hp": 2, "prerrequisitos": []},
+            {"codigo": "FIG01", "nombre": "Física I", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": []},
+            {"codigo": "CBG01", "nombre": "Ecología y Medio Ambiente", "creditos": 3, "ht": 2, "hp": 2, "prerrequisitos": []},
+            {"codigo": "MEG02", "nombre": "Cálculo I", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": []}
+          ]
+        },
+        {
+          "numero": 2,
+          "nombre": "Segundo Semestre",
+          "total_creditos": 22,
+          "cursos": [
+            {"codigo": "LCG01", "nombre": "Lingüística y Comunicación Humana", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": []},
+            {"codigo": "MEG03", "nombre": "Estadística General", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": []},
+            {"codigo": "IFG01", "nombre": "Pensamiento Computacional e Inteligencia Artificial", "creditos": 3, "ht": 2, "hp": 2, "prerrequisitos": []},
+            {"codigo": "MEG04", "nombre": "Cálculo II", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["MEG02"]},
+            {"codigo": "IFI01", "nombre": "Fundamentos de Programación", "creditos": 3, "ht": 2, "hp": 2, "prerrequisitos": []},
+            {"codigo": "MEI04", "nombre": "Matemáticas Discretas I", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["MEG01"]}
+          ]
+        },
+        {
+          "numero": 3,
+          "nombre": "Tercer Semestre",
+          "total_creditos": 22,
+          "cursos": [
+            {"codigo": "IFI02", "nombre": "Algoritmos y Estructuras de Datos I", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["IFI01", "IFG01"]},
+            {"codigo": "IFI03", "nombre": "Programación I", "creditos": 2, "ht": 0, "hp": 4, "prerrequisitos": ["IFI01"]},
+            {"codigo": "MEI05", "nombre": "Algebra Lineal Computacional", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["MEG01"]},
+            {"codigo": "FII02", "nombre": "Física Aplicada a la Informática", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["FIG01"]},
+            {"codigo": "MEI06", "nombre": "Matemáticas Discretas II", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["MEI04"]},
+            {"codigo": "MEI09", "nombre": "Cálculo III", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["MEG04"]}
+          ]
+        },
+        {
+          "numero": 4,
+          "nombre": "Cuarto Semestre",
+          "total_creditos": 22,
+          "cursos": [
+            {"codigo": "IFI04", "nombre": "Algoritmos y Estructuras de Datos II", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["IFI02", "IFI03"]},
+            {"codigo": "IFI05", "nombre": "Programación II", "creditos": 2, "ht": 0, "hp": 4, "prerrequisitos": ["IFI02", "IFI03"]},
+            {"codigo": "ADI01", "nombre": "Organización y Dirección de Empresas", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": [], "prerrequisito_creditos": 60},
+            {"codigo": "ELI01", "nombre": "Electrónica y Diseño Digital", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["FII02"]},
+            {"codigo": "IFI07", "nombre": "Modelos Probabilísticos", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["MEI06", "MEG03"]},
+            {"codigo": "MEI08", "nombre": "Ecuaciones Diferenciales", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["MEI09"]}
+          ]
+        },
+        {
+          "numero": 5,
+          "nombre": "Quinto Semestre",
+          "total_creditos": 22,
+          "cursos": [
+            {"codigo": "IFI08", "nombre": "Análisis y Diseño de Algoritmos", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["IFI04"]},
+            {"codigo": "IFI09", "nombre": "Programación III", "creditos": 2, "ht": 0, "hp": 4, "prerrequisitos": ["IFI05"]},
+            {"codigo": "IFI10", "nombre": "Análisis y Diseño de Sistemas de Información", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["IFI04", "ADI01"]},
+            {"codigo": "IFI11", "nombre": "Organización y Arquitectura del Computador", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["ELI01"]},
+            {"codigo": "IFI12", "nombre": "Métodos Numéricos", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["MEI08"]},
+            {"codigo": "IFI13", "nombre": "Teoría de la Computación", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["IFI04"]}
+          ]
+        },
+        {
+          "numero": 6,
+          "nombre": "Sexto Semestre",
+          "total_creditos": 22,
+          "cursos": [
+            {"codigo": "IFI14", "nombre": "Inteligencia Artificial", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["MEI05", "IFI07"]},
+            {"codigo": "IFI15", "nombre": "Fundamentos y Diseño de Base de Datos", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["IFI10"]},
+            {"codigo": "IFI16", "nombre": "Sistemas Operativos", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["IFI11"]},
+            {"codigo": "IFI17", "nombre": "Modelado y Simulación", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["IFI07", "IFI12"]},
+            {"codigo": "EUI01", "nombre": "Deporte", "creditos": 2, "ht": 0, "hp": 4, "prerrequisitos": [], "prerrequisito_creditos": 100},
+            {"codigo": "ELECTIVO", "nombre": "Electivo de Especialidad", "creditos": 4, "prerrequisitos": []}
+          ]
+        },
+        {
+          "numero": 7,
+          "nombre": "Séptimo Semestre",
+          "total_creditos": 22,
+          "cursos": [
+            {"codigo": "IFI19", "nombre": "Aprendizaje Automático", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["IFI14"]},
+            {"codigo": "IFI20", "nombre": "Metodología y Desarrollo de Software", "creditos": 5, "ht": 3, "hp": 4, "prerrequisitos": ["IFI15"]},
+            {"codigo": "IFI21", "nombre": "Redes de Computadoras I", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["IFI16"]},
+            {"codigo": "IFI22", "nombre": "Ciencia de Datos", "creditos": 3, "ht": 2, "hp": 2, "prerrequisitos": ["IFI14"]},
+            {"codigo": "IFI23", "nombre": "Proyección Social", "creditos": 2, "ht": 0, "hp": 4, "prerrequisitos": [], "prerrequisito_creditos": 120},
+            {"codigo": "ELECTIVO", "nombre": "Electivo de Especialidad", "creditos": 4, "prerrequisitos": []}
+          ]
+        },
+        {
+          "numero": 8,
+          "nombre": "Octavo Semestre",
+          "total_creditos": 22,
+          "cursos": [
+            {"codigo": "IFI24", "nombre": "Programación Paralela y Distribuida", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["IFI21", "IFI08"]},
+            {"codigo": "IFI25", "nombre": "Aprendizaje Profundo", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["IFI19"]},
+            {"codigo": "IFI26", "nombre": "Ingeniería de Software I", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["IFI20"]},
+            {"codigo": "IFI27", "nombre": "Redes de Computadoras II", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["IFI21"]},
+            {"codigo": "IFI28", "nombre": "Formulación de Proyectos de Tecnologías de la Información", "creditos": 3, "ht": 2, "hp": 2, "prerrequisitos": ["IFI20"]},
+            {"codigo": "ELECTIVO", "nombre": "Electivo de Especialidad", "creditos": 3, "prerrequisitos": []}
+          ]
+        },
+        {
+          "numero": 9,
+          "nombre": "Noveno Semestre",
+          "total_creditos": 22,
+          "cursos": [
+            {"codigo": "IFI29", "nombre": "Seminario de Investigación", "creditos": 3, "ht": 2, "hp": 2, "prerrequisitos": [], "prerrequisito_creditos": 170},
+            {"codigo": "IFI30", "nombre": "Ingeniería de Software II", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["IFI26"]},
+            {"codigo": "IFI31", "nombre": "Sistemas Internet de las Cosas", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["IFI27", "IFI19"]},
+            {"codigo": "IFI32", "nombre": "Ciberseguridad", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["IFI27"]},
+            {"codigo": "ELECTIVO", "nombre": "Electivo de Especialidad", "creditos": 4, "prerrequisitos": []},
+            {"codigo": "ELECTIVO", "nombre": "Electivo de Especialidad", "creditos": 3, "prerrequisitos": []}
+          ]
+        },
+        {
+          "numero": 10,
+          "nombre": "Décimo Semestre",
+          "total_creditos": 22,
+          "cursos": [
+            {"codigo": "IFI33", "nombre": "Trabajo de Investigación", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["IFI29"]},
+            {"codigo": "IFI34", "nombre": "Desarrollo de Proyectos de Ingeniería de Software", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["IFI28", "IFI30"]},
+            {"codigo": "IFI35", "nombre": "Administración de Tecnologías de la Información", "creditos": 4, "ht": 3, "hp": 2, "prerrequisitos": ["IFI32"]},
+            {"codigo": "IFI18", "nombre": "Debate", "creditos": 2, "ht": 0, "hp": 4, "prerrequisitos": [], "prerrequisito_creditos": 180},
+            {"codigo": "IFI66", "nombre": "Práctica Pre Profesionales", "creditos": 8, "ht": 0, "hp": 16, "prerrequisitos": [], "prerrequisito_creditos": 180}
+          ]
+        }
+      ]
+    }
+  },
+  "qa_entries": [
+    {
+      "id": "CUR-001",
+      "intent": "consulta_cursos_duracion_carrera",
+      "pregunta": "¿Cuántos semestres dura la carrera?",
+      "respuesta": "La carrera dura 10 semestres académicos (cinco años), según el plan curricular 2024.",
+      "fuente": "Plan Curricular 2024 EPIIS"
+    },
+    {
+      "id": "CUR-002",
+      "intent": "consulta_cursos_total_creditos",
+      "pregunta": "¿Cuántos créditos necesito para terminar la carrera?",
+      "respuesta": "El plan de estudios suma 220 créditos en total: 22 créditos por semestre a lo largo de los 10 semestres.",
+      "fuente": "Plan Curricular 2024 EPIIS"
+    },
+    {
+      "id": "CUR-003",
+      "intent": "consulta_cursos_primer_semestre",
+      "pregunta": "¿Qué cursos llevo en el primer semestre?",
+      "respuesta": "En el primer semestre llevas: Química General, Álgebra y Geometría Analítica, Historia Crítica del Perú e Identidad Nacional, Física I, Ecología y Medio Ambiente, y Cálculo I, que suman 22 créditos.",
+      "fuente": "Malla Semestralizada 2024"
+    },
+    {
+      "id": "CUR-004",
+      "intent": "consulta_cursos_adelanto_semestres",
+      "pregunta": "¿Puedo adelantar cursos de semestres superiores?",
+      "respuesta": "",
+      "_pendiente": "El adelanto de cursos depende del reglamento de matrícula (créditos máximos y prerrequisitos cumplidos), no de la malla. Completar con el reglamento de matrícula o derivar a la categoría MAT."
+    },
+    {
+      "id": "CUR-005",
+      "intent": "consulta_cursos_desaprobacion",
+      "pregunta": "¿Qué pasa si desapruebo un curso?",
+      "respuesta": "",
+      "_pendiente": "Las consecuencias de desaprobar (repetición, matrícula condicionada) están en el reglamento de matrícula/estudios, no en la malla. Completar con esa fuente o derivar a MAT."
+    },
+    {
+      "id": "CUR-006",
+      "intent": "consulta_cursos_areas_plan_estudios",
+      "pregunta": "¿En qué áreas se organiza el plan de estudios?",
+      "respuesta": "El plan curricular 2024 organiza los 220 créditos en cinco áreas: Estudios Generales (37 créditos, 17%), Estudios Específicos (94 créditos, 43%), Estudios de Especialidad (75 créditos, 34%), Actividades Extracurriculares (6 créditos, 3%) y Prácticas Pre-Profesionales (8 créditos, 4%).",
+      "fuente": "Plan Curricular 2024 EPIIS"
+    },
+    {
+      "id": "CUR-007",
+      "intent": "consulta_cursos_electivos",
+      "pregunta": "¿Cuándo y cuántos electivos llevo?",
+      "respuesta": "Los electivos de especialidad se cursan desde el 6° semestre; la malla 2024 incluye espacios de electivos en los semestres 6 al 9, que suman alrededor de 18 créditos.",
+      "fuente": "Malla Semestralizada 2024"
+    },
+    {
+      "id": "CUR-008",
+      "intent": "consulta_cursos_horario_clases",
+      "pregunta": "¿Dónde consulto mis horarios de clases?",
+      "respuesta": "Los horarios de clases se consultan en el portal SERUNSA (serunsa.unsaac.edu.pe), en la sección de consulta de horarios, con tu usuario institucional.",
+      "fuente": "Portal SERUNSA UNSAAC"
+    },
+    {
+      "id": "CUR-009",
+      "intent": "consulta_cursos_creditos_definicion",
+      "pregunta": "¿Qué es un crédito académico y a cuántas horas equivale?",
+      "respuesta": "",
+      "_pendiente": "La definición de crédito y su equivalencia en horas no está en la malla. Completar con el plan curricular 2024 o el reglamento académico."
+    },
+    {
+      "id": "CUR-010",
+      "intent": "consulta_cursos_promedio_ponderado",
+      "pregunta": "¿Cómo se calcula el promedio ponderado?",
+      "respuesta": "",
+      "_pendiente": "El cálculo del promedio ponderado pertenece al reglamento de evaluación/matrícula, no a la malla. Completar con esa fuente o derivar a MAT."
+    }
+  ]
 }
