@@ -14,8 +14,60 @@ def normalize_text(text: str) -> str:
     return text
 
 
+def normalize_plural(word: str) -> str:
+    """
+    Normaliza plurales comunes al singular (español).
+
+    Reglas aplicadas:
+    - Palabras terminadas en 's' con más de 4 letras → remover 's' final
+    - Excepciones: palabras que terminan en 'as', 'es', 'os' naturalmente singulares
+
+    Args:
+        word: Palabra normalizada (minúsculas, sin tildes)
+
+    Returns:
+        Palabra en singular (aproximado)
+    """
+    if not word or len(word) <= 3:
+        return word
+
+    # Si termina en 's' y tiene más de 4 letras, intentar singularizar
+    if word.endswith('s') and len(word) > 4:
+        # Casos especiales que no deben singularizarse
+        exceptions = {
+            'mas', 'menos', 'entonces', 'ademas', 'despues', 'antes',
+            'mas', 'pues', 'tras', 'campus', 'bus', 'plus'
+        }
+
+        if word in exceptions:
+            return word
+
+        # Singularizar: remover 's' final
+        singular = word[:-1]
+
+        # Si termina en 'es' y tiene más de 5 letras, remover 'es'
+        if word.endswith('es') and len(word) > 5:
+            singular = word[:-2]
+
+        return singular
+
+    return word
+
+
 def tokenize(text: str) -> list[str]:
-    return normalize_text(text).split()
+    """
+    Tokeniza y normaliza el texto, manejando plurales.
+
+    Returns:
+        Lista de tokens normalizados (singular, minúsculas, sin tildes)
+    """
+    normalized = normalize_text(text)
+    tokens = normalized.split()
+
+    # Normalizar plurales en cada token
+    tokens_singular = [normalize_plural(token) for token in tokens]
+
+    return tokens_singular
 
 
 def compute_tf_vector(tokens: list[str]) -> dict[str, float]:
