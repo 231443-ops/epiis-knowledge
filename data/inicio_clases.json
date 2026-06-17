@@ -1,0 +1,62 @@
+{
+  "version": "1.0.0",
+  "categoria_id": "CLA",
+  "nombre": "Inicio de Clases",
+  "fuentes_normativas": [
+    "Calendario Académico UNSAAC",
+    "Portal Institucional UNSAAC",
+    "Portal SERUNSA"
+  ],
+  "contenido": {
+    "semestre_I": {
+      "inicio": "Cuarta semana de marzo",
+      "duracion_aproximada": "16 semanas lectivas"
+    },
+    "semestre_II": {
+      "inicio": "Segunda semana de agosto",
+      "duracion_aproximada": "16 semanas lectivas"
+    },
+    "modalidades": [
+      "Presencial",
+      "Virtual",
+      "Híbrida (combinación de presencial y virtual)"
+    ],
+    "canales_comunicacion": [
+      "Correo institucional (@unsaac.edu.pe)",
+      "Portal SERUNSA (serunsa.unsaac.edu.pe)",
+      "Portal institucional UNSAAC (sección Académico)",
+      "Aulas virtuales (Moodle)",
+      "Redes sociales oficiales de la EPIIS"
+    ]
+  },
+  "qa_entries": [
+    {
+      "id": "CLA-001",
+      "intent": "consulta_cla_fechas_inicio",
+      "pregunta": "¿Cuándo inician las clases?",
+      "respuesta": "Según el calendario académico de la UNSAAC, las clases del semestre I inician en la cuarta semana de marzo, y las del semestre II inician en la segunda semana de agosto. Las fechas exactas se publican cada año en el portal institucional de la UNSAAC (sección 'Académico') y en el portal SERUNSA.",
+      "fuente": "Calendario Académico UNSAAC"
+    },
+    {
+      "id": "CLA-002",
+      "intent": "consulta_cla_modalidad",
+      "pregunta": "¿Cuál es la modalidad de las clases?",
+      "respuesta": "La modalidad de las clases (presencial, virtual o híbrida) se define en el sílabo de cada curso y depende de las características de la asignatura. Generalmente, los cursos teóricos pueden ser virtuales o híbridos, mientras que los cursos con laboratorio o prácticas suelen ser presenciales. La modalidad específica de cada curso se publica al inicio del semestre en el aula virtual y en el portal SERUNSA.",
+      "fuente": "Sílabos EPIIS / Portal SERUNSA"
+    },
+    {
+      "id": "CLA-003",
+      "intent": "consulta_cla_calendario_academico",
+      "pregunta": "¿Dónde encuentro el calendario académico?",
+      "respuesta": "El calendario académico de la UNSAAC se publica en el portal institucional, sección 'Académico', y también está disponible en el portal SERUNSA. Ahí encontrarás las fechas de inicio y fin de clases, exámenes parciales, exámenes finales, matrícula, vacaciones y otros eventos importantes del año académico.",
+      "fuente": "Portal Institucional UNSAAC / Portal SERUNSA"
+    },
+    {
+      "id": "CLA-004",
+      "intent": "consulta_cla_suspension_cambio",
+      "pregunta": "¿Qué ocurre si hay suspensión o cambio de horario?",
+      "respuesta": "Cualquier suspensión de clases, cambio de horario o reprogramación se comunica oficialmente a través del correo institucional (@unsaac.edu.pe) y del portal SERUNSA. Los docentes también publican avisos en el aula virtual de cada curso. Las clases suspendidas se reprograman para garantizar el cumplimiento del contenido del sílabo y las 16 semanas lectivas del semestre.",
+      "fuente": "Calendario Académico UNSAAC / Portal SERUNSA"
+    }
+  ]
+}

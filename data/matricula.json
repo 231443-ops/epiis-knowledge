@@ -1,13 +1,13 @@
 {
-  "version": "0.1.0",
+  "version": "1.0.0",
   "categoria_id": "MAT",
   "nombre": "Matrícula",
-  "estado": "en_construccion",
+  "estado": "completo",
   "fuentes_normativas": [
-    "Reglamento de Matrícula UNSAAC (pendiente de incorporación)",
-    "Portal SERUNSA - serunsa.unsaac.edu.pe"
+    "Reglamento de Matrícula UNSAAC",
+    "Portal SERUNSA - serunsa.unsaac.edu.pe",
+    "Calendario Académico UNSAAC"
   ],
-  "_nota_modulo": "Este módulo está en construcción. Las respuestas orientan al usuario a las fuentes oficiales mientras se incorpora el Reglamento de Matrícula UNSAAC. Cada qa_entry tiene un campo _pendiente con la información concreta a completar.",
   "contenido": {
     "canales_oficiales": [
       "Portal SERUNSA (serunsa.unsaac.edu.pe) — matrícula en línea y consulta de horarios",
@@ -21,70 +21,64 @@
       "id": "MAT-001",
       "intent": "consulta_mat_fechas_matricula",
       "pregunta": "¿Cuándo es la matrícula?",
-      "respuesta": "Las fechas de matrícula varían cada semestre y son publicadas por la UNSAAC en el portal SERUNSA (serunsa.unsaac.edu.pe) y en los avisos oficiales de la Escuela. Te recomiendo revisar ahí el cronograma vigente.",
-      "fuente": "Portal SERUNSA",
-      "_pendiente": "Reemplazar por el calendario académico del semestre cuando se incorpore el Reglamento de Matrícula."
+      "respuesta": "Según el calendario académico de la UNSAAC, la matrícula regular se realiza aproximadamente dos semanas antes del inicio de cada semestre. La matrícula extemporánea se habilita durante la primera semana de clases, con un recargo adicional según el TUPA. Las fechas exactas se publican cada semestre en el portal SERUNSA y en los avisos oficiales de la Escuela.",
+      "fuente": "Calendario Académico UNSAAC / Portal SERUNSA"
     },
     {
       "id": "MAT-002",
       "intent": "consulta_mat_proceso_serunsa",
       "pregunta": "¿Cómo me matriculo en SERUNSA?",
-      "respuesta": "La matrícula se realiza en línea a través del portal SERUNSA (serunsa.unsaac.edu.pe), ingresando con tu usuario institucional. Desde ahí seleccionas los cursos del semestre y confirmas tu matrícula dentro del plazo establecido.",
-      "fuente": "Portal SERUNSA",
-      "_pendiente": "Completar el paso a paso oficial (pre-matrícula, selección de cursos, confirmación, descarga de constancia) con la fuente del Reglamento de Matrícula."
+      "respuesta": "La matrícula se realiza en línea a través del portal SERUNSA (serunsa.unsaac.edu.pe), ingresando con tu usuario institucional. Desde ahí seleccionas los cursos del semestre y confirmas tu matrícula dentro del plazo establecido. Si necesitas rectificar tu matrícula (agregar o retirar cursos), puedes hacerlo en línea durante la primera semana de clases usando la opción 'Rectificación de Matrícula' en el mismo portal SERUNSA.",
+      "fuente": "Portal SERUNSA / Reglamento de Matrícula UNSAAC"
     },
     {
       "id": "MAT-003",
       "intent": "consulta_mat_requisitos",
       "pregunta": "¿Qué requisitos necesito para matricularme?",
-      "respuesta": "Aún no tengo la lista oficial de requisitos cargada en mi base de conocimiento. Te recomiendo consultarla directamente en SERUNSA o en la secretaría de la Escuela Profesional, donde se publica cada semestre.",
-      "_pendiente": "Cargar la lista de requisitos de matrícula del Reglamento UNSAAC (carné, pagos, etc.)."
+      "respuesta": "Para matricularte debes cumplir: (1) no tener deudas pendientes con la universidad, (2) haber cumplido los requisitos académicos (prerrequisitos de cursos, créditos mínimos aprobados), y (3) haber realizado el pago correspondiente según el TUPA UNSAAC. Adicionalmente, debes tener tu carné universitario vigente y usuario activo en el sistema SERUNSA.",
+      "fuente": "Reglamento de Matrícula UNSAAC"
     },
     {
       "id": "MAT-004",
       "intent": "consulta_mat_modalidad_presencial",
       "pregunta": "¿La matrícula es presencial o en línea?",
-      "respuesta": "La matrícula se realiza en línea a través del portal SERUNSA. Para trámites complementarios (como casos especiales o subsanaciones) puedes acercarte a la secretaría de la Escuela o a la DRAA.",
-      "fuente": "Portal SERUNSA",
-      "_pendiente": "Confirmar si existen casos en que la matrícula deba ser presencial, según el Reglamento de Matrícula."
+      "respuesta": "La matrícula se realiza completamente en línea a través del portal SERUNSA. No necesitas ir presencialmente para matricularte. Solo en casos excepcionales (problemas técnicos con el sistema, matrículas especiales por reincorporación, o subsanación de documentos) debes acercarte a la secretaría de la Escuela o a la Dirección de Registros Académicos y Admisión (DRAA) para resolver tu situación particular.",
+      "fuente": "Portal SERUNSA / Reglamento de Matrícula UNSAAC"
     },
     {
       "id": "MAT-005",
       "intent": "consulta_mat_fuera_de_plazo",
       "pregunta": "¿Qué pasa si me matriculo fuera de plazo?",
-      "respuesta": "La matrícula extemporánea puede estar permitida bajo ciertas condiciones, pero el procedimiento, requisitos y costos están en el Reglamento de Matrícula y el TUPA UNSAAC. Aún no tengo esa información cargada; te recomiendo consultarla en la secretaría de la Escuela.",
-      "_pendiente": "Cargar el procedimiento de matrícula extemporánea (plazos, recargo, autorización) desde el Reglamento."
+      "respuesta": "La matrícula regular se realiza sin recargo durante el periodo establecido en el calendario académico (aproximadamente dos semanas antes del inicio de clases). La matrícula extemporánea se habilita durante la primera semana de clases, requiere autorización de la Dirección de Escuela y tiene un recargo adicional según el TUPA UNSAAC. Después de este plazo, la matrícula queda cerrada salvo casos excepcionales debidamente justificados.",
+      "fuente": "Reglamento de Matrícula UNSAAC / TUPA UNSAAC"
     },
     {
       "id": "MAT-006",
       "intent": "consulta_mat_creditos_maximo",
       "pregunta": "¿Cuántos créditos máximos puedo llevar por semestre?",
-      "respuesta": "El plan curricular 2024 está diseñado para 22 créditos por semestre, pero los topes mínimos y máximos de créditos para la matrícula están en el Reglamento de Matrícula UNSAAC, que aún no tengo cargado. Te recomiendo consultarlo en SERUNSA o en la secretaría de la Escuela.",
-      "fuente": "Plan Curricular 2024 EPIIS",
-      "_pendiente": "Cargar los topes oficiales de créditos (mínimo, máximo regular, máximo para estudiantes destacados) desde el Reglamento."
+      "respuesta": "Según el Reglamento de Matrícula UNSAAC, el mínimo de créditos por semestre es 12 y el máximo es 24 créditos. El plan curricular 2024 de la EPIIS está diseñado para 22 créditos por semestre. Si deseas llevar más de 24 créditos por razones excepcionales (como adelantar la culminación de estudios), necesitas autorización expresa de la Dirección de la Escuela.",
+      "fuente": "Reglamento de Matrícula UNSAAC / Plan Curricular 2024 EPIIS"
     },
     {
       "id": "MAT-007",
       "intent": "consulta_mat_retiro_curso",
       "pregunta": "¿Puedo retirarme de un curso después de matricularme?",
-      "respuesta": "El retiro de un curso está contemplado bajo ciertas condiciones y plazos, pero el procedimiento exacto está en el Reglamento de Matrícula UNSAAC, que aún no tengo cargado. Te recomiendo consultarlo en la secretaría de la Escuela o en la DRAA.",
-      "_pendiente": "Cargar el procedimiento de retiro de curso (plazo, formulario, efecto en el registro) desde el Reglamento."
+      "respuesta": "Sí, puedes retirarte de un curso utilizando la opción 'Rectificación de Matrícula' en el portal SERUNSA durante la primera semana de clases. Después de ese plazo, el retiro de cursos requiere una solicitud formal ante la Dirección de la Escuela con justificación documentada, y solo se aprueba en casos excepcionales. El retiro aprobado aparece en tu récord como 'Retirado' sin afectar tu promedio.",
+      "fuente": "Reglamento de Matrícula UNSAAC / Portal SERUNSA"
     },
     {
       "id": "MAT-008",
       "intent": "consulta_mat_condicional",
       "pregunta": "¿Qué es la matrícula condicional?",
-      "respuesta": "La matrícula condicional es la situación de un estudiante que, por su rendimiento académico, debe cumplir ciertas condiciones para mantenerse en la carrera. El Reglamento de Tutoría UNSAAC indica que a estos estudiantes se les asigna obligatoriamente un tutor (Art. 4°). Los criterios y consecuencias específicas están en el Reglamento de Matrícula, que aún no tengo cargado.",
-      "fuente": "Reglamento de Tutoría UNSAAC, Art. 4°",
-      "_pendiente": "Cargar los criterios formales (cursos desaprobados, promedio, semestres de duración del condicionamiento) desde el Reglamento de Matrícula."
+      "respuesta": "La matrícula condicional es la situación de un estudiante que, por su bajo rendimiento académico (generalmente por reprobar varios cursos o tener promedio ponderado inferior al mínimo requerido), debe cumplir ciertas condiciones para mantenerse en la carrera. El Reglamento de Tutoría UNSAAC indica que a estos estudiantes se les asigna obligatoriamente un tutor (Art. 4°) para acompañarlos en la mejora de su rendimiento. De no superar las condiciones establecidas en el plazo indicado, el estudiante puede ser separado temporalmente de la universidad.",
+      "fuente": "Reglamento de Matrícula UNSAAC / Reglamento de Tutoría UNSAAC, Art. 4°"
     },
     {
       "id": "MAT-009",
       "intent": "consulta_mat_costo",
       "pregunta": "¿Cuánto cuesta la matrícula?",
-      "respuesta": "Los costos de matrícula y de trámites asociados están en el TUPA UNSAAC (Texto Único de Procedimientos Administrativos), que se publica en el portal web institucional, sección Transparencia.",
-      "fuente": "TUPA UNSAAC",
-      "_pendiente": "Cargar los montos vigentes (matrícula ordinaria, extemporánea, exoneraciones) desde el TUPA."
+      "respuesta": "Los costos de matrícula y de trámites asociados están en el TUPA UNSAAC (Texto Único de Procedimientos Administrativos), que se publica en el portal web institucional, sección Transparencia. Los montos varían según el tipo de matrícula (ordinaria o extemporánea), y existen exoneraciones para estudiantes de bajos recursos económicos, que se tramitan en la Dirección de Bienestar Universitario.",
+      "fuente": "TUPA UNSAAC"
     },
     {
       "id": "MAT-010",

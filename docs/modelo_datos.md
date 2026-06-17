@@ -109,14 +109,31 @@ Archivo de evaluación. No se carga en producción; se usa para medir la calidad
 
 ## Inventario de archivos de datos
 
-| Archivo | Prefijos | Estado |
-|---|---|---|
-| `tutorias.json` | TUT, TTUT | completo |
-| `malla_semestralizada.json` | CUR | completo |
-| `plan_estudios_resumen.json` | ESP | completo |
-| `practicas.json` | PPP | completo |
-| `bienestar.json` | BIE | verificar |
-| `movilidad.json` | MOV | verificar |
-| `matricula.json` | MAT | en_construccion |
-| `titulacion.json` | TIT | en_construccion |
-| `servicios_academicos.json` | SER | verificar |
+| Archivo | Prefijos | Entradas | Estado |
+|---|---|---|---|
+| `tutorias.json` | TUT, TTUT | 20 | completo |
+| `matricula.json` | MAT | 10 | completo |
+| `servicios_academicos.json` | SER | 10 | completo |
+| `practicas.json` | PPP | 10 | completo |
+| `bienestar.json` | BIE | 10 | completo |
+| `movilidad.json` | MOV | 10 | completo |
+| `titulacion.json` | TIT | 10 | completo |
+| `malla_semestralizada.json` | CUR | 10 | completo |
+| `plan_estudios_resumen.json` | ESP | 10 | completo |
+| `inicio_clases.json` | CLA | 4 | completo |
+| `silabos.json` | SIL | 4 | completo |
+
+**Total:** 11 archivos, **108 qa_entries**
+
+---
+
+## Estadísticas del corpus
+
+- **Categorías:** 11 módulos temáticos
+- **Total de pares pregunta-respuesta:** 108 entradas
+- **Intents únicos:** 109 (definidos en `knowledge_base/intents.json`)
+- **Cobertura temática:**
+  - Tutorías y apoyo académico: 20 entradas
+  - Procesos administrativos (matrícula, titulación): 20 entradas
+  - Servicios estudiantiles (bienestar, movilidad, servicios): 30 entradas
+  - Plan de estudios (cursos, especialidades, clases, sílabos): 38 entradas

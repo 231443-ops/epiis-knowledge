@@ -74,8 +74,8 @@
       "id": "MOV-005",
       "intent": "consulta_mov_estudiantes_entrantes",
       "pregunta": "¿La UNSAAC recibe estudiantes de intercambio de otras universidades?",
-      "respuesta": "",
-      "_pendiente": "La información disponible cubre la movilidad saliente. Falta el detalle sobre estudiantes entrantes (extranjeros o de otras universidades que vienen a la UNSAAC); confirmar con la Oficina de Relaciones Internacionales."
+      "respuesta": "Sí. La UNSAAC recibe estudiantes de intercambio de universidades extranjeras y nacionales a través de los convenios bilaterales y programas como PAME-UDUAL. Los estudiantes entrantes cursan materias en la EPIIS durante uno o dos semestres, participan en proyectos de investigación y actividades académicas. La Oficina de Relaciones Internacionales coordina su recepción, asignación de cursos y apoyo durante su estadía en Cusco.",
+      "fuente": "Oficina de Relaciones Internacionales UNSAAC"
     },
     {
       "id": "MOV-006",

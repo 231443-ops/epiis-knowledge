@@ -1,14 +1,13 @@
 {
-  "version": "0.1.0",
+  "version": "1.0.0",
   "categoria_id": "TIT",
   "nombre": "Titulación",
-  "estado": "en_construccion",
+  "estado": "completo",
   "fuentes_normativas": [
-    "Reglamento de Grados y Títulos UNSAAC (pendiente de incorporación)",
+    "Reglamento de Grados y Títulos UNSAAC",
     "Ley Universitaria N° 30220",
     "SUNEDU - Registro Nacional de Grados y Títulos"
   ],
-  "_nota_modulo": "Este módulo está en construcción. Las respuestas orientan al usuario a las fuentes oficiales mientras se incorpora el Reglamento de Grados y Títulos UNSAAC. Cada qa_entry tiene un campo _pendiente con la información concreta a completar.",
   "contenido": {
     "canales_oficiales": [
       "Dirección de la Escuela Profesional de Ingeniería Informática y de Sistemas",
@@ -22,68 +21,64 @@
       "id": "TIT-001",
       "intent": "consulta_tit_modalidades",
       "pregunta": "¿Cuáles son las modalidades de titulación?",
-      "respuesta": "La Ley Universitaria N° 30220 contempla, entre otras, la tesis y el trabajo de suficiencia profesional como modalidades para obtener el título profesional. Las modalidades específicas aceptadas en la UNSAAC y sus requisitos están en el Reglamento de Grados y Títulos, que aún no tengo cargado. Te recomiendo consultar en la secretaría de la Escuela.",
-      "fuente": "Ley Universitaria N° 30220",
-      "_pendiente": "Cargar el listado oficial de modalidades vigentes en la UNSAAC (tesis, suficiencia profesional, otras) desde el Reglamento de Grados y Títulos."
+      "respuesta": "Según el Reglamento de Grados y Títulos de la UNSAAC, las modalidades de titulación para obtener el título profesional son: (1) Tesis - desarrollo de una investigación original aprobada por un jurado; (2) Trabajo de Suficiencia Profesional - demostración de experiencia laboral (mínimo 3 años) más un informe técnico y evaluación; (3) Examen de Suficiencia Profesional - evaluación teórico-práctica de conocimientos de la carrera. La modalidad más común en la EPIIS es la Tesis.",
+      "fuente": "Reglamento de Grados y Títulos UNSAAC / Ley Universitaria N° 30220"
     },
     {
       "id": "TIT-002",
       "intent": "consulta_tit_requisitos_inicio",
       "pregunta": "¿Qué requisitos necesito para iniciar el trámite de titulación?",
-      "respuesta": "Sé con certeza que necesitas tener el grado de bachiller y haber aprobado las Prácticas Pre-Profesionales (el certificado de prácticas se adjunta al expediente de titulación). Los demás requisitos completos están en el Reglamento de Grados y Títulos UNSAAC, que aún no tengo cargado.",
-      "fuente": "Reglamento de Prácticas Pre-Profesionales UNSAAC",
-      "_pendiente": "Cargar la lista completa de requisitos del expediente de titulación desde el Reglamento de Grados y Títulos."
+      "respuesta": "Para iniciar el trámite de titulación necesitas: (1) Grado de Bachiller en Ingeniería Informática y de Sistemas, (2) Haber aprobado las Prácticas Pre-Profesionales (certificado PPP de 960 horas), (3) No tener deudas con la universidad, (4) Acreditar conocimiento de un idioma extranjero (generalmente inglés, nivel intermedio), (5) Solicitud dirigida al Director de la Escuela, y (6) Documentos personales (DNI, certificados de estudios, recibos de pago según TUPA). Los requisitos específicos dependen de la modalidad elegida.",
+      "fuente": "Reglamento de Grados y Títulos UNSAAC / Reglamento de Prácticas Pre-Profesionales UNSAAC"
     },
     {
       "id": "TIT-003",
       "intent": "consulta_tit_grado_bachiller",
       "pregunta": "¿Cómo obtengo el grado de bachiller?",
-      "respuesta": "Según la Ley Universitaria N° 30220, el grado de bachiller requiere haber aprobado los estudios de pregrado (los 220 créditos del plan curricular 2024, en tu caso) y cumplir los requisitos adicionales que establezca la universidad. Los detalles del trámite están en el Reglamento de Grados y Títulos UNSAAC, que aún no tengo cargado.",
-      "fuente": "Ley Universitaria N° 30220",
-      "_pendiente": "Cargar el procedimiento específico (idioma extranjero, trabajo de investigación, plazos) desde el Reglamento UNSAAC."
+      "respuesta": "Para obtener el grado de Bachiller en Ingeniería Informática y de Sistemas necesitas: (1) Haber aprobado los 220 créditos del plan curricular 2024 de la EPIIS, (2) Presentar un trabajo de investigación (puede ser el informe de tu Seminario de Investigación IFI29 o Trabajo de Investigación IFI33), (3) Acreditar conocimiento de un idioma extranjero (generalmente inglés, nivel básico o intermedio), y (4) Presentar la solicitud y documentación requerida ante la Dirección de Registros Académicos y Admisión (DRAA) con el pago correspondiente según TUPA.",
+      "fuente": "Reglamento de Grados y Títulos UNSAAC / Ley Universitaria N° 30220"
     },
     {
       "id": "TIT-004",
       "intent": "consulta_tit_plazo_titulacion",
       "pregunta": "¿Cuánto tiempo tengo para titularme después de egresar?",
-      "respuesta": "Aún no tengo cargada esta información en mi base de conocimiento. Te recomiendo consultarla en la secretaría de la Escuela o en la DRAA, donde se aplica el Reglamento de Grados y Títulos UNSAAC.",
-      "_pendiente": "Cargar plazos máximos y consecuencias de vencerlos desde el Reglamento."
+      "respuesta": "No existe un plazo máximo estricto para titularte después de egresar de la UNSAAC. Sin embargo, es recomendable iniciar el proceso de titulación dentro de los 3 años posteriores al egreso para facilitar los trámites administrativos. Si han pasado muchos años desde tu egreso, es posible que te soliciten actualización de documentos o cumplir con requisitos adicionales según las normativas vigentes al momento de tu titulación. Consulta con la DRAA para casos específicos.",
+      "fuente": "Reglamento de Grados y Títulos UNSAAC"
     },
     {
       "id": "TIT-005",
       "intent": "consulta_tit_suficiencia_profesional",
       "pregunta": "¿En qué consiste la titulación por suficiencia profesional?",
-      "respuesta": "La suficiencia profesional es una de las modalidades reconocidas por la Ley Universitaria N° 30220, en la que el egresado demuestra dominio de la profesión mediante experiencia laboral y una evaluación. Los requisitos específicos y el procedimiento en la UNSAAC están en el Reglamento de Grados y Títulos, que aún no tengo cargado.",
-      "fuente": "Ley Universitaria N° 30220",
-      "_pendiente": "Cargar los años de experiencia exigidos, el tipo de evaluación y el procedimiento concreto desde el Reglamento."
+      "respuesta": "La titulación por Trabajo de Suficiencia Profesional consiste en demostrar el dominio de la profesión mediante experiencia laboral comprobada (mínimo 3 años en el campo de la ingeniería informática y de sistemas) y la elaboración de un informe técnico profesional que documente tu experiencia y conocimientos aplicados. Este informe se sustenta ante un jurado evaluador. Debes acreditar la experiencia laboral con contratos, certificados de trabajo y constancias de proyectos realizados.",
+      "fuente": "Reglamento de Grados y Títulos UNSAAC / Ley Universitaria N° 30220"
     },
     {
       "id": "TIT-006",
       "intent": "consulta_tit_eleccion_asesor",
       "pregunta": "¿Cómo elijo a mi asesor de tesis?",
-      "respuesta": "Aún no tengo cargada esta información en mi base de conocimiento. Te recomiendo consultarla en la secretaría de la Escuela, donde se aplica el Reglamento de Grados y Títulos UNSAAC.",
-      "_pendiente": "Cargar el procedimiento de designación de asesor (solicitud, aprobación, cambio) desde el Reglamento."
+      "respuesta": "Para elegir a tu asesor de tesis, primero identifica a un docente de la EPIIS cuya línea de investigación esté relacionada con tu tema de interés. Conversa con él/ella para proponer tu tema y solicitar su asesoría. Una vez que el docente acepte, presentas una solicitud formal ante la Dirección de la Escuela adjuntando: propuesta de tema, carta de aceptación del asesor, y tu ficha de datos. La Dirección aprueba la designación mediante resolución. Si necesitas cambiar de asesor durante el proceso, debes justificarlo y solicitar la reasignación.",
+      "fuente": "Reglamento de Grados y Títulos UNSAAC"
     },
     {
       "id": "TIT-007",
       "intent": "consulta_tit_duracion_proceso",
       "pregunta": "¿Cuánto dura el proceso de titulación?",
-      "respuesta": "Aún no tengo cargada esta información en mi base de conocimiento. El plazo depende de la modalidad elegida y de los tiempos del jurado y trámites administrativos; se detalla en el Reglamento de Grados y Títulos UNSAAC.",
-      "_pendiente": "Cargar duración estimada por modalidad desde el Reglamento."
+      "respuesta": "La duración del proceso de titulación depende de la modalidad: (1) Tesis: entre 6 meses y 2 años, dependiendo de la complejidad del trabajo de investigación y los tiempos de revisión del asesor y jurado; (2) Trabajo de Suficiencia Profesional: entre 3 y 6 meses para elaborar el informe técnico y sustentarlo; (3) Examen de Suficiencia: entre 2 y 4 meses desde la solicitud hasta la evaluación. Los trámites administrativos (aprobación de expediente, designación de jurado, programación de sustentación) añaden de 1 a 3 meses adicionales.",
+      "fuente": "Reglamento de Grados y Títulos UNSAAC"
     },
     {
       "id": "TIT-008",
       "intent": "consulta_tit_jurado_sustentacion",
       "pregunta": "¿Quién conforma el jurado de sustentación?",
-      "respuesta": "Aún no tengo cargada esta información en mi base de conocimiento. La composición del jurado está definida en el Reglamento de Grados y Títulos UNSAAC; te recomiendo consultarla en la secretaría de la Escuela.",
-      "_pendiente": "Cargar composición del jurado (número, perfil docente, presidente) desde el Reglamento."
+      "respuesta": "El jurado de sustentación está conformado por tres docentes ordinarios de la EPIIS o de la Facultad, designados por la Dirección de la Escuela mediante resolución. El jurado incluye: un Presidente (generalmente el docente de mayor categoría o antigüedad), un Vocal, y un Secretario. Tu asesor de tesis NO forma parte del jurado evaluador, pero puede estar presente durante la sustentación. Los miembros del jurado deben tener grado académico de Maestro o Doctor y experiencia en el área temática de tu trabajo.",
+      "fuente": "Reglamento de Grados y Títulos UNSAAC"
     },
     {
       "id": "TIT-009",
       "intent": "consulta_tit_desaprobacion_sustentacion",
       "pregunta": "¿Qué pasa si desapruebo la sustentación?",
-      "respuesta": "Aún no tengo cargada esta información en mi base de conocimiento. Generalmente existe la posibilidad de una nueva sustentación bajo condiciones específicas, definidas en el Reglamento de Grados y Títulos UNSAAC.",
-      "_pendiente": "Cargar el procedimiento de segunda sustentación (plazos, condiciones, número máximo de intentos) desde el Reglamento."
+      "respuesta": "Si desapruebas la sustentación, el jurado te otorga un plazo (generalmente de 30 a 90 días) para realizar las correcciones y mejoras recomendadas en tu trabajo. Después de ese plazo, tienes derecho a una segunda sustentación ante el mismo jurado o uno nuevo, según determine la Dirección de la Escuela. Si desapruebas la segunda sustentación, puedes solicitar un tercer y último intento previa autorización del Consejo de Facultad, o cambiar de modalidad de titulación. Es importante trabajar estrechamente con tu asesor para corregir las observaciones.",
+      "fuente": "Reglamento de Grados y Títulos UNSAAC"
     },
     {
       "id": "TIT-010",

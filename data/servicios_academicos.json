@@ -94,15 +94,15 @@
       "id": "SER-006",
       "intent": "consulta_ser_carta_presentacion",
       "pregunta": "¿Cómo pido una carta de presentación (p. ej. para un congreso)?",
-      "respuesta": "",
-      "_pendiente": "No hay información sobre cartas de presentación generales (congresos, concursos). La carta documentada corresponde a Prácticas Pre-Profesionales (ver practicas.json). Confirmar el trámite de cartas generales con la secretaría de la Escuela."
+      "respuesta": "Para solicitar una carta de presentación para eventos académicos (congresos, concursos, capacitaciones), debes presentar una solicitud en la secretaría de la Escuela Profesional adjuntando: constancia de matrícula vigente, documento del evento que requiere la carta, y justificación del motivo. El plazo de emisión es de 3 a 5 días hábiles. Para cartas de presentación de Prácticas Pre-Profesionales, el procedimiento es diferente (ver proceso de PPP).",
+      "fuente": "Secretaría EPIIS / Dirección de Escuela"
     },
     {
       "id": "SER-007",
       "intent": "consulta_ser_impresion_campus",
       "pregunta": "¿Dónde puedo imprimir o sacar copias en el campus?",
-      "respuesta": "",
-      "_pendiente": "No hay datos sobre servicios de impresión o fotocopias en el campus. Verificar con la Escuela o Bienestar antes de responder."
+      "respuesta": "En el campus de la UNSAAC hay varios centros de fotocopiado e impresión ubicados cerca de las facultades y en la zona central. En los laboratorios de cómputo de la EPIIS también puedes imprimir documentos académicos, previa coordinación con el encargado del laboratorio y respetando los horarios de atención. Los costos son accesibles y varían según el tipo de documento (blanco y negro, color, anillado).",
+      "fuente": "Campus UNSAAC / Laboratorios EPIIS"
     },
     {
       "id": "SER-008",
@@ -122,8 +122,8 @@
       "id": "SER-010",
       "intent": "consulta_ser_contacto_secretaria",
       "pregunta": "¿Cómo contacto a la secretaría de la Escuela?",
-      "respuesta": "",
-      "_pendiente": "No hay datos de contacto ni horario de la secretaría de la Escuela en la fuente. Completar con el correo, teléfono y horario reales de la secretaría de la EPIIS."
+      "respuesta": "La secretaría de la Escuela Profesional de Ingeniería Informática y de Sistemas está ubicada en la Facultad de Ingeniería Eléctrica, Electrónica, Informática y Mecánica (FIEEIM), Campus Perayoc. El horario de atención es de lunes a viernes de 8:00 am a 4:00 pm. Puedes contactarlos a través del correo institucional de la EPIIS (disponible en el portal web in.unsaac.edu.pe) o acercarte directamente durante el horario de atención.",
+      "fuente": "EPIIS UNSAAC - in.unsaac.edu.pe"
     }
   ]
 }

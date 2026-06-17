@@ -1,0 +1,68 @@
+{
+  "version": "1.0.0",
+  "categoria_id": "SIL",
+  "nombre": "Sílabos",
+  "fuentes_normativas": [
+    "Reglamento Académico UNSAAC",
+    "Formato de Sílabo UNSAAC",
+    "Plataforma Educativa Institucional"
+  ],
+  "contenido": {
+    "definicion": "El sílabo es el documento oficial que describe de manera detallada los objetivos, contenidos, metodología, cronograma, sistema de evaluación y bibliografía de una asignatura para un semestre académico.",
+    "acceso": {
+      "principal": "Plataforma educativa institucional (Aula Virtual - Moodle)",
+      "secundario": "Portal SERUNSA o solicitud directa al docente del curso"
+    },
+    "estructura_oficial": {
+      "secciones": [
+        "Datos generales (código, nombre, créditos, semestre, docente)",
+        "Sumilla (descripción breve del curso)",
+        "Competencias (genéricas y específicas a desarrollar)",
+        "Contenidos por unidades temáticas",
+        "Metodología de enseñanza y aprendizaje",
+        "Cronograma de actividades por semanas",
+        "Sistema de evaluación (criterios, instrumentos, pesos porcentuales)",
+        "Referencias bibliográficas (básicas y complementarias)",
+        "Datos del docente (correo, horario de atención)"
+      ]
+    },
+    "sistema_evaluacion_general": {
+      "evaluaciones_continuas": "40-60% (tareas, prácticas, participación)",
+      "examen_parcial": "20-30%",
+      "examen_final": "20-30%",
+      "nota_minima_aprobatoria": 11,
+      "nota_maxima": 20,
+      "observacion": "Los porcentajes específicos varían según el sílabo de cada curso."
+    }
+  },
+  "qa_entries": [
+    {
+      "id": "SIL-001",
+      "intent": "consulta_sil_definicion",
+      "pregunta": "¿Qué es un sílabo?",
+      "respuesta": "El sílabo es el documento oficial que describe de manera detallada los objetivos, contenidos, metodología, cronograma de actividades, sistema de evaluación y bibliografía de una asignatura para un semestre académico. Es elaborado por el docente del curso y aprobado por la Dirección de la Escuela Profesional. Funciona como un contrato académico entre el estudiante y el docente sobre lo que se va a aprender y cómo se va a evaluar.",
+      "fuente": "Reglamento Académico UNSAAC"
+    },
+    {
+      "id": "SIL-002",
+      "intent": "consulta_sil_acceso",
+      "pregunta": "¿Dónde encuentro los sílabos?",
+      "respuesta": "Los sílabos de tus cursos están disponibles en la plataforma educativa institucional, específicamente en el aula virtual (Moodle) de cada curso, en la sección de 'Información del curso' o 'Documentos'. También puedes consultarlos en el portal SERUNSA o solicitarlos directamente al docente del curso durante la primera semana de clases.",
+      "fuente": "Plataforma Educativa Institucional (Aula Virtual - Moodle)"
+    },
+    {
+      "id": "SIL-003",
+      "intent": "consulta_sil_estructura",
+      "pregunta": "¿Cuál es la estructura del sílabo?",
+      "respuesta": "El sílabo oficial de la UNSAAC está organizado en 9 secciones: (1) Datos generales (código, nombre, créditos, semestre, docente), (2) Sumilla (descripción breve del curso), (3) Competencias genéricas y específicas a desarrollar, (4) Contenidos organizados por unidades temáticas, (5) Metodología de enseñanza y aprendizaje, (6) Cronograma de actividades por semanas, (7) Sistema de evaluación con criterios e instrumentos, (8) Referencias bibliográficas básicas y complementarias, y (9) Datos de contacto del docente.",
+      "fuente": "Formato de Sílabo UNSAAC"
+    },
+    {
+      "id": "SIL-004",
+      "intent": "consulta_sil_evaluacion",
+      "pregunta": "¿Cómo es el sistema de evaluación?",
+      "respuesta": "El sistema de evaluación varía según cada curso, pero generalmente se compone de: evaluaciones continuas (40-60% del promedio final, incluyendo tareas, prácticas, trabajos y participación), examen parcial (20-30%) y examen final (20-30%). La nota mínima aprobatoria es 11 sobre 20. Los pesos específicos de cada componente están detallados en el sílabo de cada curso, que debes revisar al inicio del semestre.",
+      "fuente": "Reglamento Académico UNSAAC / Sílabos EPIIS"
+    }
+  ]
+}

@@ -1,14 +1,20 @@
-from .utils import normalize_text, tokenize
+from .utils import normalize_text, tokenize, compute_tf_vector, cosine_similarity
 
 
 class IntentClassifier:
     """
-    Clasificador basado en coincidencia de keywords y solapamiento de palabras
-    con trigger_phrases. No requiere modelo externo ni dependencias de NLP.
+    Clasificador basado en Similitud Coseno entre la consulta del usuario
+    y las representaciones vectoriales (TF) de keywords y trigger_phrases de cada intent.
+
+    Implementa la fórmula:
+        Similitud(Q,D) = (Σ Q_i * D_i) / (√(Σ Q_i²) * √(Σ D_i²))
+
+    donde Q es el vector TF de la consulta del usuario y D es el vector TF
+    del documento de referencia (keywords + trigger_phrases del intent).
 
     Nota: los valores confianza_minima de intents.json están calibrados para
-    Dialogflow/Rasa (modelos ML). Este clasificador de keywords usa threshold=0.5
-    como umbral propio, que es apropiado para la escala de puntuación que produce.
+    Dialogflow/Rasa (modelos ML). Este clasificador usa threshold=0.5 como
+    umbral propio, apropiado para la escala de similitud coseno [0, 1].
     """
 
     def __init__(
@@ -25,61 +31,67 @@ class IntentClassifier:
         self._prepared = self._prepare(keywords_mapping)
 
     def _prepare(self, mapping: list[dict]) -> list[dict]:
+        """
+        Pre-procesa los keywords y trigger_phrases de cada intent,
+        construyendo su representación vectorial (TF).
+        """
         prepared = []
         for entry in mapping:
-            norm_keywords = [normalize_text(k) for k in entry.get("keywords", [])]
-            norm_triggers: list[set[str]] = [
-                set(tokenize(tp)) for tp in entry.get("trigger_phrases", [])
-            ]
+            intent = entry["intent"]
+
+            # Combinar todos los keywords y trigger_phrases en un solo documento de referencia
+            keywords = entry.get("keywords", [])
+            trigger_phrases = entry.get("trigger_phrases", [])
+
+            # Construir el "documento de referencia" del intent
+            reference_text = " ".join(keywords) + " " + " ".join(trigger_phrases)
+            reference_tokens = tokenize(reference_text)
+            reference_vector = compute_tf_vector(reference_tokens)
+
             prepared.append({
-                "intent": entry["intent"],
-                "keywords": norm_keywords,
-                "trigger_tokens": norm_triggers,
+                "intent": intent,
+                "reference_vector": reference_vector,
             })
+
         return prepared
 
     def classify(self, text: str) -> tuple[str | None, float]:
         """
-        Retorna (intent, confianza). Retorna (None, 0.0) si no supera
-        el umbral mínimo de ningún intent.
+        Clasifica el texto del usuario usando similitud coseno.
+
+        Args:
+            text: Consulta del usuario en lenguaje natural
+
+        Returns:
+            tuple (intent, confianza): intent detectado y su score de similitud,
+            o (None, mejor_score) si ningún intent supera el umbral mínimo.
         """
-        norm = normalize_text(text)
-        tokens = set(tokenize(text))
+        if not text or not text.strip():
+            return None, 0.0
+
+        # Vectorizar la consulta del usuario
+        query_tokens = tokenize(text)
+        query_vector = compute_tf_vector(query_tokens)
+
+        if not query_vector:
+            return None, 0.0
 
         best_intent: str | None = None
         best_score: float = 0.0
 
+        # Calcular similitud coseno con cada intent
         for entry in self._prepared:
             intent = entry["intent"]
-            score = self._score(norm, tokens, entry)
+            reference_vector = entry["reference_vector"]
+
+            score = cosine_similarity(query_vector, reference_vector)
+
             if score > best_score:
                 best_score = score
                 best_intent = intent
 
+        # Verificar si supera el umbral
         if best_intent is None or best_score < self._threshold:
             return None, round(best_score, 4)
 
         return best_intent, round(best_score, 4)
-
-    def _score(self, norm_text: str, tokens: set[str], entry: dict) -> float:
-        """
-        Combina dos señales:
-        - keyword_score: fracción de keywords del intent presentes en el texto
-        - trigger_score: mejor solapamiento de Jaccard con algún trigger_phrase
-        """
-        keywords = entry["keywords"]
-        keyword_score = 0.0
-        if keywords:
-            hits = sum(1 for kw in keywords if kw in norm_text)
-            keyword_score = hits / len(keywords)
-
-        trigger_score = 0.0
-        for trig_tokens in entry["trigger_tokens"]:
-            if not trig_tokens:
-                continue
-            overlap = len(tokens & trig_tokens) / len(tokens | trig_tokens)
-            if overlap > trigger_score:
-                trigger_score = overlap
-
-        # Ponderación: keywords tienen más peso que trigger_phrases
-        return 0.65 * keyword_score + 0.35 * trigger_score
