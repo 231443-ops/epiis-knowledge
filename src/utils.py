@@ -4,6 +4,48 @@ import math
 from collections import Counter
 
 
+# Stop words (palabras vacías) en español
+# Estas palabras se filtran del análisis porque no aportan significado semántico
+STOP_WORDS = {
+    # Artículos
+    'el', 'la', 'los', 'las', 'un', 'una', 'unos', 'unas',
+
+    # Preposiciones
+    'de', 'del', 'a', 'al', 'en', 'por', 'para', 'con', 'sin', 'sobre',
+    'entre', 'desde', 'hasta', 'hacia', 'mediante', 'tras',
+
+    # Pronombres
+    'yo', 'tu', 'el', 'ella', 'nosotros', 'vosotros', 'ellos', 'ellas',
+    'me', 'te', 'se', 'nos', 'os', 'le', 'les', 'lo', 'mi', 'mis', 'su', 'sus',
+
+    # Conjunciones
+    'y', 'e', 'o', 'u', 'pero', 'sino', 'aunque', 'si', 'porque', 'que',
+
+    # Verbos auxiliares comunes
+    'ser', 'estar', 'haber', 'tener', 'hacer', 'poder', 'deber',
+    'es', 'son', 'esta', 'estan', 'hay', 'tiene', 'pueden',
+
+    # Interrogativos (se mantienen algunos como 'como', 'cuando' que pueden ser útiles)
+
+    # Demostrativos
+    'este', 'esta', 'estos', 'estas', 'ese', 'esa', 'esos', 'esas',
+    'aquel', 'aquella', 'aquellos', 'aquellas',
+
+    # Adverbios muy comunes
+    'muy', 'mas', 'menos', 'tambien', 'tampoco', 'si', 'no',
+
+    # Nombres institucionales genéricos (contexto UNSAAC)
+    'unsaac', 'universidad', 'nacional', 'san', 'antonio', 'abad', 'cusco',
+
+    # Palabras de cortesía/relleno
+    'por', 'favor', 'gracias', 'dame', 'dime', 'explicame', 'quiero', 'necesito',
+    'hola', 'buenos', 'dias', 'tardes', 'noches', 'ayuda', 'ayudame',
+
+    # Otras palabras vacías
+    'algo', 'nada', 'todo', 'cada', 'otro', 'otra', 'mismo', 'misma'
+}
+
+
 def normalize_text(text: str) -> str:
     """Minúsculas + sin tildes + sin puntuación."""
     text = text.lower()
@@ -54,18 +96,26 @@ def normalize_plural(word: str) -> str:
     return word
 
 
-def tokenize(text: str) -> list[str]:
+def tokenize(text: str, remove_stop_words: bool = True) -> list[str]:
     """
-    Tokeniza y normaliza el texto, manejando plurales.
+    Tokeniza y normaliza el texto, manejando plurales y filtrando stop_words.
+
+    Args:
+        text: Texto a tokenizar
+        remove_stop_words: Si True, filtra palabras vacías (por defecto True)
 
     Returns:
-        Lista de tokens normalizados (singular, minúsculas, sin tildes)
+        Lista de tokens normalizados (singular, minúsculas, sin tildes, sin stop_words)
     """
     normalized = normalize_text(text)
     tokens = normalized.split()
 
     # Normalizar plurales en cada token
     tokens_singular = [normalize_plural(token) for token in tokens]
+
+    # Filtrar stop_words si está habilitado
+    if remove_stop_words:
+        tokens_singular = [token for token in tokens_singular if token not in STOP_WORDS]
 
     return tokens_singular
 
