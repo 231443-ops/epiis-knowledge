@@ -125,10 +125,8 @@ Para cada intent:
 | MAT | `matricula.json` |
 | TIT | `titulacion.json` |
 | SER | `servicios_academicos.json` |
-| CLA | `inicio_clases.json` |
-| SIL | `silabos.json` |
 
-**Total:** 11 archivos de datos, 108 qa_entries
+**Total:** 9 archivos de datos, 117 qa_entries
 
 ---
 

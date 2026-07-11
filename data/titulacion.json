@@ -4,88 +4,260 @@
   "nombre": "Titulación",
   "estado": "completo",
   "fuentes_normativas": [
-    "Reglamento de Grados y Títulos UNSAAC",
+    "Reglamento Académico UNSAAC – Res. N° CU-093-2017-UNSAAC (Título V: Art. 117° al 157°)",
     "Ley Universitaria N° 30220",
-    "SUNEDU - Registro Nacional de Grados y Títulos"
+    "SUNEDU – Registro Nacional de Grados y Títulos"
   ],
   "contenido": {
-    "canales_oficiales": [
-      "Dirección de la Escuela Profesional de Ingeniería Informática y de Sistemas",
-      "Dirección de Registros Académicos y Admisión (DRAA)",
-      "Vicerrectorado Académico UNSAAC",
-      "SUNEDU — registro nacional de grados y títulos"
-    ]
+    "ambito": {
+      "art": "Art. 117°",
+      "texto": "El Título V regula el otorgamiento del grado de Bachiller y del Título Profesional de Licenciado en Ingeniería Informática y de Sistemas o su equivalente. Su cumplimiento es supervisado por SUNEDU."
+    },
+    "registro_nacional": {
+      "art": "Art. 118°",
+      "texto": "El grado y título se confieren a nombre de la Nación. La UNSAAC mantiene registro de los grados y títulos conferidos y los reporta a SUNEDU conforme a ley."
+    },
+    "modalidades_titulacion": {
+      "art": "Art. 120°",
+      "modalidades": [
+        "Tesis",
+        "Trabajo de Suficiencia Profesional"
+      ]
+    },
+    "bachiller": {
+      "art": "Art. 121° al 129°",
+      "egresado": "Quien, desde su admisión, completa el número de créditos exigidos por el Plan de Estudios de su Escuela Profesional. Al concluir cada semestre, el Centro de Cómputo y la Dirección de Escuela determinan quiénes alcanzan calidad de egresados.",
+      "requisitos": {
+        "art": "Art. 123°",
+        "lista": [
+          "Solicitud",
+          "Ficha de Seguimiento Académico con conformidad del egresado",
+          "Copia del DNI vigente",
+          "Certificación de conocimiento de idioma extranjero, conforme a lo establecido por la UNSAAC",
+          "Certificación del Instituto de Sistemas Cusco o el Centro de Capacitación en Informática de la UNSAAC que acredite dominio de computación",
+          "Pago en caja por bachillerato",
+          "Inscripción del trabajo de investigación a sustentar"
+        ]
+      },
+      "trabajo_investigacion": {
+        "inscripcion": {
+          "art": "Art. 126°",
+          "condicion": "Puedes inscribir el trabajo de investigación cuando hayas aprobado el 70% de créditos del plan curricular, con apoyo de tu tutor o de un docente asesor nombrado por el Decano."
+        },
+        "evaluacion": {
+          "art": "Art. 128°",
+          "texto": "La Unidad de Investigación nombra un docente para pronunciarse en un plazo improrrogable de 5 días sobre si el trabajo es aceptable; puede convocar a exposición pública si lo considera pertinente."
+        },
+        "conferimiento": {
+          "art": "Art. 129°",
+          "texto": "Con el pronunciamiento favorable, el Decano remite el expediente al Consejo Universitario para que confiera el grado y emita el diploma, refrendado por el Rector y certificado por el Secretario General. El diploma se registra conforme a normas SUNEDU."
+        }
+      },
+      "procedimiento_plazo": {
+        "art": "Art. 124°, Art. 125°",
+        "plazo_revision_escuela": "3 días (improrrogables)",
+        "resolucion": "Emitida por el Decano declarando al egresado apto para grado; ninguna autoridad puede observar situación académica alguna una vez declarada la aptitud."
+      }
+    },
+    "titulo_profesional": {
+      "naturaleza": {
+        "art": "Art. 130°",
+        "texto": "Acredita la habilitación certificada para el ejercicio de la profesión, una vez registrado en el Colegio Profesional correspondiente."
+      },
+      "requisito_sustancial": {
+        "art": "Art. 131°",
+        "texto": "Tener el grado académico de Bachiller otorgado por la UNSAAC."
+      },
+      "requisitos_formales": {
+        "art": "Art. 132°",
+        "lista": [
+          "Solicitud",
+          "Copia simple del diploma de Bachiller conferido por la UNSAAC",
+          "Copia simple del DNI vigente",
+          "Declaración jurada autenticada por Notario Público o Fedatario, de carecer de antecedentes penales y judiciales, autorizando a la universidad a recabar la información al Poder Judicial",
+          "Recibo en caja por título profesional"
+        ]
+      },
+      "declaracion_apto": {
+        "art": "Art. 133°",
+        "plazo_director": "3 días para emitir informe de cumplimiento de requisitos",
+        "plazo_decano": "3 días siguientes para emitir resolución declarando apto",
+        "silencio_positivo": "Si se incumple el plazo opera el silencio administrativo positivo (Art. 157°)"
+      }
+    },
+    "titulacion_tesis": {
+      "art": "Art. 134° al 148°",
+      "definicion": "Trabajo de investigación en las áreas de conocimiento de la Escuela que constituye aporte al desarrollo local, regional o nacional, sustentado en acto público.",
+      "modalidad": "Individual o colectiva (máximo 2 participantes, aunque el Art. 135° señala 'no superior a dos (3)', se aplica el tenor correcto: hasta 2 o 3 según la resolución).",
+      "inscripcion_plan": {
+        "art": "Art. 136°",
+        "condicion": "Puedes presentar el Plan de Tesis cuando hayas aprobado el 80% de créditos del plan curricular; el plan tiene vigencia de 2 años prorrogable por 1 año más."
+      },
+      "dictaminadores": {
+        "art": "Art. 140°",
+        "plazo": "10 días para emitir opinión individual de suficiencia o insuficiencia; si observan, el postulante tiene 10 días para absolver y el dictaminador otros 10 días para pronunciamiento definitivo."
+      },
+      "jurado": {
+        "art": "Art. 142°",
+        "composicion": "El Decano lo preside (puede delegar) y lo integran hasta 4 docentes: los 2 dictaminadores y 2 replicantes; los ejemplares se distribuyen al menos 2 días antes."
+      },
+      "sustentacion": {
+        "art": "Art. 143°",
+        "individual": "Exposición oral máx. 45 min; cada jurado formula preguntas por máx. 10 min. La tolerancia de espera es 15 min."
+      },
+      "calificacion": {
+        "art": "Art. 144°, Art. 145°",
+        "criterios": {
+          "forma": "20%",
+          "dominio": "30%",
+          "sintesis": "20%",
+          "absolucion": "30%"
+        },
+        "escala": "1–13 Desaprobado; 14–15 Aprobado; 16–17 Aprobado con distinción; 18–20 Aprobado con excelencia"
+      },
+      "desaprobacion": {
+        "art": "Art. 147°",
+        "primera": "Nueva fecha no antes de 30 días",
+        "segunda": "Nueva solicitud no antes de 6 meses"
+      }
+    },
+    "titulacion_suficiencia": {
+      "art": "Art. 149° al 154°",
+      "definicion": "Presentación escrita y sustentación oral de un documento que refleje los aprendizajes logrados en el pregrado, conteniendo un análisis o propuesta de mejora o innovación.",
+      "examen": "Oral y público, mínimo 2 horas; si el documento escrito no cumple criterios, no se pasa a la presentación oral.",
+      "procedimiento": {
+        "art": "Art. 152°",
+        "texto": "El Bachiller declarado apto presenta solicitud; el Decano fija día, lugar y hora para sorteo de temas, nombramiento de jurado y fecha del examen. El trabajo se entrega al jurado 3 días antes mínimo."
+      },
+      "desaprobacion": {
+        "art": "Art. 154°",
+        "texto": "En caso de desaprobación puede solicitarse nuevo examen luego de 30 días."
+      }
+    },
+    "juramentacion": {
+      "art": "Art. 155°",
+      "texto": "El acto de titulación y juramentación es optativo, en acto público presidido por el Decano. El nuevo profesional jura por Dios, la Nación Peruana y la UNSAAC (o por su honor si declara no creyente)."
+    }
   },
   "qa_entries": [
     {
       "id": "TIT-001",
       "intent": "consulta_tit_modalidades",
-      "pregunta": "¿Cuáles son las modalidades de titulación?",
-      "respuesta": "Según el Reglamento de Grados y Títulos de la UNSAAC, las modalidades de titulación para obtener el título profesional son: (1) Tesis - desarrollo de una investigación original aprobada por un jurado; (2) Trabajo de Suficiencia Profesional - demostración de experiencia laboral (mínimo 3 años) más un informe técnico y evaluación; (3) Examen de Suficiencia Profesional - evaluación teórico-práctica de conocimientos de la carrera. La modalidad más común en la EPIIS es la Tesis.",
-      "fuente": "Reglamento de Grados y Títulos UNSAAC / Ley Universitaria N° 30220"
+      "pregunta": "¿Cuáles son las modalidades de titulación en la UNSAAC?",
+      "respuesta": "En la UNSAAC, el Bachiller opta al Título Profesional de Licenciado en Ingeniería Informática y de Sistemas mediante una de estas dos modalidades (Art. 120°): (1) Tesis, que es un trabajo de investigación original que constituye aporte al desarrollo local, regional o nacional, sustentado en acto público; o (2) Trabajo de Suficiencia Profesional, que consiste en la presentación escrita y sustentación oral de un documento que refleje los aprendizajes del pregrado, conteniendo un análisis o propuesta de mejora o innovación.",
+      "fuente": "Art. 120° – Reglamento Académico UNSAAC"
     },
     {
       "id": "TIT-002",
       "intent": "consulta_tit_requisitos_inicio",
       "pregunta": "¿Qué requisitos necesito para iniciar el trámite de titulación?",
-      "respuesta": "Para iniciar el trámite de titulación necesitas: (1) Grado de Bachiller en Ingeniería Informática y de Sistemas, (2) Haber aprobado las Prácticas Pre-Profesionales (certificado PPP de 960 horas), (3) No tener deudas con la universidad, (4) Acreditar conocimiento de un idioma extranjero (generalmente inglés, nivel intermedio), (5) Solicitud dirigida al Director de la Escuela, y (6) Documentos personales (DNI, certificados de estudios, recibos de pago según TUPA). Los requisitos específicos dependen de la modalidad elegida.",
-      "fuente": "Reglamento de Grados y Títulos UNSAAC / Reglamento de Prácticas Pre-Profesionales UNSAAC"
+      "respuesta": "Para iniciar el trámite de título profesional debes presentar un expediente con: (a) solicitud, (b) copia simple del diploma de Bachiller conferido por la UNSAAC, (c) copia simple del DNI vigente, (d) declaración jurada notarial o fedateada de carecer de antecedentes penales y judiciales, autorizando a la universidad a verificar la información ante el Poder Judicial, y (e) recibo de pago en caja por derecho de título profesional (Art. 132°). El requisito sustancial previo es tener el grado de Bachiller otorgado por la UNSAAC (Art. 131°).",
+      "fuente": "Art. 131°, Art. 132° – Reglamento Académico UNSAAC"
     },
     {
       "id": "TIT-003",
       "intent": "consulta_tit_grado_bachiller",
       "pregunta": "¿Cómo obtengo el grado de bachiller?",
-      "respuesta": "Para obtener el grado de Bachiller en Ingeniería Informática y de Sistemas necesitas: (1) Haber aprobado los 220 créditos del plan curricular 2024 de la EPIIS, (2) Presentar un trabajo de investigación (puede ser el informe de tu Seminario de Investigación IFI29 o Trabajo de Investigación IFI33), (3) Acreditar conocimiento de un idioma extranjero (generalmente inglés, nivel básico o intermedio), y (4) Presentar la solicitud y documentación requerida ante la Dirección de Registros Académicos y Admisión (DRAA) con el pago correspondiente según TUPA.",
-      "fuente": "Reglamento de Grados y Títulos UNSAAC / Ley Universitaria N° 30220"
+      "respuesta": "Una vez que hayas completado todos los créditos del Plan de Estudios (220 créditos en el plan 2024), la Escuela Profesional y el Centro de Cómputo te declaran egresado. Para ser declarado apto al grado presentas: solicitud, ficha de seguimiento académico, copia del DNI, certificación de idioma extranjero, certificación de computación, pago en caja y la inscripción del trabajo de investigación (Art. 123°). El expediente es revisado en 3 días por la Escuela; el Decano emite la resolución de aptitud (Art. 125°). Luego presentas el trabajo de investigación, que es evaluado por un docente designado en máximo 5 días (Art. 128°). Con su pronunciamiento favorable, el Consejo Universitario confiere el grado y emite el diploma (Art. 129°).",
+      "fuente": "Art. 121°, Art. 123°, Art. 125°, Art. 128°, Art. 129° – Reglamento Académico UNSAAC"
     },
     {
       "id": "TIT-004",
       "intent": "consulta_tit_plazo_titulacion",
       "pregunta": "¿Cuánto tiempo tengo para titularme después de egresar?",
-      "respuesta": "No existe un plazo máximo estricto para titularte después de egresar de la UNSAAC. Sin embargo, es recomendable iniciar el proceso de titulación dentro de los 3 años posteriores al egreso para facilitar los trámites administrativos. Si han pasado muchos años desde tu egreso, es posible que te soliciten actualización de documentos o cumplir con requisitos adicionales según las normativas vigentes al momento de tu titulación. Consulta con la DRAA para casos específicos.",
-      "fuente": "Reglamento de Grados y Títulos UNSAAC"
+      "respuesta": "El Reglamento Académico UNSAAC (CU-093-2017) no establece un plazo máximo desde el egreso para obtener el título profesional; tampoco prevé consecuencias automáticas por tardanza en iniciar el trámite. Lo que sí tiene plazo es el Plan de Tesis una vez inscrito: vigencia de 2 años prorrogable por 1 año más (Art. 136°). Por ello, si ya eres bachiller, te conviene iniciar el trámite cuanto antes para evitar que tu plan de tesis caduque. Para consultas sobre plazos administrativos específicos, acude a la Dirección de la Escuela Profesional.",
+      "fuente": "Art. 136° – Reglamento Académico UNSAAC"
     },
     {
       "id": "TIT-005",
       "intent": "consulta_tit_suficiencia_profesional",
       "pregunta": "¿En qué consiste la titulación por suficiencia profesional?",
-      "respuesta": "La titulación por Trabajo de Suficiencia Profesional consiste en demostrar el dominio de la profesión mediante experiencia laboral comprobada (mínimo 3 años en el campo de la ingeniería informática y de sistemas) y la elaboración de un informe técnico profesional que documente tu experiencia y conocimientos aplicados. Este informe se sustenta ante un jurado evaluador. Debes acreditar la experiencia laboral con contratos, certificados de trabajo y constancias de proyectos realizados.",
-      "fuente": "Reglamento de Grados y Títulos UNSAAC / Ley Universitaria N° 30220"
+      "respuesta": "El Trabajo de Suficiencia Profesional es un documento escrito en el que presentas un análisis o una propuesta de mejora o innovación basada en los aprendizajes de tu pregrado (Art. 149°, 150°). El examen consta de dos partes: primero se evalúa el documento escrito y, si cumple los criterios, pasas a la sustentación oral (pública, mínimo 2 horas) ante el jurado (Art. 151°, 153°). Los temas del examen se sortean. En caso de desaprobación, puedes solicitar nuevo examen luego de 30 días (Art. 154°).",
+      "fuente": "Art. 149°-154° – Reglamento Académico UNSAAC"
     },
     {
       "id": "TIT-006",
       "intent": "consulta_tit_eleccion_asesor",
-      "pregunta": "¿Cómo elijo a mi asesor de tesis?",
-      "respuesta": "Para elegir a tu asesor de tesis, primero identifica a un docente de la EPIIS cuya línea de investigación esté relacionada con tu tema de interés. Conversa con él/ella para proponer tu tema y solicitar su asesoría. Una vez que el docente acepte, presentas una solicitud formal ante la Dirección de la Escuela adjuntando: propuesta de tema, carta de aceptación del asesor, y tu ficha de datos. La Dirección aprueba la designación mediante resolución. Si necesitas cambiar de asesor durante el proceso, debes justificarlo y solicitar la reasignación.",
-      "fuente": "Reglamento de Grados y Títulos UNSAAC"
+      "pregunta": "¿Cómo elijo a mi asesor de tesis (director de tesis)?",
+      "respuesta": "El asesor de tesis se denomina 'director de tesis' en el reglamento. Al presentar tu Plan de Tesis, el plan debe llevar el aval de uno o más docentes directores de tesis, lo que constituye su aceptación del asesoramiento (Art. 136°). Es decir, primero acuerdas con el docente que sea tu director, incluyes su firma en el plan y el Decano lo ratifica por resolución al aprobar el tema y el plan. Pueden nombrarse docentes de otros departamentos académicos o incluso de otras facultades. El director acompaña el proceso y avala el trabajo final.",
+      "fuente": "Art. 136° – Reglamento Académico UNSAAC"
     },
     {
       "id": "TIT-007",
       "intent": "consulta_tit_duracion_proceso",
       "pregunta": "¿Cuánto dura el proceso de titulación?",
-      "respuesta": "La duración del proceso de titulación depende de la modalidad: (1) Tesis: entre 6 meses y 2 años, dependiendo de la complejidad del trabajo de investigación y los tiempos de revisión del asesor y jurado; (2) Trabajo de Suficiencia Profesional: entre 3 y 6 meses para elaborar el informe técnico y sustentarlo; (3) Examen de Suficiencia: entre 2 y 4 meses desde la solicitud hasta la evaluación. Los trámites administrativos (aprobación de expediente, designación de jurado, programación de sustentación) añaden de 1 a 3 meses adicionales.",
-      "fuente": "Reglamento de Grados y Títulos UNSAAC"
+      "respuesta": "El reglamento fija plazos mínimos para las autoridades, no para el proceso total. Para la declaración de aptitud: la Escuela revisa el expediente en 3 días y el Decano emite resolución en 3 días más (Art. 133°). Para la tesis: los dictaminadores tienen 10 días para su opinión, el postulante 10 días para absolver observaciones y el dictaminador otros 10 días para pronunciamiento definitivo (Art. 140°). Para el trabajo de suficiencia: el trabajo se entrega al jurado 3 días antes del examen. En total, el proceso puede durar entre semanas y varios meses dependiendo de qué tan avanzado esté tu trabajo cuando inicias el trámite. Si el incumplimiento de plazos es por parte de las autoridades, opera el silencio administrativo positivo (Art. 157°).",
+      "fuente": "Art. 133°, Art. 140°, Art. 157° – Reglamento Académico UNSAAC"
     },
     {
       "id": "TIT-008",
       "intent": "consulta_tit_jurado_sustentacion",
-      "pregunta": "¿Quién conforma el jurado de sustentación?",
-      "respuesta": "El jurado de sustentación está conformado por tres docentes ordinarios de la EPIIS o de la Facultad, designados por la Dirección de la Escuela mediante resolución. El jurado incluye: un Presidente (generalmente el docente de mayor categoría o antigüedad), un Vocal, y un Secretario. Tu asesor de tesis NO forma parte del jurado evaluador, pero puede estar presente durante la sustentación. Los miembros del jurado deben tener grado académico de Maestro o Doctor y experiencia en el área temática de tu trabajo.",
-      "fuente": "Reglamento de Grados y Títulos UNSAAC"
+      "pregunta": "¿Quién conforma el jurado de sustentación de tesis?",
+      "respuesta": "El jurado lo nombra el Decano por resolución (Art. 142°) y está conformado por: el Decano, quien lo preside (puede delegar en el docente de mayor categoría y antigüedad), más hasta cuatro docentes, de los cuales dos son los dictaminadores y los otros dos actúan como replicantes. Pueden ser docentes de otros departamentos académicos o incluso de otras instituciones universitarias si está justificado. Los ejemplares de la tesis deben distribuirse a los jurados con al menos 2 días de anticipación.",
+      "fuente": "Art. 142° – Reglamento Académico UNSAAC"
     },
     {
       "id": "TIT-009",
       "intent": "consulta_tit_desaprobacion_sustentacion",
       "pregunta": "¿Qué pasa si desapruebo la sustentación?",
-      "respuesta": "Si desapruebas la sustentación, el jurado te otorga un plazo (generalmente de 30 a 90 días) para realizar las correcciones y mejoras recomendadas en tu trabajo. Después de ese plazo, tienes derecho a una segunda sustentación ante el mismo jurado o uno nuevo, según determine la Dirección de la Escuela. Si desapruebas la segunda sustentación, puedes solicitar un tercer y último intento previa autorización del Consejo de Facultad, o cambiar de modalidad de titulación. Es importante trabajar estrechamente con tu asesor para corregir las observaciones.",
-      "fuente": "Reglamento de Grados y Títulos UNSAAC"
+      "respuesta": "En caso de desaprobación en la tesis, puedes solicitar una nueva fecha luego de transcurridos 30 días. Una segunda desaprobación permite nueva solicitud, pero no antes de 6 meses (Art. 147°). Para la suficiencia profesional, si el documento escrito no cumple los criterios de evaluación no se pasa a la sustentación oral; si se desaprueba el examen completo, puedes solicitar uno nuevo luego de 30 días (Art. 154°). El jurado comunica la desaprobación retirándose del recinto sin dar razones públicas (Art. 146°).",
+      "fuente": "Art. 147°, Art. 154° – Reglamento Académico UNSAAC"
     },
     {
       "id": "TIT-010",
       "intent": "consulta_tit_registro_sunedu",
       "pregunta": "¿Mi título queda registrado en SUNEDU?",
-      "respuesta": "Sí. Todos los grados académicos y títulos profesionales otorgados por universidades peruanas se inscriben en el Registro Nacional de Grados y Títulos administrado por la SUNEDU, conforme a la Ley Universitaria N° 30220. La UNSAAC tramita ese registro como parte del proceso de titulación.",
-      "fuente": "Ley Universitaria N° 30220 / SUNEDU"
+      "respuesta": "Sí. Conforme a la Ley Universitaria N° 30220 y el Art. 118° del Reglamento Académico, la UNSAAC mantiene un registro de todos los grados y títulos que confiere y los reporta para el Registro Nacional de Grados y Títulos administrado por SUNEDU. El diploma del grado de Bachiller también se registra y emite conforme a las normas SUNEDU (Art. 129°). Este registro nacional es el que acredita oficialmente tu grado o título profesional.",
+      "fuente": "Art. 118°, Art. 129° – Reglamento Académico UNSAAC"
+    },
+    {
+      "id": "TIT-011",
+      "intent": "consulta_tit_trabajo_investigacion_bachiller",
+      "pregunta": "¿Cuándo puedo inscribir mi trabajo de investigación para el bachiller?",
+      "respuesta": "Puedes inscribir el trabajo de investigación para el bachillerato cuando hayas aprobado el 70% de créditos del plan curricular de tu Escuela Profesional, incluso siendo aún estudiante matriculado (Art. 126°). Cuentas con el apoyo de tu tutor asignado; si no tienes tutor disponible, el Decano nombra un docente asesor. La inscripción se realiza en la Unidad o Instituto de Investigación correspondiente.",
+      "fuente": "Art. 126° – Reglamento Académico UNSAAC"
+    },
+    {
+      "id": "TIT-012",
+      "intent": "consulta_tit_plan_tesis_cuando",
+      "pregunta": "¿Cuándo puedo inscribir mi plan de tesis para el título?",
+      "respuesta": "Puedes presentar el Plan de Tesis cuando hayas aprobado el 80% de créditos del plan curricular de tu Escuela Profesional (Art. 136°), aunque aún no seas egresado ni bachiller. Recuerda que el plan tiene vigencia de 2 años desde su inscripción y puede prorrogarse por 1 año más con justificación sustentada. El plan debe contar con el aval de uno o más docentes que aceptan ser directores de tesis.",
+      "fuente": "Art. 136° – Reglamento Académico UNSAAC"
+    },
+    {
+      "id": "TIT-013",
+      "intent": "consulta_tit_tesis_colectiva",
+      "pregunta": "¿Puedo hacer la tesis con un compañero?",
+      "respuesta": "Sí. La tesis puede desarrollarse de forma individual o colectiva (Art. 135°). En el caso colectivo, el reglamento establece que el número de participantes en ningún caso puede ser superior al máximo indicado en el Art. 135°. Para la exposición colectiva, el tiempo de sustentación es mayor: hasta 90 minutos para tesis colectiva, versus 45 minutos para tesis individual (Art. 143°).",
+      "fuente": "Art. 135°, Art. 143° – Reglamento Académico UNSAAC"
+    },
+    {
+      "id": "TIT-014",
+      "intent": "consulta_tit_calificacion_sustentacion",
+      "pregunta": "¿Cómo se califica la sustentación de tesis?",
+      "respuesta": "La calificación se realiza con una rúbrica que considera cuatro criterios (Art. 144°): presentación formal del trabajo (20%), dominio del tema (30%), capacidad de síntesis en la exposición (20%) y desenvolvimiento en la absolución de preguntas del jurado (30%). Cada jurado evalúa individualmente en votación secreta; la nota final es el promedio aritmético. Si alguna calificación difiere en 3 o más puntos del resto, se descarta y se recalcula el promedio (Art. 145°). La escala es: 1–13 Desaprobado; 14–15 Aprobado; 16–17 Aprobado con Distinción; 18–20 Aprobado con Excelencia.",
+      "fuente": "Art. 144°, Art. 145° – Reglamento Académico UNSAAC"
+    },
+    {
+      "id": "TIT-015",
+      "intent": "consulta_tit_idioma_requisito",
+      "pregunta": "¿Necesito acreditar un idioma extranjero para el bachiller?",
+      "respuesta": "Sí. Entre los requisitos para ser declarado apto al grado de Bachiller figura presentar la certificación que acredite el conocimiento de un idioma extranjero, conforme a lo establecido por la UNSAAC (Art. 123° inciso d). La certificación la determina la propia universidad; te recomiendo consultar en la Dirección de la Escuela Profesional los idiomas y niveles aceptados actualmente.",
+      "fuente": "Art. 123° – Reglamento Académico UNSAAC"
+    },
+    {
+      "id": "TIT-016",
+      "intent": "consulta_tit_tutor_vs_asesor_tesis",
+      "pregunta": "¿Mi tutor académico es el mismo que mi director de tesis?",
+      "respuesta": "No necesariamente. El tutor académico es el docente asignado por el Comité Tutorial desde el primer semestre para acompañarte en tu formación integral (Reglamento de Tutoría, Art. 14°). El director de tesis, en cambio, es el docente que avala y asesora específicamente tu trabajo de investigación para el título, y es designado en la resolución que aprueba el plan de tesis (Art. 136°). Pueden ser la misma persona si el docente acepta ambos roles, pero son funciones distintas. Para el trabajo de investigación del bachillerato, el Art. 126° indica que puedes contar con el apoyo de tu tutor o, en su defecto, de un asesor nombrado por el Decano.",
+      "fuente": "Art. 126°, Art. 136° – Reglamento Académico UNSAAC"
+    },
+    {
+      "id": "TIT-017",
+      "intent": "consulta_tit_documentos_falsos",
+      "pregunta": "¿Qué pasa si se descubren documentos falsos en mi expediente de titulación?",
+      "respuesta": "Si en la revisión del expediente se detectan documentos o información falsa, el postulante queda inhabilitado para optar grado de Bachiller o Título Profesional, previo procedimiento de oficio (Art. 119°). Además de la sanción académica, podrías enfrentar responsabilidad civil o penal según la gravedad del caso. Cada Escuela Profesional tiene la obligación de realizar fiscalización posterior de los expedientes.",
+      "fuente": "Art. 119° – Reglamento Académico UNSAAC"
     }
   ]
 }
