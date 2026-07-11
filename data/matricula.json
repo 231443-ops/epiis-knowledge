@@ -4,88 +4,287 @@
   "nombre": "Matrícula",
   "estado": "completo",
   "fuentes_normativas": [
-    "Reglamento de Matrícula UNSAAC",
+    "Reglamento Académico UNSAAC – Res. N° CU-093-2017-UNSAAC (Título I: Matrícula, Art. 1° al 38°)",
+    "Ley Universitaria N° 30220",
     "Portal SERUNSA - serunsa.unsaac.edu.pe",
-    "Calendario Académico UNSAAC"
+    "TUPA UNSAAC"
   ],
   "contenido": {
-    "canales_oficiales": [
-      "Portal SERUNSA (serunsa.unsaac.edu.pe) — matrícula en línea y consulta de horarios",
-      "Secretaría de la Escuela Profesional de Ingeniería Informática y de Sistemas",
-      "Dirección de Registros Académicos y Admisión (DRAA)",
-      "TUPA UNSAAC — costos y plazos de trámites"
-    ]
+    "naturaleza": {
+      "art": "Art. 1°",
+      "texto": "La matrícula es un acto formal voluntario que confiere la calidad de estudiante de la UNSAAC. Es incondicional y conlleva el compromiso de cumplir la Ley Universitaria, el Estatuto, el reglamento y otras normas internas. Es semestral y solo es posible su registro en una Escuela Profesional, dentro del periodo programado en el cronograma aprobado."
+    },
+    "objeto": {
+      "art": "Art. 2°",
+      "texto": "Mediante la matrícula el estudiante selecciona las asignaturas del Plan de Estudios que le corresponde llevar en el semestre, pudiendo contar con el apoyo tutorial del docente asignado. El registro correcto es responsabilidad absoluta del estudiante."
+    },
+    "tipos_estudiante": {
+      "art": "Art. 3°",
+      "regular": "Registra matrícula en un mínimo de 12 créditos, salvo que le falten menos créditos para concluir la carrera.",
+      "no_regular": "Registra matrícula en menos de 12 créditos; no puede mantenerse indefinidamente, el plazo máximo es de 3 semestres consecutivos.",
+      "especial": "Estudiante de otra universidad por convenio de movilidad, o extranjero por convenio o interés particular. La matrícula especial por interés personal solo da derecho a certificado de estudios, no conduce a grado ni título."
+    },
+    "estudiante_habil": {
+      "art": "Art. 4°",
+      "supuestos": [
+        "Estudiante regular que cursa estudios de pregrado en la UNSAAC",
+        "Estudiante no regular con autorización del Director de Escuela",
+        "Ingresante con vacante en proceso de admisión",
+        "Quien reinicia estudios con resolución de autorización (hasta 6 semestres sin matrícula)",
+        "Quien cuenta con resolución del Decano autorizando matrícula especial"
+      ]
+    },
+    "pago_y_tasas": {
+      "pago_matricula": {
+        "art": "Art. 5°",
+        "texto": "Pago semestral cuyo monto fija el Consejo Universitario cada año académico; no tiene carácter de pensión de enseñanza."
+      },
+      "tasa_asignatura_desaprobada": {
+        "art": "Art. 29°",
+        "texto": "El estudiante que desaprueba una o más asignaturas paga una tasa de servicio adicional para matricularse en el siguiente periodo."
+      },
+      "escalas": {
+        "art": "Art. 30°",
+        "A": "Estudiantes regulares invictos e ingresantes",
+        "B": "Regulares con asignaturas desaprobadas el semestre anterior, según créditos no aprobados",
+        "C": "Graduados o titulados que siguen una segunda profesión",
+        "D": "Matrícula especial"
+      }
+    },
+    "clases_matricula": {
+      "art": "Art. 8°",
+      "regular": "Mínimo 12 créditos; incluye también a graduados, titulados y trasladados en los mismos términos.",
+      "no_regular": [
+        "Estudiante con menos de 12 créditos por bajo rendimiento u otra circunstancia",
+        "Estudiante por movilidad estudiantil",
+        "Matrícula especial de graduado, titulado o extranjero, hasta 22 créditos, sin opción a grado ni título (requiere resolución del Decano)",
+        "Estudiante por egresar: hasta 30 créditos y mínimo 1 asignatura, beneficio aplicable una sola vez (Art. 8.2.4°)"
+      ]
+    },
+    "topes_creditos": {
+      "art": "Art. 9°",
+      "regular": "Mínimo 12, máximo 22 créditos por semestre",
+      "promedio_destacado": "Con promedio ponderado ⥠16 puntos, hasta 26 créditos",
+      "por_egresar": "Hasta 30 créditos (Art. 8.2.4°), sin exigir prerrequisitos para más de dos asignaturas, con autorización del Decano"
+    },
+    "requisitos_matricula_valida": {
+      "art": "Art. 10°",
+      "lista": [
+        "Hallarse en alguno de los supuestos del Art. 3°",
+        "Tener código de alumno de la Escuela Profesional",
+        "No figurar como deudor de la UNSAAC",
+        "No tener matrícula condicionada por bajo rendimiento",
+        "Haber realizado el pago correspondiente"
+      ],
+      "caso_especial": "El que desaprueba dos veces una asignatura asume compromiso escrito de superar su bajo rendimiento; requiere resolución del Decano con opinión previa favorable de su tutor."
+    },
+    "organos_competentes": {
+      "art": "Art. 11°",
+      "consejo_universitario": "Aprueba el cronograma de matrículas (plazo perentorio, sin ampliaciones)",
+      "vicerrector_academico": "Dirige el proceso a nivel universidad, coordina con el Centro de Cómputo, resuelve en segunda instancia",
+      "decano_director_escuela": "Responsables de la matrícula en cada Facultad; el Decano emite los actos administrativos",
+      "centro_computo": "Administra la base de datos del registro; carece de potestad resolutiva"
+    },
+    "proceso_registro": {
+      "art": "Art. 12°, Art. 13°",
+      "pasos": [
+        "Una semana antes del inicio, el Director de Escuela ingresa el catálogo de asignaturas al Centro de Cómputo",
+        "El estudiante ingresa por Internet a la Base de Datos y obtiene el monto a pagar",
+        "Realiza el pago y accede al formato virtual de matrícula",
+        "Completa el cuestionario de evaluación de desempeño docente del semestre anterior",
+        "Selecciona asignaturas y confirma su aceptación en el formato electrónico",
+        "La matrícula queda registrada; el Centro de Cómputo emite la constancia automáticamente (Art. 15°)"
+      ]
+    },
+    "matricula_condicionada": {
+      "art": "Art. 31°, Art. 32°",
+      "primera_desaprobacion": "Observación académica, comunicada al matricularse en el siguiente periodo",
+      "segunda_desaprobacion": "Mantiene observación académica y se le asigna obligatoriamente un docente tutor, conforme al reglamento de tutoría",
+      "tercera_desaprobacion": "Suspensión de un año académico; si vuelve a desaprobar tras la suspensión, separación automática de la Escuela Profesional (sin carácter disciplinario, puede postular a otra Escuela)",
+      "seguimiento": "Todo estudiante regular es objeto de seguimiento académico por la Escuela en coordinación con Bienestar Universitario y el docente tutor."
+    },
+    "calendario_y_extemporaneidad": {
+      "art": "Art. 33°, Art. 34°",
+      "aprobacion": "El Consejo Universitario aprueba el calendario y cronograma antes de concluir el segundo semestre de cada año, incluyendo periodos de matrícula regular, traslados, graduados/titulados, reinicio y cursos dirigidos, fechas de evaluaciones, sustitutorios y entrega de actas.",
+      "extemporanea": "Una vez concluido el cronograma de matrícula, su registro queda prohibido, bajo responsabilidad."
+    },
+    "reserva_de_matricula": {
+      "art": "Art. 35° al 38°",
+      "definicion": "Derecho del estudiante a quedar relevado de obligaciones académicas regulares, sin perjudicar resultados académicos ni su ubicación en Tercio o Quinto Superior.",
+      "plazo_maximo": "No puede exceder de 6 semestres consecutivos o alternos; vencido ese límite, el estudiante es separado de la Escuela.",
+      "causales": [
+        "Resultado académico favorable al concluir un semestre",
+        "Trabajo u otra causa (65 días antes de concluir el semestre)",
+        "Enfermedad o accidente debidamente acreditados"
+      ],
+      "tramite": "Se presenta en la Escuela Profesional adjuntando la ficha de seguimiento académico; resuelve el Decano y, en segunda instancia, el Vicerrector Académico."
+    },
+    "matricula_graduados_titulados_trasladados": {
+      "graduados_titulados": {
+        "art": "Art. 22° al 24°",
+        "texto": "Registran matrícula dentro del cronograma aprobado, previa asignación de código por el Centro de Cómputo y autorización del Decano por resolución."
+      },
+      "traslados": {
+        "art": "Art. 25°, Art. 26°",
+        "texto": "El traslado interno o externo se formaliza con resolución del Decano y asignación de código; en traslados entre facultades, la Facultad de origen remite toda la información académica."
+      },
+      "extranjeros": {
+        "art": "Art. 27°, Art. 28°",
+        "texto": "Matrícula especial sujeta a presentar documento de identidad/pasaporte, documentos académicos de procedencia, recibo de pago y constancia de salud; autorizada por el Vicerrectorado Académico."
+      }
+    },
+    "cursos_dirigidos_y_reinicio": {
+      "cursos_dirigidos": {
+        "art": "Art. 16° al 18°",
+        "texto": "Asignatura no ofrecida en el catálogo del semestre, necesaria para que el estudiante por egresar complete créditos. Máximo dos cursos dirigidos, una sola vez, cuando falten hasta 30 créditos para egresar o se tengan hasta dos asignaturas pendientes."
+      },
+      "reinicio_estudios": {
+        "art": "Art. 19° al 21°",
+        "texto": "Quien deja de matricularse 2 o más semestres (hasta 6) debe tramitar reinicio de estudios presentando constancia de notas, pago del trámite y, de ser el caso, constancia de convalidación; tras 6 semestres consecutivos sin matrícula se pierde automáticamente la calidad de estudiante."
+      }
+    }
   },
   "qa_entries": [
     {
       "id": "MAT-001",
       "intent": "consulta_mat_fechas_matricula",
       "pregunta": "¿Cuándo es la matrícula?",
-      "respuesta": "Según el calendario académico de la UNSAAC, la matrícula regular se realiza aproximadamente dos semanas antes del inicio de cada semestre. La matrícula extemporánea se habilita durante la primera semana de clases, con un recargo adicional según el TUPA. Las fechas exactas se publican cada semestre en el portal SERUNSA y en los avisos oficiales de la Escuela.",
-      "fuente": "Calendario Académico UNSAAC / Portal SERUNSA"
+      "respuesta": "Las fechas exactas cambian cada año, pero siguen una regla fija: el Consejo Universitario aprueba el calendario y cronograma de actividades académicas antes de que termine el segundo semestre del año anterior (Art. 33°), y ese calendario incluye el periodo de matrícula de estudiantes regulares e ingresantes, además del periodo para trasladados, graduados, titulados, reinicio de estudios y cursos dirigidos. El plazo aprobado es perentorio, no se permiten ampliaciones (Art. 11.1°). Revisa el calendario vigente en el portal SERUNSA o en los avisos de la Escuela.",
+      "fuente": "Art. 33°, Art. 11.1° – Reglamento Académico UNSAAC"
     },
     {
       "id": "MAT-002",
       "intent": "consulta_mat_proceso_serunsa",
       "pregunta": "¿Cómo me matriculo en SERUNSA?",
-      "respuesta": "La matrícula se realiza en línea a través del portal SERUNSA (serunsa.unsaac.edu.pe), ingresando con tu usuario institucional. Desde ahí seleccionas los cursos del semestre y confirmas tu matrícula dentro del plazo establecido. Si necesitas rectificar tu matrícula (agregar o retirar cursos), puedes hacerlo en línea durante la primera semana de clases usando la opción 'Rectificación de Matrícula' en el mismo portal SERUNSA.",
-      "fuente": "Portal SERUNSA / Reglamento de Matrícula UNSAAC"
+      "respuesta": "El registro se realiza por Internet, directamente en la base de datos del Centro de Cómputo. Primero ingresas con el catálogo de asignaturas ofrecido para el semestre y el sistema te indica el monto a pagar (Art. 13°). Una vez pagado, accedes al formato virtual; antes de seleccionar cursos debes completar el cuestionario de evaluación de desempeño docente del semestre anterior. Finalmente seleccionas tus asignaturas y confirmas tu aceptación en el formato electrónico, con lo que tu matrícula queda registrada y se genera tu constancia automáticamente (Art. 15°).",
+      "fuente": "Art. 13°, Art. 15° – Reglamento Académico UNSAAC"
     },
     {
       "id": "MAT-003",
       "intent": "consulta_mat_requisitos",
       "pregunta": "¿Qué requisitos necesito para matricularme?",
-      "respuesta": "Para matricularte debes cumplir: (1) no tener deudas pendientes con la universidad, (2) haber cumplido los requisitos académicos (prerrequisitos de cursos, créditos mínimos aprobados), y (3) haber realizado el pago correspondiente según el TUPA UNSAAC. Adicionalmente, debes tener tu carné universitario vigente y usuario activo en el sistema SERUNSA.",
-      "fuente": "Reglamento de Matrícula UNSAAC"
+      "respuesta": "Para que tu matrícula sea válida necesitas: (a) encontrarte en alguna de las condiciones de estudiante regular, no regular o especial reconocidas en el reglamento; (b) tener tu código de alumno de la Escuela Profesional asignado al ser admitido; (c) no figurar como deudor de la UNSAAC; (d) no tener matrícula condicionada por bajo rendimiento; y (e) haber realizado el pago correspondiente. Si desaprobaste dos veces una misma asignatura, además debes asumir un compromiso escrito de superar tu bajo rendimiento, y tu matrícula requiere resolución del Decano con opinión previa favorable de tu tutor.",
+      "fuente": "Art. 10° – Reglamento Académico UNSAAC"
     },
     {
       "id": "MAT-004",
       "intent": "consulta_mat_modalidad_presencial",
       "pregunta": "¿La matrícula es presencial o en línea?",
-      "respuesta": "La matrícula se realiza completamente en línea a través del portal SERUNSA. No necesitas ir presencialmente para matricularte. Solo en casos excepcionales (problemas técnicos con el sistema, matrículas especiales por reincorporación, o subsanación de documentos) debes acercarte a la secretaría de la Escuela o a la Dirección de Registros Académicos y Admisión (DRAA) para resolver tu situación particular.",
-      "fuente": "Portal SERUNSA / Reglamento de Matrícula UNSAAC"
+      "respuesta": "Es en línea. Ingresas por Internet a la base de datos del Centro de Cómputo para pagar, seleccionar tus asignaturas y confirmar tu matrícula en el formato virtual (Art. 13°). Los trámites complementarios, como autorizaciones especiales, reinicio de estudios, traslados o casos de matrícula condicionada, sí requieren presentar solicitudes y expedientes físicos en la secretaría de la Escuela o ante el Decanato.",
+      "fuente": "Art. 13° – Reglamento Académico UNSAAC"
     },
     {
       "id": "MAT-005",
       "intent": "consulta_mat_fuera_de_plazo",
       "pregunta": "¿Qué pasa si me matriculo fuera de plazo?",
-      "respuesta": "La matrícula regular se realiza sin recargo durante el periodo establecido en el calendario académico (aproximadamente dos semanas antes del inicio de clases). La matrícula extemporánea se habilita durante la primera semana de clases, requiere autorización de la Dirección de Escuela y tiene un recargo adicional según el TUPA UNSAAC. Después de este plazo, la matrícula queda cerrada salvo casos excepcionales debidamente justificados.",
-      "fuente": "Reglamento de Matrícula UNSAAC / TUPA UNSAAC"
+      "respuesta": "No es posible. Una vez concluido el proceso de matrícula según el calendario aprobado, el registro de matrícula extemporánea queda expresamente prohibido, bajo responsabilidad (Art. 34°). El cronograma de matrículas que aprueba el Consejo Universitario es perentorio y no admite ampliaciones (Art. 11.1°). Por eso es importante matricularte dentro de las fechas oficiales.",
+      "fuente": "Art. 34°, Art. 11.1° – Reglamento Académico UNSAAC"
     },
     {
       "id": "MAT-006",
       "intent": "consulta_mat_creditos_maximo",
       "pregunta": "¿Cuántos créditos máximos puedo llevar por semestre?",
-      "respuesta": "Según el Reglamento de Matrícula UNSAAC, el mínimo de créditos por semestre es 12 y el máximo es 24 créditos. El plan curricular 2024 de la EPIIS está diseñado para 22 créditos por semestre. Si deseas llevar más de 24 créditos por razones excepcionales (como adelantar la culminación de estudios), necesitas autorización expresa de la Dirección de la Escuela.",
-      "fuente": "Reglamento de Matrícula UNSAAC / Plan Curricular 2024 EPIIS"
+      "respuesta": "Como estudiante regular puedes matricularte en un mínimo de 12 y un máximo de 22 créditos por semestre (Art. 9°). Si tu promedio ponderado es igual o mayor a 16 puntos, tienes derecho a matricularte hasta en 26 créditos (Art. 9°). Si estás por egresar, puedes matricularte hasta en 30 créditos y como mínimo en una asignatura, beneficio que solo puedes usar una vez (Art. 8.2.4°). Si te matriculas en menos de 12 créditos, pasas a la condición de estudiante no regular, situación que no puede mantenerse más de 3 semestres consecutivos (Art. 3.2°).",
+      "fuente": "Art. 9°, Art. 8.2.4°, Art. 3.2° – Reglamento Académico UNSAAC"
     },
     {
       "id": "MAT-007",
       "intent": "consulta_mat_retiro_curso",
       "pregunta": "¿Puedo retirarme de un curso después de matricularme?",
-      "respuesta": "Sí, puedes retirarte de un curso utilizando la opción 'Rectificación de Matrícula' en el portal SERUNSA durante la primera semana de clases. Después de ese plazo, el retiro de cursos requiere una solicitud formal ante la Dirección de la Escuela con justificación documentada, y solo se aprueba en casos excepcionales. El retiro aprobado aparece en tu récord como 'Retirado' sin afectar tu promedio.",
-      "fuente": "Reglamento de Matrícula UNSAAC / Portal SERUNSA"
+      "respuesta": "El Reglamento Académico no contempla un trámite de retiro de una sola asignatura después de concluida la matrícula. Lo que sí regula es la reserva de matrícula completa, es decir, de todo el semestre (Art. 35° al 38°), y la nulidad de matrícula en los supuestos del Art. 7° (doble registro, información falsa, incumplimiento de requisitos o impedimento por bajo rendimiento). Si tu intención es dejar una asignatura puntual y no todo el semestre, te recomiendo consultarlo directamente en la secretaría de tu Escuela Profesional.",
+      "fuente": "Art. 7°, Art. 35°-38° – Reglamento Académico UNSAAC",
+      "_pendiente": "Verificar si existe una directiva complementaria de retiro de asignatura individual no contemplada en el Reglamento Académico 2017."
     },
     {
       "id": "MAT-008",
       "intent": "consulta_mat_condicional",
       "pregunta": "¿Qué es la matrícula condicional?",
-      "respuesta": "La matrícula condicional es la situación de un estudiante que, por su bajo rendimiento académico (generalmente por reprobar varios cursos o tener promedio ponderado inferior al mínimo requerido), debe cumplir ciertas condiciones para mantenerse en la carrera. El Reglamento de Tutoría UNSAAC indica que a estos estudiantes se les asigna obligatoriamente un tutor (Art. 4°) para acompañarlos en la mejora de su rendimiento. De no superar las condiciones establecidas en el plazo indicado, el estudiante puede ser separado temporalmente de la universidad.",
-      "fuente": "Reglamento de Matrícula UNSAAC / Reglamento de Tutoría UNSAAC, Art. 4°"
+      "respuesta": "El reglamento la llama 'matrícula condicionada por bajo rendimiento académico' y la regula como una escala de medidas correctivas (Art. 31°): si desapruebas una asignatura por primera vez, quedas en observación académica; si la desapruebas por segunda vez, mantienes la observación y se te asigna obligatoriamente un docente tutor, conforme al reglamento de tutoría; si la desapruebas por tercera vez, eres suspendido un año académico y, de volver a desaprobarla al reincorporarte, eres separado automáticamente de la Escuela Profesional (sin que ello tenga carácter disciplinario). Mientras tengas matrícula condicionada por bajo rendimiento, no puedes registrar una matrícula válida hasta regularizar tu situación.",
+      "fuente": "Art. 31°, Art. 10° inciso d – Reglamento Académico UNSAAC"
     },
     {
       "id": "MAT-009",
       "intent": "consulta_mat_costo",
       "pregunta": "¿Cuánto cuesta la matrícula?",
-      "respuesta": "Los costos de matrícula y de trámites asociados están en el TUPA UNSAAC (Texto Único de Procedimientos Administrativos), que se publica en el portal web institucional, sección Transparencia. Los montos varían según el tipo de matrícula (ordinaria o extemporánea), y existen exoneraciones para estudiantes de bajos recursos económicos, que se tramitan en la Dirección de Bienestar Universitario.",
-      "fuente": "TUPA UNSAAC"
+      "respuesta": "El pago por matrícula es semestral y el monto lo fija el Consejo Universitario para cada año académico; no tiene carácter de pensión de enseñanza, sino que cubre el costo del servicio (Art. 5°). Si desaprobaste una o más asignaturas, pagas además una tasa de servicio adicional para matricularte en el siguiente periodo (Art. 29°). Existen cuatro escalas (Art. 30°): Escala A para regulares invictos e ingresantes; Escala B para regulares con asignaturas desaprobadas el semestre anterior, según créditos no aprobados; Escala C para graduados o titulados en una segunda profesión; y Escala D para matrícula especial. Los cursos dirigidos generan un monto adicional. Los montos exactos vigentes están en el TUPA UNSAAC.",
+      "fuente": "Art. 5°, Art. 29°, Art. 30° – Reglamento Académico UNSAAC"
     },
     {
       "id": "MAT-010",
       "intent": "consulta_mat_seguro_activacion",
       "pregunta": "¿Cuándo se activa mi seguro estudiantil al matricularme?",
       "respuesta": "El seguro estudiantil de accidentes se activa automáticamente al completar la matrícula y cubre desde el primer día de clases hasta el fin del semestre.",
-      "fuente": "Dirección de Bienestar - Seguro Estudiantil de Accidentes"
+      "fuente": "Dirección de Bienestar – Seguro Estudiantil de Accidentes"
+    },
+    {
+      "id": "MAT-011",
+      "intent": "consulta_mat_estudiante_regular",
+      "pregunta": "¿Cuándo soy considerado estudiante regular?",
+      "respuesta": "Eres estudiante regular cuando registras matrícula en un mínimo de 12 créditos en el semestre (Art. 3.1°), salvo que te falte un número menor de créditos para concluir la carrera. Si te matriculas en menos de 12 créditos pasas a ser estudiante no regular, condición que no puede mantenerse más de 3 semestres consecutivos (Art. 3.2°). Esta distinción importa porque algunos derechos y trámites, como el seguimiento académico y la asignación de tutor, aplican especialmente al estudiante regular (Art. 32°).",
+      "fuente": "Art. 3°, Art. 32° – Reglamento Académico UNSAAC"
+    },
+    {
+      "id": "MAT-012",
+      "intent": "consulta_mat_nulidad_matricula",
+      "pregunta": "¿En qué casos mi matrícula puede ser anulada?",
+      "respuesta": "La matrícula es declarada nula cuando el estudiante: (a) se registra simultáneamente en dos Escuelas Profesionales, (b) falsea información requerida, (c) se registra sin observar los requisitos y disposiciones del reglamento, o (d) estaba impedido o separado por bajo rendimiento académico (Art. 7°). La nulidad la declara el Vicerrector Académico, luego del procedimiento iniciado en la Facultad.",
+      "fuente": "Art. 7° – Reglamento Académico UNSAAC"
+    },
+    {
+      "id": "MAT-013",
+      "intent": "consulta_mat_reserva_duracion",
+      "pregunta": "¿Por cuánto tiempo puedo reservar mi matrícula?",
+      "respuesta": "La reserva de matrícula no puede exceder 6 semestres consecutivos o alternos (Art. 36°). Al vencerse ese límite, la Facultad inicia un procedimiento de oficio ante el Tribunal de Honor y el estudiante es separado de la Escuela Profesional. Mientras está vigente la reserva, el estudiante queda relevado de sus obligaciones académicas sin que ello perjudique sus notas ni su ubicación en el Tercio o Quinto Superior.",
+      "fuente": "Art. 35°, Art. 36° – Reglamento Académico UNSAAC"
+    },
+    {
+      "id": "MAT-014",
+      "intent": "consulta_mat_reserva_como_solicitar",
+      "pregunta": "¿Cómo solicito la reserva de matrícula?",
+      "respuesta": "Presentas una solicitud en la Escuela Profesional adjuntando la ficha de seguimiento académico; el Director de Escuela opina y el Decano emite la resolución correspondiente (Art. 38°). Los momentos en que puedes pedirla son: (1) al terminar un semestre con resultados favorables, dentro del cronograma de matrícula (Art. 37.1°); (2) si ya estás matriculado, por razones de trabajo u otras causas, con 65 días calendario antes de concluir el semestre (Art. 37.2°); o (3) por enfermedad o accidente debidamente acreditados (Art. 37.3°). El Vicerrector Académico resuelve en segunda instancia.",
+      "fuente": "Art. 37°, Art. 38° – Reglamento Académico UNSAAC"
+    },
+    {
+      "id": "MAT-015",
+      "intent": "consulta_mat_reinicio_estudios",
+      "pregunta": "¿Qué hago si dejé de matricularme varios semestres y quiero regresar?",
+      "respuesta": "Si dejaste de matricularte entre 2 y 6 semestres (consecutivos o no), puedes tramitar el reinicio de estudios en la Escuela Profesional (Art. 19°). Debes presentar: constancia de notas del último semestre cursado, recibo del pago por trámite de reinicio y, si aplica, constancia de homologación o convalidación (Art. 20°). El Decano evalúa la solicitud con informe del Director de Escuela y emite resolución; si es favorable, procedes a la matrícula normal. Si superaste los 6 semestres sin matrícula, perdiste automáticamente la calidad de estudiante y ya no es posible el reinicio.",
+      "fuente": "Art. 19°, Art. 20°, Art. 21° – Reglamento Académico UNSAAC"
+    },
+    {
+      "id": "MAT-016",
+      "intent": "consulta_mat_primera_matricula",
+      "pregunta": "¿Cómo es la primera matrícula de un ingresante?",
+      "respuesta": "La primera matrícula del estudiante recién admitido se realiza en el grupo correspondiente de Estudios Generales, con el solo pago de matrícula establecido (Art. 14°). No necesitas seleccionar asignaturas individualmente; el sistema te asigna directamente al grupo de Estudios Generales de acuerdo al cronograma aprobado.",
+      "fuente": "Art. 14° – Reglamento Académico UNSAAC"
+    },
+    {
+      "id": "MAT-017",
+      "intent": "consulta_mat_curso_dirigido",
+      "pregunta": "¿Qué es un curso dirigido y cuándo puedo pedirlo?",
+      "respuesta": "Un curso dirigido es una asignatura que no está en el catálogo de oferta del semestre pero que necesitas para completar tus créditos en situación de egreso (Art. 16°). Puedes pedirlo cuando: (a) te falten hasta 30 créditos para egresar, incluidos los cursos dirigidos, o (b) tengas hasta dos asignaturas pendientes que no cursaste o reprobaste (Art. 17°). Solo puedes acceder a este beneficio una vez y en máximo dos cursos dirigidos. La autorización la emite el Decano previo informe del Director de Escuela; pagas una tasa adicional a la matrícula regular.",
+      "fuente": "Art. 16°, Art. 17°, Art. 18° – Reglamento Académico UNSAAC"
+    },
+    {
+      "id": "MAT-018",
+      "intent": "consulta_mat_deuda_matricula",
+      "pregunta": "¿Puedo matricularme si tengo deudas con la universidad?",
+      "respuesta": "No. Uno de los requisitos para que tu matrícula sea válida es no aparecer como deudor en la información proporcionada por la Dirección General de Administración o la Escuela Profesional (Art. 10° inciso c). Si tienes deudas pendientes con la UNSAAC, debes regularizarlas antes de intentar matricularte para el siguiente semestre.",
+      "fuente": "Art. 10° – Reglamento Académico UNSAAC"
+    },
+    {
+      "id": "MAT-019",
+      "intent": "consulta_mat_creditos_minimos",
+      "pregunta": "¿Cuál es el mínimo de créditos para matricularse y ser regular?",
+      "respuesta": "Para ser estudiante regular debes matricularte en mínimo 12 créditos (Art. 3.1°). Si te matriculas en menos de 12, eres estudiante no regular y tienes un plazo máximo de 3 semestres consecutivos en esa condición antes de que sea problemático (Art. 3.2°). La excepción: si te faltan menos de 12 créditos para concluir la carrera, puedes matricularte solo en esos créditos y aun así ser considerado regular.",
+      "fuente": "Art. 3°, Art. 8.1°, Art. 9° – Reglamento Académico UNSAAC"
+    },
+    {
+      "id": "MAT-020",
+      "intent": "consulta_mat_tutor_matricula",
+      "pregunta": "¿Mi tutor interviene en mi matrícula?",
+      "respuesta": "Sí, en casos específicos. En la matrícula regular, el Art. 2° indica que el estudiante puede contar con el apoyo tutorial del docente asignado para seleccionar sus asignaturas. Pero la intervención se vuelve obligatoria y formal cuando desapruebas una asignatura por segunda vez: necesitas la opinión favorable de tu tutor para que el Decano autorice tu matrícula (Art. 10°). También, en la matrícula condicionada por bajo rendimiento, la asignación de tutor es mandatoria desde la segunda desaprobación de una misma asignatura (Art. 31° inciso b).",
+      "fuente": "Art. 2°, Art. 10°, Art. 31° – Reglamento Académico UNSAAC"
     }
   ]
 }
