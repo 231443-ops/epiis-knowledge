@@ -112,28 +112,26 @@ Archivo de evaluación. No se carga en producción; se usa para medir la calidad
 | Archivo | Prefijos | Entradas | Estado |
 |---|---|---|---|
 | `tutorias.json` | TUT, TTUT | 20 | completo |
-| `matricula.json` | MAT | 10 | completo |
+| `matricula.json` | MAT | 20 | completo |
 | `servicios_academicos.json` | SER | 10 | completo |
 | `practicas.json` | PPP | 10 | completo |
 | `bienestar.json` | BIE | 10 | completo |
 | `movilidad.json` | MOV | 10 | completo |
-| `titulacion.json` | TIT | 10 | completo |
+| `titulacion.json` | TIT | 17 | completo |
 | `malla_semestralizada.json` | CUR | 10 | completo |
 | `plan_estudios_resumen.json` | ESP | 10 | completo |
-| `inicio_clases.json` | CLA | 4 | completo |
-| `silabos.json` | SIL | 4 | completo |
 
-**Total:** 11 archivos, **108 qa_entries**
+**Total:** 9 archivos, **117 qa_entries**
 
 ---
 
 ## Estadísticas del corpus
 
-- **Categorías:** 11 módulos temáticos
-- **Total de pares pregunta-respuesta:** 108 entradas
-- **Intents únicos:** 109 (definidos en `knowledge_base/intents.json`)
+- **Categorías:** 9 módulos temáticos
+- **Total de pares pregunta-respuesta:** 117 entradas
+- **Intents únicos:** 117 (definidos en `knowledge_base/intents.json`)
 - **Cobertura temática:**
   - Tutorías y apoyo académico: 20 entradas
   - Procesos administrativos (matrícula, titulación): 20 entradas
   - Servicios estudiantiles (bienestar, movilidad, servicios): 30 entradas
-  - Plan de estudios (cursos, especialidades, clases, sílabos): 38 entradas
+  - Plan de estudios (cursos, especialidades): 30 entradas

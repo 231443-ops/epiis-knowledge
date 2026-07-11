@@ -10,18 +10,16 @@ Este repositorio almacena, en formato JSON estructurado, el conocimiento institu
 epiis-knowledge/
 ├── README.md
 ├── CLAUDE.md                     # Guía para Claude Code
-├── data/                         # 11 archivos de conocimiento (108 qa_entries)
+├── data/                         # 9 archivos de conocimiento (100 qa_entries)
 │   ├── tutorias.json            # Tutoría académica (20 entradas)
-│   ├── matricula.json           # Matrícula y procesos (10 entradas)
+│   ├── matricula.json           # Matrícula y procesos (20 entradas)
 │   ├── servicios_academicos.json # Servicios académicos (10 entradas)
 │   ├── practicas.json           # Prácticas pre-profesionales (10 entradas)
 │   ├── bienestar.json           # Bienestar universitario (10 entradas)
 │   ├── movilidad.json           # Movilidad estudiantil (10 entradas)
-│   ├── titulacion.json          # Grados y títulos (10 entradas)
+│   ├── titulacion.json          # Grados y títulos (17 entradas)
 │   ├── malla_semestralizada.json # Cursos por semestre (10 entradas)
-│   ├── plan_estudios_resumen.json # Áreas curriculares (10 entradas)
-│   ├── inicio_clases.json       # Inicio de clases (4 entradas)
-│   └── silabos.json             # Sílabos académicos (4 entradas)
+│   └── plan_estudios_resumen.json # Áreas curriculares (10 entradas)
 ├── knowledge_base/
 │   ├── intents.json             # 109 intents con prioridades
 │   └── keywords.json            # Keywords y trigger_phrases por intent
@@ -73,25 +71,23 @@ similitud(Q, D) = (Σ Q_i × D_i) / (√(Σ Q_i²) × √(Σ D_i²))
 ## 📊 Corpus de Conocimiento
 
 ### Cobertura actual
-- **11 categorías temáticas**
-- **108 pares pregunta-respuesta** (qa_entries)
-- **109 intents únicos** definidos
+- **9 categorías temáticas**
+- **117 pares pregunta-respuesta** (qa_entries)
+- **117 intents únicos** definidos
 
 ### Distribución por categoría
 
 | Categoría | Archivo | Entradas | Descripción |
 |-----------|---------|----------|-------------|
 | Tutorías | `tutorias.json` | 20 | Sistema de tutoría académica UNSAAC |
-| Matrícula | `matricula.json` | 10 | Proceso de matrícula y requisitos |
+| Matrícula | `matricula.json` | 20 | Proceso de matrícula y requisitos |
 | Servicios Académicos | `servicios_academicos.json` | 10 | Constancias, certificados, trámites |
 | Prácticas PPP | `practicas.json` | 10 | Prácticas pre-profesionales |
 | Bienestar | `bienestar.json` | 10 | Servicios de bienestar universitario |
 | Movilidad | `movilidad.json` | 10 | Movilidad estudiantil e intercambios |
-| Titulación | `titulacion.json` | 10 | Grados académicos y títulos |
+| Titulación | `titulacion.json` | 17 | Grados académicos y títulos |
 | Cursos | `malla_semestralizada.json` | 10 | Plan de estudios semestralizado |
 | Especialidades | `plan_estudios_resumen.json` | 10 | Áreas curriculares y especialidades |
-| Inicio de Clases | `inicio_clases.json` | 4 | Calendario y modalidades |
-| Sílabos | `silabos.json` | 4 | Estructura de sílabos y evaluación |
 
 ## 🛠️ Uso del Chatbot
 
@@ -99,7 +95,7 @@ similitud(Q, D) = (Σ Q_i × D_i) / (√(Σ Q_i²) × √(Σ D_i²))
 
 ```bash
 # Clonar el repositorio
-git clone https://github.com/usuario/epiis-knowledge.git
+git clone https://github.com/231443-ops/epiis-knowledge.git
 cd epiis-knowledge
 
 # Instalar dependencias (solo pytest para desarrollo)
