@@ -38,7 +38,9 @@ STOP_WORDS = {
     'unsaac', 'universidad', 'nacional', 'san', 'antonio', 'abad', 'cusco',
 
     # Palabras de cortesía/relleno
-    'por', 'favor', 'gracias', 'dame', 'dime', 'explicame', 'quiero', 'necesito',
+    # Nota: 'necesito'/'quiero' NO están aquí a propósito: "qué necesito para X"
+    # es la forma más común de preguntar por requisitos, filtrarla vacía la consulta.
+    'por', 'favor', 'gracias', 'dame', 'dime', 'explicame',
     'hola', 'buenos', 'dias', 'tardes', 'noches', 'ayuda', 'ayudame',
 
     # Otras palabras vacías
@@ -56,13 +58,27 @@ def normalize_text(text: str) -> str:
     return text
 
 
+# Sufijos que en español casi siempre vienen de una raíz terminada en
+# consonante + "-es" (profesor -> profesores, obligación -> obligaciones).
+# Se usan para decidir si hay que quitar "es" completo o solo la "s" final,
+# ya que ambos patrones de plural ("papel"->"papeles" y "semestre"->"semestres")
+# terminan igual en la superficie y no se pueden distinguir letra por letra.
+_SUFIJOS_PLURAL_CONSONANTE = (
+    'ciones', 'siones', 'dades', 'tades', 'ores', 'ones', 'ales', 'iles', 'eles', 'enes',
+)
+
+
 def normalize_plural(word: str) -> str:
     """
     Normaliza plurales comunes al singular (español).
 
     Reglas aplicadas:
     - Palabras terminadas en 's' con más de 4 letras → remover 's' final
-    - Excepciones: palabras que terminan en 'as', 'es', 'os' naturalmente singulares
+      (cubre plurales de palabras que terminan en vocal: "semestre" -> "semestres")
+    - Si además terminan en uno de los sufijos típicos de raíz consonántica
+      + "es" (ver _SUFIJOS_PLURAL_CONSONANTE) → remover "es" completo
+      ("profesor" -> "profesores", "obligación" -> "obligaciones")
+    - Excepciones: palabras que terminan naturalmente en 's' en singular
 
     Args:
         word: Palabra normalizada (minúsculas, sin tildes)
@@ -84,11 +100,13 @@ def normalize_plural(word: str) -> str:
         if word in exceptions:
             return word
 
-        # Singularizar: remover 's' final
+        # Singularizar: remover 's' final (caso general, raíz en vocal)
         singular = word[:-1]
 
-        # Si termina en 'es' y tiene más de 5 letras, remover 'es'
-        if word.endswith('es') and len(word) > 5:
+        # Solo si el sufijo calza con un patrón conocido de raíz consonántica
+        # removemos también la 'e' (evita romper "semestre", "docente",
+        # "estudiante", "clase", "parte", que ya terminan en vocal)
+        if len(word) > 6 and word.endswith(_SUFIJOS_PLURAL_CONSONANTE):
             singular = word[:-2]
 
         return singular
