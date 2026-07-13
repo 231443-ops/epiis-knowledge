@@ -1,79 +1,114 @@
-# Repositorio de Conocimiento — EPIIS UNSAAC
+# Chatbot Académico EPIIS — Repositorio de Conocimiento
 
-Repositorio de conocimientos de la **Escuela Profesional de Ingeniería Informática y de Sistemas** de la Universidad Nacional de San Antonio Abad del Cusco (UNSAAC).
+**Repositorio:** https://github.com/231443-ops/epiis-knowledge
 
-Este repositorio almacena, en formato JSON estructurado, el conocimiento institucional de la EPIIS para alimentar un **chatbot de atención académica** a estudiantes y docentes. Forma parte del Proyecto Semestral del curso **IF651 Inteligencia Artificial** (2026-1).
+Repositorio de conocimientos y código del chatbot de atención académica de la **Escuela Profesional de Ingeniería Informática y de Sistemas (EPIIS)** de la Universidad Nacional de San Antonio Abad del Cusco (UNSAAC).
+
+Forma parte del Proyecto Semestral del curso **IF651 Inteligencia Artificial** (2026-1).
+
+---
 
 ## 📂 Estructura del repositorio
 
 ```
 epiis-knowledge/
 ├── README.md
-├── CLAUDE.md                     # Guía para Claude Code
-├── data/                         # 9 archivos de conocimiento (100 qa_entries)
-│   ├── tutorias.json            # Tutoría académica (20 entradas)
-│   ├── matricula.json           # Matrícula y procesos (20 entradas)
-│   ├── servicios_academicos.json # Servicios académicos (10 entradas)
-│   ├── practicas.json           # Prácticas pre-profesionales (10 entradas)
-│   ├── bienestar.json           # Bienestar universitario (10 entradas)
-│   ├── movilidad.json           # Movilidad estudiantil (10 entradas)
-│   ├── titulacion.json          # Grados y títulos (17 entradas)
-│   ├── malla_semestralizada.json # Cursos por semestre (10 entradas)
+├── data/                          # 9 archivos de conocimiento (116 qa_entries)
+│   ├── tutorias.json              # Tutoría académica (20 entradas)
+│   ├── matricula.json             # Matrícula y procesos (20 entradas)
+│   ├── titulacion.json            # Grados y títulos (16 entradas)
+│   ├── servicios_academicos.json  # Servicios académicos (10 entradas)
+│   ├── practicas.json             # Prácticas pre-profesionales (10 entradas)
+│   ├── bienestar.json             # Bienestar universitario (10 entradas)
+│   ├── movilidad.json             # Movilidad estudiantil (10 entradas)
+│   ├── malla_semestralizada.json  # Cursos por semestre (10 entradas)
 │   └── plan_estudios_resumen.json # Áreas curriculares (10 entradas)
 ├── knowledge_base/
-│   ├── intents.json             # 109 intents con prioridades
-│   └── keywords.json            # Keywords y trigger_phrases por intent
-├── src/                         # Código fuente del chatbot (Python)
-│   ├── chatbot.py               # Clase orquestadora ChatbotEPIIS
-│   ├── intent_classifier.py     # Clasificador con similitud coseno
-│   ├── knowledge_loader.py      # Cargador de datos JSON
-│   ├── response_generator.py    # Generador de respuestas
-│   └── utils.py                 # Funciones de normalización y vectorización
-├── tests/                       # Tests unitarios (pytest)
-│   ├── test_chatbot.py
-│   └── test_knowledge_loader.py
+│   ├── intents.json               # 116 intents con prioridades
+│   └── keywords.json              # Keywords y trigger_phrases por intent
+├── src/                           # Código fuente del chatbot (Python)
+│   ├── chatbot.py                 # Clase orquestadora ChatbotEPIIS
+│   ├── intent_classifier.py       # Clasificador con similitud coseno
+│   ├── knowledge_loader.py        # Cargador de datos JSON
+│   ├── response_generator.py      # Generador de respuestas
+│   └── utils.py                   # Normalización y vectorización (TF)
+├── tests/                         # Tests unitarios (pytest)
 ├── notebooks/
-│   └── chatbot_epiis.ipynb      # Demo interactiva y evaluación
+│   └── chatbot_epiis.ipynb        # Demo interactiva y evaluación
 ├── corpus/
-│   └── corpus_consultas.json    # 80 consultas de prueba
-├── docs/
-│   ├── arquitectura.md          # Documentación técnica
-│   └── modelo_datos.md          # Esquema de datos JSON
-└── sources/
-    └── README.md                # Referencias documentales
+│   └── corpus_consultas.json      # 84 consultas de prueba
+├── docs/                          # Documentación técnica
+└── sources/                       # PDFs normativos que respaldan la data
 ```
 
-## 🎯 Características del Chatbot
+## 🏗️ Arquitectura del Chatbot
 
-### Arquitectura basada en POO
-- **ChatbotEPIIS**: Clase orquestadora principal
-- **IntentClassifier**: Clasificación de intenciones con similitud coseno
-- **KnowledgeLoader**: Carga centralizada de conocimiento
-- **ResponseGenerator**: Generación de respuestas contextualizadas
+Arquitectura modular basada en POO, **sin dependencias de NLP externas** (solo Python estándar). Cada consulta atraviesa el siguiente pipeline:
+
+```
+Pregunta del usuario
+   │
+   ▼
+normalize_text()      → minúsculas, sin tildes, sin puntuación
+   │
+   ▼
+tokenize()            → tokens + singularización de plurales + filtrado de stop-words
+   │
+   ▼
+compute_tf_vector()   → vector TF (Term Frequency) de la consulta
+   │
+   ▼
+IntentClassifier      → similitud coseno contra cada intent
+   │                    (fallback por substring/trigramas si el score es muy bajo)
+   ▼
+¿score ≥ umbral (0.3)?
+   │            │
+  sí           no ──► respuesta de fallback ("no encontré información…")
+   │
+   ▼
+ResponseGenerator     → busca la respuesta del intent (índice O(1)) + cita la fuente
+   │
+   ▼
+Respuesta al usuario
+```
+
+### Componentes (`src/`)
+
+| Componente | Responsabilidad |
+|---|---|
+| **`ChatbotEPIIS`** (`chatbot.py`) | Orquestador. Expone `ask()` y `ask_debug()`. Sin estado entre consultas. |
+| **`KnowledgeLoader`** (`knowledge_loader.py`) | Carga los JSON de `data/` y `knowledge_base/`. |
+| **`IntentClassifier`** (`intent_classifier.py`) | Clasifica la consulta por similitud coseno; fallback por substring/trigramas. Umbral 0.3. |
+| **`ResponseGenerator`** (`response_generator.py`) | Índice `intent → qa_entry` para lookup O(1); añade la cita de la `fuente`. |
+| **`utils.py`** | Normalización de texto, singularización de plurales, stop-words, vectores TF y similitud coseno. |
 
 ### Motor de clasificación: Similitud Coseno
-El chatbot utiliza **similitud coseno** sobre representaciones vectoriales TF (Term Frequency) para clasificar las consultas del usuario:
+
+Cada intent tiene un "documento de referencia" (sus `keywords` + `trigger_phrases`) representado como vector TF. La consulta se compara con cada documento mediante similitud coseno:
 
 ```
 similitud(Q, D) = (Σ Q_i × D_i) / (√(Σ Q_i²) × √(Σ D_i²))
 ```
 
-- **Q**: Vector TF de la consulta del usuario
-- **D**: Vector TF del intent (keywords + trigger_phrases)
-- **Resultado**: Score entre 0.0 (ortogonal) y 1.0 (idéntico)
+- **Q**: vector TF de la consulta del usuario
+- **D**: vector TF del intent (keywords + trigger_phrases)
+- **Resultado**: score entre 0.0 (ortogonal) y 1.0 (idéntico)
+
+Si ningún intent supera el umbral por similitud coseno, se aplica un **fallback** basado en coincidencia de subcadenas y trigramas de caracteres, que ayuda con variantes léxicas y errores ortográficos menores.
 
 ### Características técnicas
-- ✅ **Zero dependencias de NLP**: Solo Python stdlib + pytest
-- ✅ **Procesamiento local**: Sin llamadas a APIs externas
-- ✅ **Determinista**: Resultados reproducibles
-- ✅ **Extensible**: Arquitectura modular para agregar dominios
+
+- ✅ **Zero dependencias de NLP**: solo Python stdlib (+ pytest para tests)
+- ✅ **Procesamiento local**: sin llamadas a APIs externas
+- ✅ **Determinista**: resultados reproducibles
+- ✅ **Extensible**: arquitectura modular para agregar dominios
 
 ## 📊 Corpus de Conocimiento
 
 ### Cobertura actual
 - **9 categorías temáticas**
-- **117 pares pregunta-respuesta** (qa_entries)
-- **117 intents únicos** definidos
+- **116 pares pregunta-respuesta** (qa_entries)
+- **116 intents únicos** definidos
 
 ### Distribución por categoría
 
@@ -81,13 +116,17 @@ similitud(Q, D) = (Σ Q_i × D_i) / (√(Σ Q_i²) × √(Σ D_i²))
 |-----------|---------|----------|-------------|
 | Tutorías | `tutorias.json` | 20 | Sistema de tutoría académica UNSAAC |
 | Matrícula | `matricula.json` | 20 | Proceso de matrícula y requisitos |
+| Titulación | `titulacion.json` | 16 | Grados académicos y títulos |
 | Servicios Académicos | `servicios_academicos.json` | 10 | Constancias, certificados, trámites |
 | Prácticas PPP | `practicas.json` | 10 | Prácticas pre-profesionales |
 | Bienestar | `bienestar.json` | 10 | Servicios de bienestar universitario |
 | Movilidad | `movilidad.json` | 10 | Movilidad estudiantil e intercambios |
-| Titulación | `titulacion.json` | 17 | Grados académicos y títulos |
 | Cursos | `malla_semestralizada.json` | 10 | Plan de estudios semestralizado |
 | Especialidades | `plan_estudios_resumen.json` | 10 | Áreas curriculares y especialidades |
+
+### Fuentes
+
+El contenido de `data/` se respalda en los documentos normativos oficiales de la UNSAAC ubicados en [`sources/`](sources/): Reglamento Académico, Reglamento de Tutoría Académica y el Plan de Estudios / Malla Curricular. Cada `respuesta` cita el artículo o documento del que proviene.
 
 ## 🛠️ Uso del Chatbot
 
@@ -123,7 +162,7 @@ print(f"Respuesta: {debug['response']}")
 
 ### Uso desde Jupyter Notebook
 
-Abre `notebooks/chatbot_epiis.ipynb` para una demo interactiva completa.
+Abre `notebooks/chatbot_epiis.ipynb` para una demo interactiva completa y la evaluación sobre el corpus.
 
 ### Ejecución de tests
 
@@ -140,7 +179,7 @@ python -m pytest tests/test_chatbot.py::test_classify_known_queries
 
 ## 📑 Estructura de Datos
 
-### Formato de qa_entry
+### Formato de qa_entry (`data/*.json`)
 
 ```json
 {
@@ -152,7 +191,7 @@ python -m pytest tests/test_chatbot.py::test_classify_known_queries
 }
 ```
 
-### Formato de keywords_mapping
+### Formato de keywords_mapping (`knowledge_base/keywords.json`)
 
 ```json
 {
@@ -166,27 +205,6 @@ python -m pytest tests/test_chatbot.py::test_classify_known_queries
 }
 ```
 
-## 🎯 Plan Curricular Vigente
-
-- **Nombre:** Plan Curricular 2024
-- **Aprobado por:** Resolución CU-031-2025-UNSAAC (13 de enero de 2025)
-- **Implementación:** Desde el Año Académico 2025
-- **Modelo educativo:** Formación basada en competencias
-- **Total:** 220 créditos en 10 semestres (59 cursos)
-
-## 🏛️ Datos Institucionales
-
-- **Universidad:** Universidad Nacional de San Antonio Abad del Cusco (UNSAAC)
-- **Facultad:** Ingeniería Eléctrica, Electrónica, Informática y Mecánica (FIEEIM)
-- **Escuela:** Ingeniería Informática y de Sistemas (EPIIS)
-- **Web oficial:** https://in.unsaac.edu.pe/
-
-## 📚 Documentación Adicional
-
-- [Arquitectura del Sistema](docs/arquitectura.md) - Detalles técnicos del chatbot
-- [Modelo de Datos](docs/modelo_datos.md) - Esquema de archivos JSON
-- [CLAUDE.md](CLAUDE.md) - Guía para Claude Code
-
 ## 🤝 Contribución
 
 Para agregar nuevos dominios de conocimiento:
@@ -197,12 +215,7 @@ Para agregar nuevos dominios de conocimiento:
 4. Actualizar el mapeo de prefijos en `src/knowledge_loader.py`
 5. Agregar tests en `tests/test_chatbot.py`
 
-## 📄 Licencia
+## 📚 Documentación Adicional
 
-Este proyecto es parte del curso IF651 Inteligencia Artificial de la UNSAAC (2026-1).
-
----
-
-**Proyecto desarrollado por:** [Nombre del equipo/estudiante]
-**Curso:** IF651 Inteligencia Artificial (2026-1)
-**Institución:** EPIIS - UNSAAC
+- [Arquitectura del Sistema](docs/arquitectura.md) — Detalles técnicos del chatbot
+- [Modelo de Datos](docs/modelo_datos.md) — Esquema de archivos JSON
