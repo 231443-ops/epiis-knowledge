@@ -246,13 +246,6 @@
       "fuente": "Art. 123° – Reglamento Académico UNSAAC"
     },
     {
-      "id": "TIT-016",
-      "intent": "consulta_tit_tutor_vs_asesor_tesis",
-      "pregunta": "¿Mi tutor académico es el mismo que mi director de tesis?",
-      "respuesta": "No necesariamente. El tutor académico es el docente asignado por el Comité Tutorial desde el primer semestre para acompañarte en tu formación integral (Reglamento de Tutoría, Art. 14°). El director de tesis, en cambio, es el docente que avala y asesora específicamente tu trabajo de investigación para el título, y es designado en la resolución que aprueba el plan de tesis (Art. 136°). Pueden ser la misma persona si el docente acepta ambos roles, pero son funciones distintas. Para el trabajo de investigación del bachillerato, el Art. 126° indica que puedes contar con el apoyo de tu tutor o, en su defecto, de un asesor nombrado por el Decano.",
-      "fuente": "Art. 126°, Art. 136° – Reglamento Académico UNSAAC"
-    },
-    {
       "id": "TIT-017",
       "intent": "consulta_tit_documentos_falsos",
       "pregunta": "¿Qué pasa si se descubren documentos falsos en mi expediente de titulación?",

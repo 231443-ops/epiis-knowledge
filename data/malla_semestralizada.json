@@ -172,15 +172,15 @@
       "id": "CUR-004",
       "intent": "consulta_cursos_adelanto_semestres",
       "pregunta": "¿Puedo adelantar cursos de semestres superiores?",
-      "respuesta": "",
-      "_pendiente": "El adelanto de cursos depende del reglamento de matrícula (créditos máximos y prerrequisitos cumplidos), no de la malla. Completar con el reglamento de matrícula o derivar a la categoría MAT."
+      "respuesta": "Solo dentro de tu tope de créditos y respetando los prerrequisitos de cada curso: como estudiante regular puedes matricularte en un máximo de 22 créditos por semestre (Art. 9°), y si tu promedio ponderado es igual o mayor a 16 puntos, ese máximo sube a 26 créditos (Art. 9°). Esos créditos adicionales te permiten llevar cursos de ciclos superiores siempre que tengas aprobados los prerrequisitos correspondientes; la única excepción donde se exime de prerrequisitos (hasta en 2 asignaturas) es para quienes están por egresar (Art. 8.2.4°).",
+      "fuente": "Art. 9°, Art. 8.2.4° – Reglamento Académico UNSAAC"
     },
     {
       "id": "CUR-005",
       "intent": "consulta_cursos_desaprobacion",
       "pregunta": "¿Qué pasa si desapruebo un curso?",
-      "respuesta": "",
-      "_pendiente": "Las consecuencias de desaprobar (repetición, matrícula condicionada) están en el reglamento de matrícula/estudios, no en la malla. Completar con esa fuente o derivar a MAT."
+      "respuesta": "Depende de cuántas veces desapruebes esa asignatura (Art. 31°): la primera vez quedas en observación académica; la segunda vez mantienes la observación y se te asigna obligatoriamente un docente tutor; la tercera vez eres suspendido un año académico, y si vuelves a desaprobarla al reincorporarte, eres separado de la Escuela Profesional (sin carácter disciplinario). Además, pagas una tasa de servicio adicional para matricularte de nuevo en esa asignatura (Art. 29°). Mientras tengas esta 'matrícula condicionada' no puedes registrar una matrícula válida hasta regularizar tu situación (Art. 10°).",
+      "fuente": "Art. 29°, Art. 31° – Reglamento Académico UNSAAC"
     },
     {
       "id": "CUR-006",

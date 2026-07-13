@@ -111,7 +111,6 @@
     { "id": "TIT-013", "intent": "consulta_tit_tesis_colectiva", "prioridad": "Baja", "confianza_minima": 0.70 },
     { "id": "TIT-014", "intent": "consulta_tit_calificacion_sustentacion", "prioridad": "Media", "confianza_minima": 0.75 },
     { "id": "TIT-015", "intent": "consulta_tit_idioma_requisito", "prioridad": "Media", "confianza_minima": 0.80 },
-    { "id": "TIT-016", "intent": "consulta_tit_tutor_vs_asesor_tesis", "prioridad": "Baja", "confianza_minima": 0.75 },
     { "id": "TIT-017", "intent": "consulta_tit_documentos_falsos", "prioridad": "Alta", "confianza_minima": 0.85 },
     { "id": "SER-001", "intent": "consulta_ser_biblioteca", "prioridad": "Media", "confianza_minima": 0.75 },
     { "id": "SER-002", "intent": "consulta_ser_correo_institucional", "prioridad": "Alta", "confianza_minima": 0.85 },
