@@ -157,15 +157,90 @@ def compute_tf_vector(tokens: list[str]) -> dict[str, float]:
     return {term: count / total for term, count in freq.items()}
 
 
+def compute_idf(documents: list[list[str]]) -> dict[str, float]:
+    """
+    Calcula el peso IDF (Inverse Document Frequency) atenuado de cada termino
+    sobre una coleccion de documentos ya tokenizados.
+
+        IDF(t) = √( ln( N / (1 + df(t)) ) + 1 )
+
+    Se parte de la variante suavizada (smooth IDF): el "+1" en el denominador
+    evita la division por cero para terminos ausentes y el "+1" exterior
+    garantiza que ningun termino reciba peso nulo, de modo que un termino
+    presente en todos los documentos aun contribuye minimamente al vector.
+
+    La raiz cuadrada **atenua** ese peso, y es una decision deliberada para
+    este dominio. Los "documentos" aqui no son textos naturales sino los
+    catalogos de keywords/trigger_phrases de cada intencion: son cortos
+    (~13 tokens) y estan curados a mano. En ellos, la palabra que nombra el
+    dominio ("titulacion", "tutoria", "matricula") aparece a proposito en
+    varias intenciones de esa misma categoria, porque es la senal que indica
+    el tema. El IDF sin atenuar interpreta esa repeticion como "ruido" y
+    penaliza justo el termino mas informativo para enrutar la consulta; la
+    raiz comprime el rango de pesos y evita ese efecto contraproducente.
+
+    Args:
+        documents: lista de documentos, cada uno como lista de tokens.
+
+    Returns:
+        dict {termino: peso_idf}
+    """
+    n_docs = len(documents)
+    if n_docs == 0:
+        return {}
+
+    df: Counter = Counter()
+    for tokens in documents:
+        df.update(set(tokens))
+
+    return {
+        term: math.sqrt(math.log(n_docs / (1 + freq)) + 1.0)
+        for term, freq in df.items()
+    }
+
+
+def compute_tfidf_vector(
+    tokens: list[str],
+    idf: dict[str, float],
+    default_idf: float | None = None,
+) -> dict[str, float]:
+    """
+    Calcula el vector TF-IDF de una lista de tokens.
+
+        TF-IDF(t, d) = TF(t, d) * IDF(t)
+
+    Los terminos que no aparecen en el vocabulario de la coleccion (por
+    ejemplo, palabras nuevas en una consulta del usuario) reciben
+    ``default_idf``; de este modo el vector de consulta nunca se vacia.
+    Si no se indica, se usa el IDF maximo observado: un termino nunca visto
+    es, por definicion, al menos tan raro como el mas raro conocido, y darle
+    un peso bajo lo haria contar menos que las palabras mas comunes.
+
+    Args:
+        tokens: lista de tokens normalizados.
+        idf: pesos IDF calculados con compute_idf().
+        default_idf: peso asignado a terminos fuera de vocabulario.
+            Por defecto (None), el maximo peso IDF de la coleccion.
+
+    Returns:
+        dict {termino: peso_tfidf}
+    """
+    if default_idf is None:
+        default_idf = max(idf.values()) if idf else 1.0
+
+    tf = compute_tf_vector(tokens)
+    return {term: value * idf.get(term, default_idf) for term, value in tf.items()}
+
+
 def cosine_similarity(vec1: dict[str, float], vec2: dict[str, float]) -> float:
     """
-    Calcula la similitud coseno entre dos vectores TF.
+    Calcula la similitud coseno entre dos vectores dispersos (TF o TF-IDF).
 
     Fórmula: sim(Q,D) = (Σ Q_i * D_i) / (√(Σ Q_i²) * √(Σ D_i²))
 
     Args:
-        vec1: Vector TF del primer texto (ej: query del usuario)
-        vec2: Vector TF del segundo texto (ej: documento de referencia)
+        vec1: Vector del primer texto (ej: query del usuario)
+        vec2: Vector del segundo texto (ej: documento de referencia)
 
     Returns:
         float entre 0.0 (ortogonales) y 1.0 (idénticos)
