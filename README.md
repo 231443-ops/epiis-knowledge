@@ -55,7 +55,7 @@ normalize_text()      → minúsculas, sin tildes, sin puntuación
 tokenize()            → tokens + singularización de plurales + filtrado de stop-words
    │
    ▼
-compute_tf_vector()   → vector TF (Term Frequency) de la consulta
+compute_tfidf_vector() → vector TF-IDF de la consulta
    │
    ▼
 IntentClassifier      → similitud coseno contra cada intent
@@ -80,19 +80,21 @@ Respuesta al usuario
 | **`KnowledgeLoader`** (`knowledge_loader.py`) | Carga los JSON de `data/` y `knowledge_base/`. |
 | **`IntentClassifier`** (`intent_classifier.py`) | Clasifica la consulta por similitud coseno; fallback por substring/trigramas. Umbral 0.3. |
 | **`ResponseGenerator`** (`response_generator.py`) | Índice `intent → qa_entry` para lookup O(1); añade la cita de la `fuente`. |
-| **`utils.py`** | Normalización de texto, singularización de plurales, stop-words, vectores TF y similitud coseno. |
+| **`utils.py`** | Normalización de texto, singularización de plurales, stop-words, vectores TF-IDF y similitud coseno. |
 
-### Motor de clasificación: Similitud Coseno
+### Motor de clasificación: Similitud Coseno sobre TF-IDF
 
-Cada intent tiene un "documento de referencia" (sus `keywords` + `trigger_phrases`) representado como vector TF. La consulta se compara con cada documento mediante similitud coseno:
+Cada intent tiene un "documento de referencia" (sus `keywords` + `trigger_phrases`) representado como vector TF-IDF. La consulta se proyecta sobre ese mismo espacio vectorial y se compara mediante similitud coseno:
 
 ```
 similitud(Q, D) = (Σ Q_i × D_i) / (√(Σ Q_i²) × √(Σ D_i²))
 ```
 
-- **Q**: vector TF de la consulta del usuario
-- **D**: vector TF del intent (keywords + trigger_phrases)
+- **Q**: vector TF-IDF de la consulta del usuario
+- **D**: vector TF-IDF del intent (keywords + trigger_phrases)
 - **Resultado**: score entre 0.0 (ortogonal) y 1.0 (idéntico)
+
+El peso **IDF** realza los términos discriminantes (`convalidacion`, `bachiller`) frente a los que aparecen en muchas intenciones (`tramite`, `solicitar`). Se aplica **atenuado** (raíz cuadrada): como los documentos de referencia son cortos y curados a mano, la palabra que nombra el dominio (`titulacion`, `tutoria`) aparece a propósito en varias intenciones de su categoría, y un IDF sin atenuar acabaría penalizando justo esa señal temática.
 
 Si ningún intent supera el umbral por similitud coseno, se aplica un **fallback** basado en coincidencia de subcadenas y trigramas de caracteres, que ayuda con variantes léxicas y errores ortográficos menores.
 
