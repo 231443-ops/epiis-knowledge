@@ -2,7 +2,7 @@
 
 ## Visión general
 
-El chatbot es un sistema de pregunta-respuesta basado en **Similitud Coseno** sobre representaciones vectoriales TF-IDF del texto. No depende de modelos de lenguaje externos: todo el procesamiento es local y determinista, lo que facilita el mantenimiento y la trazabilidad de respuestas.
+El chatbot es un sistema de pregunta-respuesta basado en **Similitud Coseno** sobre representaciones vectoriales TF (Term Frequency) del texto. No depende de modelos de lenguaje externos: todo el procesamiento es local y determinista, lo que facilita el mantenimiento y la trazabilidad de respuestas.
 
 ```
 Usuario
@@ -13,8 +13,8 @@ ChatbotEPIIS.ask(pregunta)
   ├─► IntentClassifier.classify(texto)
   │       │
   │       ├─ normalize_text() / tokenize()       [utils.py]
-  │       ├─ compute_tfidf_vector() para query
-  │       ├─ compute_tfidf_vector() para cada intent (keywords + trigger_phrases)
+  │       ├─ compute_tf_vector() para query
+  │       ├─ compute_tf_vector() para cada intent (keywords + trigger_phrases)
   │       └─ cosine_similarity(query_vec, intent_vec)
   │             Fórmula: sim(Q,D) = (Σ Q_i*D_i) / (√(Σ Q_i²) * √(Σ D_i²))
   │
@@ -46,13 +46,11 @@ Recibe texto libre y devuelve `(intent, confianza)` usando **Similitud Coseno**.
 1. **Pre-procesamiento** (método `_prepare`):
    - Para cada intent, combina sus keywords y trigger_phrases en un "documento de referencia"
    - Tokeniza y normaliza el documento
-   - Calcula los pesos IDF atenuados sobre la colección completa de documentos:
-     `IDF(t) = √(ln(N / (1 + df(t))) + 1)`
-   - Calcula el vector TF-IDF: `TF-IDF(t,d) = TF(t,d) × IDF(t)`
+   - Calcula el vector TF (Term Frequency): `TF(término) = freq_término / total_términos`
    - Almacena el vector de referencia para cada intent
 
 2. **Clasificación** (método `classify`):
-   - Tokeniza y vectoriza la consulta del usuario (vector TF-IDF)
+   - Tokeniza y vectoriza la consulta del usuario (vector TF)
    - Calcula similitud coseno entre el vector de la consulta y cada vector de referencia:
      ```
      similitud(Q, D) = (Σ Q_i * D_i) / (√(Σ Q_i²) * √(Σ D_i²))
@@ -79,9 +77,7 @@ Funciones de normalización y análisis vectorial:
 - `normalize_text()` — minúsculas + sin tildes + sin puntuación
 - `tokenize()` — lista de tokens normalizados
 - `compute_tf_vector(tokens)` — calcula vector TF (Term Frequency)
-- `compute_idf(documents)` — pesos IDF atenuados de la colección
-- `compute_tfidf_vector(tokens, idf)` — calcula vector TF-IDF
-- `cosine_similarity(vec1, vec2)` — similitud coseno entre dos vectores
+- `cosine_similarity(vec1, vec2)` — similitud coseno entre dos vectores TF
 
 ---
 
@@ -94,7 +90,7 @@ texto_usuario
 normalize_text() + tokenize()
     │
     ▼
-compute_tfidf_vector(tokens_usuario, idf)
+compute_tf_vector(tokens_usuario)
     │              vector Q
     ▼
 Para cada intent:

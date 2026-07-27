@@ -1,33 +1,20 @@
-from .utils import (
-    normalize_text,
-    tokenize,
-    compute_idf,
-    compute_tfidf_vector,
-    cosine_similarity,
-)
+from .utils import normalize_text, tokenize, compute_tf_vector, cosine_similarity
 
 
 class IntentClassifier:
     """
-    Clasificador basado en Similitud Coseno sobre vectores TF-IDF.
+    Clasificador basado en Similitud Coseno entre la consulta del usuario
+    y las representaciones vectoriales (TF) de keywords y trigger_phrases de cada intent.
 
-    Cada intencion se representa como un "documento de referencia" formado por
-    la union de sus keywords y trigger_phrases. La coleccion de todos esos
-    documentos define el vocabulario y los pesos IDF; la consulta del usuario
-    se proyecta sobre ese mismo espacio vectorial y se compara por coseno:
-
+    Implementa la fórmula:
         Similitud(Q,D) = (Σ Q_i * D_i) / (√(Σ Q_i²) * √(Σ D_i²))
 
-    donde Q es el vector TF-IDF de la consulta y D el vector TF-IDF del
-    documento de referencia de la intencion. El factor IDF penaliza los
-    terminos que aparecen en muchas intenciones ("tramite", "solicitar") y
-    realza los discriminantes ("convalidacion", "bachiller"). Se usa el IDF
-    atenuado de compute_idf(): sin atenuar, el peso llega a penalizar la
-    palabra que nombra el dominio (ver la nota en esa funcion).
+    donde Q es el vector TF de la consulta del usuario y D es el vector TF
+    del documento de referencia (keywords + trigger_phrases del intent).
 
     Nota: los valores confianza_minima de intents.json están calibrados para
-    Dialogflow/Rasa (modelos ML). Este clasificador usa su propio umbral
-    (threshold=0.3), apropiado para la escala de similitud coseno [0, 1].
+    Dialogflow/Rasa (modelos ML). Este clasificador usa threshold=0.5 como
+    umbral propio, apropiado para la escala de similitud coseno [0, 1].
     """
 
     def __init__(
@@ -46,27 +33,26 @@ class IntentClassifier:
 
     def _prepare(self, mapping: list[dict]) -> list[dict]:
         """
-        Pre-procesa los keywords y trigger_phrases de cada intent: construye la
-        coleccion de documentos de referencia, estima los pesos IDF sobre ella y
-        vectoriza cada intencion en el espacio TF-IDF. Se ejecuta una sola vez.
+        Pre-procesa los keywords y trigger_phrases de cada intent,
+        construyendo su representación vectorial (TF).
         """
-        # 1a pasada: tokenizar el documento de referencia de cada intencion.
-        tokenized: list[tuple[str, list[str]]] = []
+        prepared = []
         for entry in mapping:
+            intent = entry["intent"]
+
+            # Combinar todos los keywords y trigger_phrases en un solo documento de referencia
             keywords = entry.get("keywords", [])
             trigger_phrases = entry.get("trigger_phrases", [])
+
+            # Construir el "documento de referencia" del intent
             reference_text = " ".join(keywords) + " " + " ".join(trigger_phrases)
-            tokenized.append((entry["intent"], tokenize(reference_text)))
+            reference_tokens = tokenize(reference_text)
+            reference_vector = compute_tf_vector(reference_tokens)
 
-        # 2a pasada: los pesos IDF se estiman sobre la coleccion completa de
-        # documentos de referencia, que es el "corpus" del sistema.
-        self._idf = compute_idf([tokens for _, tokens in tokenized])
-
-        # 3a pasada: vectorizar cada intencion en el espacio TF-IDF.
-        prepared = [
-            {"intent": intent, "reference_vector": compute_tfidf_vector(tokens, self._idf)}
-            for intent, tokens in tokenized
-        ]
+            prepared.append({
+                "intent": intent,
+                "reference_vector": reference_vector,
+            })
 
         return prepared
 
@@ -117,10 +103,8 @@ class IntentClassifier:
 
     def classify(self, text: str) -> tuple[str | None, float]:
         """
-        Clasifica el texto del usuario por relevancia semantica vectorial:
-        similitud coseno entre el vector TF-IDF de la consulta y el de cada
-        intencion. Si la similitud es muy baja, se aplica un fallback lexico
-        por subcadenas y trigramas de caracteres.
+        Clasifica el texto del usuario usando similitud coseno.
+        Si la similitud coseno es muy baja, intenta substring matching como fallback.
 
         Args:
             text: Consulta del usuario en lenguaje natural
@@ -132,9 +116,9 @@ class IntentClassifier:
         if not text or not text.strip():
             return None, 0.0
 
-        # Proyectar la consulta sobre el mismo espacio TF-IDF de las intenciones
+        # Vectorizar la consulta del usuario
         query_tokens = tokenize(text)
-        query_vector = compute_tfidf_vector(query_tokens, self._idf)
+        query_vector = compute_tf_vector(query_tokens)
 
         if not query_vector:
             return None, 0.0
@@ -142,7 +126,7 @@ class IntentClassifier:
         best_intent: str | None = None
         best_score: float = 0.0
 
-        # Relevancia semantica vectorial: coseno contra cada intencion
+        # Calcular similitud coseno con cada intent
         for entry in self._prepared:
             intent = entry["intent"]
             reference_vector = entry["reference_vector"]
