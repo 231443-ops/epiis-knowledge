@@ -117,21 +117,23 @@ Archivo de evaluación. No se carga en producción; se usa para medir la calidad
 | `practicas.json` | PPP | 10 | completo |
 | `bienestar.json` | BIE | 10 | completo |
 | `movilidad.json` | MOV | 10 | completo |
-| `titulacion.json` | TIT | 17 | completo |
+| `titulacion.json` | TIT | 16 | completo |
 | `malla_semestralizada.json` | CUR | 10 | completo |
 | `plan_estudios_resumen.json` | ESP | 10 | completo |
 
-**Total:** 9 archivos, **117 qa_entries**
+**Total:** 9 archivos, **116 qa_entries**
+
+> **Nota sobre TIT-016:** La entrada TIT-016 (`consulta_tit_tutor_vs_asesor_tesis`) fue eliminada el 12/Jul/2026 (commit `dcbbd6a`) por ser duplicado de TTUT-009, que cubre el mismo intent "tutor vs asesor de tesis". El hueco en la numeración se mantiene intencionalmente para no romper referencias existentes en logs o documentación externa.
 
 ---
 
 ## Estadísticas del corpus
 
 - **Categorías:** 9 módulos temáticos
-- **Total de pares pregunta-respuesta:** 117 entradas
-- **Intents únicos:** 117 (definidos en `knowledge_base/intents.json`)
+- **Total de pares pregunta-respuesta:** 116 entradas
+- **Intents únicos:** 116 (definidos en `knowledge_base/intents.json`)
 - **Cobertura temática:**
   - Tutorías y apoyo académico: 20 entradas
-  - Procesos administrativos (matrícula, titulación): 20 entradas
+  - Procesos administrativos (matrícula, titulación): 36 entradas
   - Servicios estudiantiles (bienestar, movilidad, servicios): 30 entradas
   - Plan de estudios (cursos, especialidades): 30 entradas
